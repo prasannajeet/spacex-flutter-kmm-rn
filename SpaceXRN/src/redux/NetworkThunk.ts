@@ -1,17 +1,20 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import {CompanyInfoType} from '../types/CompanyInfoTypes';
 import {NetworkFetchState, Status} from '../types/NetworkCallType';
 
 export const fetchData = createAsyncThunk(
   'data/fetchData',
   async (url: string) => {
     const response = await axios.get(url);
-    return response.data;
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(response.data);
+      }, 5000);
+    });
   },
 );
 
-const initialNetworkFetchState: NetworkFetchState<CompanyInfoType> = {
+const initialNetworkFetchState: NetworkFetchState = {
   data: null,
   status: Status.IDLE,
   error: null,
@@ -20,10 +23,27 @@ const initialNetworkFetchState: NetworkFetchState<CompanyInfoType> = {
 /**
  * A slice of the Redux store that handles network fetch data.
  */
+/**
+ * A Redux slice that handles the network fetch state of the application.
+ * @remarks
+ * This slice handles the pending, fulfilled, and rejected states of a fetch data request.
+ * It also handles the unmount state of the component.
+ * @public
+ */
 const dataSlice = createSlice({
-  name: 'networkFetchData',
+  name: 'networkFetch',
   initialState: initialNetworkFetchState,
-  reducers: {},
+  reducers: {
+    /**
+     * Handles the unmount state of the component.
+     * @param state - The current state of the slice.
+     */
+    reset: state => {
+      state.status = Status.IDLE;
+      state.error = null;
+      state.data = null;
+    },
+  },
   extraReducers: {
     /**
      * Handles the pending state of a fetch data request.
@@ -56,3 +76,4 @@ const dataSlice = createSlice({
 });
 
 export const networkFetchReducer = dataSlice.reducer;
+export const networkActions = dataSlice.actions;

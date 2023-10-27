@@ -1,25 +1,22 @@
 import React from 'react';
-import { useColorScheme, StatusBar } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useTheme } from 'react-native-paper';
-import { SpaceXCompanyInfoScreen } from './src/components/CompanyInfo';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {useTheme} from 'react-native-paper';
+import {SpaceXCompanyInfoScreen} from './src/screens/CompanyInfoScreen';
+import {StyleSheet} from 'react-native';
+import ThemeSwitcher from './src/components/ThemeSwitcher';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const theme = useTheme();
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? '#000000' : '#ffffff',
+    backgroundColor: theme.dark ? '#000000' : '#ffffff',
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
       <SpaceXCompanyInfoScreen />
+      <ThemeSwitcher />
     </SafeAreaView>
   );
 };
-
 export default App;

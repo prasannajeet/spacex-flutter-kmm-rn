@@ -1,6 +1,6 @@
 import {configureStore} from '@reduxjs/toolkit';
-import {counterReducers} from './slices/dummyreducer';
-import {networkFetchReducer} from '../data/network/networkthunk';
+import {networkFetchReducer} from './NetworkThunk';
+import {themeReducer} from './ThemeSlice';
 
 /**
  * Configures the Redux store with the provided reducers and enables the Redux DevTools extension.
@@ -8,8 +8,8 @@ import {networkFetchReducer} from '../data/network/networkthunk';
  */
 const store = configureStore({
   reducer: {
-    counter: counterReducers,
     networkFetch: networkFetchReducer,
+    themeSwitcher: themeReducer,
   },
   devTools: true,
 });

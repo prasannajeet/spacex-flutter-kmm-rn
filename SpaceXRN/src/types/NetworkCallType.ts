@@ -9,9 +9,9 @@ export enum Status {
  * Represents the state of a network fetch operation.
  * @template DataType The type of data returned by the fetch operation.
  */
-export type NetworkFetchState<DataType> = {
+export type NetworkFetchState = {
   /** The data returned by the fetch operation. */
-  data: null | DataType;
+  data: null | Object;
   /** The status of the fetch operation. */
   status: Status;
   /** The error, if any, that occurred during the fetch operation. */
