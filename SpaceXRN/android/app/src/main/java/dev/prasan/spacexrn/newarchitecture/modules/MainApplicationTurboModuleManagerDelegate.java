@@ -1,4 +1,4 @@
-package com.spacexrn.newarchitecture.modules;
+package dev.prasan.spacexrn.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

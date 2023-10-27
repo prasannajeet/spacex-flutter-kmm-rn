@@ -1,4 +1,4 @@
-package com.spacexrn.newarchitecture;
+package dev.prasan.spacexrn.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,10 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.spacexrn.BuildConfig;
-import com.spacexrn.newarchitecture.components.MainComponentsRegistry;
-import com.spacexrn.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+
+import dev.prasan.spacexrn.BuildConfig;
+import dev.prasan.spacexrn.newarchitecture.components.MainComponentsRegistry;
+import dev.prasan.spacexrn.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
