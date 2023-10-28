@@ -4,19 +4,9 @@ import {useTheme} from 'react-native-paper';
 import {SpaceXCompanyInfoScreen} from './src/screens/CompanyInfoScreen';
 import {StyleSheet} from 'react-native';
 import ThemeSwitcher from './src/components/ThemeSwitcher';
+import {SpaceXTabBar} from './src/screens/Tab';
 
 const App = () => {
-  const theme = useTheme();
-
-  const backgroundStyle = {
-    backgroundColor: theme.dark ? '#000000' : '#ffffff',
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <SpaceXCompanyInfoScreen />
-      <ThemeSwitcher />
-    </SafeAreaView>
-  );
+  return <SpaceXTabBar />;
 };
 export default App;

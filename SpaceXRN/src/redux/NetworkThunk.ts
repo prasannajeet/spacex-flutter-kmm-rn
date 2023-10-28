@@ -6,11 +6,7 @@ export const fetchData = createAsyncThunk(
   'data/fetchData',
   async (url: string) => {
     const response = await axios.get(url);
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(response.data);
-      }, 5000);
-    });
+    return response.data;
   },
 );
 
