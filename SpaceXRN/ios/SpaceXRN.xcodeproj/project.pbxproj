@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		699125DAEDACA7019FDA7660 /* libPods-SpaceXRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4676670C960467D99B4470AF /* libPods-SpaceXRN.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		D905E15EB2D86ADDD2A76D88 /* libPods-SpaceXRN-SpaceXRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F12DE4236831266BC824BC3 /* libPods-SpaceXRN-SpaceXRNTests.a */; };
+		98818CA6F0C613DCB7BB488E /* libPods-SpaceXRN-SpaceXRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9981FD78987ABF6C31D0FAD8 /* libPods-SpaceXRN-SpaceXRNTests.a */; };
+		B2A83DF6EE2EC5652FAF67D7 /* libPods-SpaceXRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ACD4DBB111487BFE37724 /* libPods-SpaceXRN.a */; };
 		F1C869F12AECBE0000FCADED /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C869DE2AECBE0000FCADED /* Feather.ttf */; };
 		F1C869F22AECBE0000FCADED /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C869DF2AECBE0000FCADED /* Foundation.ttf */; };
 		F1C869F32AECBE0000FCADED /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1C869E02AECBE0000FCADED /* MaterialIcons.ttf */; };
@@ -55,12 +55,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpaceXRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SpaceXRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SpaceXRN/main.m; sourceTree = "<group>"; };
-		30B3F50C77CE8399399F84A9 /* Pods-SpaceXRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN.release.xcconfig"; path = "Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN.release.xcconfig"; sourceTree = "<group>"; };
-		4676670C960467D99B4470AF /* libPods-SpaceXRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		59986C81886B75B1E0B66BDB /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F12DE4236831266BC824BC3 /* libPods-SpaceXRN-SpaceXRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXRN-SpaceXRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		257C51C4BADC13DB76C6BB0A /* Pods-SpaceXRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN.release.xcconfig"; path = "Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN.release.xcconfig"; sourceTree = "<group>"; };
+		3A9ACD4DBB111487BFE37724 /* libPods-SpaceXRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47341D828F7FDA0ABB4E6CEF /* Pods-SpaceXRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SpaceXRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B52682B8BF691AAB683FE802 /* Pods-SpaceXRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN.debug.xcconfig"; sourceTree = "<group>"; };
+		94DDA8A8DE4FA93B78A49BFC /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN-SpaceXRNTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests.release.xcconfig"; sourceTree = "<group>"; };
+		9981FD78987ABF6C31D0FAD8 /* libPods-SpaceXRN-SpaceXRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXRN-SpaceXRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE766D677A38A511AEE8D962 /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F1C869DE2AECBE0000FCADED /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
 		F1C869DF2AECBE0000FCADED /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		F1C869EE2AECBE0000FCADED /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		F1C869EF2AECBE0000FCADED /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		F1C869F02AECBE0000FCADED /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		FC9D93B4C262CA5A3955BF0A /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXRN-SpaceXRNTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D905E15EB2D86ADDD2A76D88 /* libPods-SpaceXRN-SpaceXRNTests.a in Frameworks */,
+				98818CA6F0C613DCB7BB488E /* libPods-SpaceXRN-SpaceXRNTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				699125DAEDACA7019FDA7660 /* libPods-SpaceXRN.a in Frameworks */,
+				B2A83DF6EE2EC5652FAF67D7 /* libPods-SpaceXRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				4676670C960467D99B4470AF /* libPods-SpaceXRN.a */,
-				5F12DE4236831266BC824BC3 /* libPods-SpaceXRN-SpaceXRNTests.a */,
+				3A9ACD4DBB111487BFE37724 /* libPods-SpaceXRN.a */,
+				9981FD78987ABF6C31D0FAD8 /* libPods-SpaceXRN-SpaceXRNTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,10 +179,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B52682B8BF691AAB683FE802 /* Pods-SpaceXRN.debug.xcconfig */,
-				30B3F50C77CE8399399F84A9 /* Pods-SpaceXRN.release.xcconfig */,
-				59986C81886B75B1E0B66BDB /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */,
-				FC9D93B4C262CA5A3955BF0A /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */,
+				47341D828F7FDA0ABB4E6CEF /* Pods-SpaceXRN.debug.xcconfig */,
+				257C51C4BADC13DB76C6BB0A /* Pods-SpaceXRN.release.xcconfig */,
+				AE766D677A38A511AEE8D962 /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */,
+				94DDA8A8DE4FA93B78A49BFC /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -220,12 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SpaceXRNTests" */;
 			buildPhases = (
-				01D0D01B7C63E1724616C67F /* [CP] Check Pods Manifest.lock */,
+				214F79581301982D2C699421 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9448D4AAB6618034C9925EFB /* [CP] Embed Pods Frameworks */,
-				6FA8F6677C95CE72E855EC04 /* [CP] Copy Pods Resources */,
+				AC7FD26CECEBB18551C824A7 /* [CP] Embed Pods Frameworks */,
+				133396187A1114C7AF156675 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,14 +241,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SpaceXRN" */;
 			buildPhases = (
-				E9F7D681DE40D91F56F70E83 /* [CP] Check Pods Manifest.lock */,
+				9FE4D1DC1989CE773F86CD8E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				5214214AD290471EEE6EC439 /* [CP] Embed Pods Frameworks */,
-				E15AED9217BC5F3C8EDA5384 /* [CP] Copy Pods Resources */,
+				6F9FF043FD4B397A6492A906 /* [CP] Embed Pods Frameworks */,
+				C0340ED7E920E0400C54B798 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -350,7 +350,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		01D0D01B7C63E1724616C67F /* [CP] Check Pods Manifest.lock */ = {
+		133396187A1114C7AF156675 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		214F79581301982D2C699421 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,7 +389,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5214214AD290471EEE6EC439 /* [CP] Embed Pods Frameworks */ = {
+		6F9FF043FD4B397A6492A906 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,58 +406,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FA8F6677C95CE72E855EC04 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9448D4AAB6618034C9925EFB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E15AED9217BC5F3C8EDA5384 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E9F7D681DE40D91F56F70E83 /* [CP] Check Pods Manifest.lock */ = {
+		9FE4D1DC1989CE773F86CD8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,6 +426,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC7FD26CECEBB18551C824A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN-SpaceXRNTests/Pods-SpaceXRN-SpaceXRNTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0340ED7E920E0400C54B798 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpaceXRN/Pods-SpaceXRN-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -514,7 +514,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59986C81886B75B1E0B66BDB /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */;
+			baseConfigurationReference = AE766D677A38A511AEE8D962 /* Pods-SpaceXRN-SpaceXRNTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -541,7 +541,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC9D93B4C262CA5A3955BF0A /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */;
+			baseConfigurationReference = 94DDA8A8DE4FA93B78A49BFC /* Pods-SpaceXRN-SpaceXRNTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -565,7 +565,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B52682B8BF691AAB683FE802 /* Pods-SpaceXRN.debug.xcconfig */;
+			baseConfigurationReference = 47341D828F7FDA0ABB4E6CEF /* Pods-SpaceXRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -599,7 +599,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B3F50C77CE8399399F84A9 /* Pods-SpaceXRN.release.xcconfig */;
+			baseConfigurationReference = 257C51C4BADC13DB76C6BB0A /* Pods-SpaceXRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

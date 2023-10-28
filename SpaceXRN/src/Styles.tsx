@@ -8,7 +8,7 @@ export const getStyle = () => {
 
   return StyleSheet.create({
     backgroundStyle: {
-      backgroundColor: isDarkTheme ? '#000000' : '#ffffff',
+      backgroundColor: isDarkTheme ? '#000000' : '#ffffff', 
     },
     screen: {
       backgroundColor: isDarkTheme ? 'black' : 'white',

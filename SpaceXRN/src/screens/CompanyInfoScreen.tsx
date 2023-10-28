@@ -9,7 +9,7 @@ import {HorizontalSpacer, VerticalSpacer} from '../components/Spacer';
 import {BodyText} from '../components/BodyText';
 import {CurrencyDisplay} from '../components/CurrencyDisplay';
 import {SectionHeader} from '../components/SectionHeader';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import LottieView from 'lottie-react-native';
 
 /**
  * Renders the SpaceX company information screen.
@@ -31,6 +31,8 @@ export const SpaceXCompanyInfoScreen = () => {
       )}
       {status === 'succeeded' && (
         <View>
+          <LottieView source={require('../assets/rocket_anim.json')} />
+          <VerticalSpacer space={8} />
           <TitleText>{data.name}</TitleText>
           <VerticalSpacer space={8} />
           <SubtitleText>
