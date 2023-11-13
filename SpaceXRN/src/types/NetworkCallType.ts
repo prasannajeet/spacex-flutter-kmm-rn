@@ -10,10 +10,13 @@ export enum Status {
  * @template DataType The type of data returned by the fetch operation.
  */
 export type NetworkFetchState = {
-  /** The data returned by the fetch operation. */
-  data: null | Object;
   /** The status of the fetch operation. */
   status: Status;
   /** The error, if any, that occurred during the fetch operation. */
   error: null | Error;
+  data: Data | null;
+};
+
+export type Data = {
+  [key: string]: any;
 };

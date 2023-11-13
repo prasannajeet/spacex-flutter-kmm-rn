@@ -20,7 +20,7 @@ export const SpaceXCompanyInfoScreen = () => {
   const style = getStyle();
 
   return (
-    <ScrollView style={style.screen}>
+    <ScrollView style={style.screen} contentInsetAdjustmentBehavior="automatic">
       {status === 'loading' && (
         <ActivityIndicator
           style={style.progress}
@@ -155,11 +155,7 @@ export const SpaceXCompanyInfoScreen = () => {
           </View>
         </View>
       )}
-      {status === 'failed' && (
-        <Text style={style.text} variant="bodyMedium">
-          Error: {error.message}
-        </Text>
-      )}
+      {status === 'failed' && <BodyText>Error: {error.message}</BodyText>}
     </ScrollView>
   );
 };

@@ -12,7 +12,7 @@ export const SpaceXTabBar = () => {
     <SafeAreaView style={{flex: 1}}>
       <Tab.Navigator
         backBehavior="history"
-        initialRouteName="Launches"
+        initialRouteName="Company"
         barStyle={{padding: 0}}
         activeColor="blue">
         <Tab.Screen

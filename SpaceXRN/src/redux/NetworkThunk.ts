@@ -6,13 +6,14 @@ export const fetchData = createAsyncThunk(
   'data/fetchData',
   async (url: string) => {
     const response = await axios.get(url);
+    console.log(response.data);
     return response.data;
   },
 );
 
 const initialNetworkFetchState: NetworkFetchState = {
-  data: null,
   status: Status.IDLE,
+  data: null,
   error: null,
 };
 
@@ -34,40 +35,22 @@ const dataSlice = createSlice({
      * Handles the unmount state of the component.
      * @param state - The current state of the slice.
      */
-    reset: state => {
-      state.status = Status.IDLE;
+    [fetchData.pending.name]: state => {
+      state.status = Status.LOADING;
       state.error = null;
-      state.data = null;
     },
   },
-  extraReducers: {
-    /**
-     * Handles the pending state of a fetch data request.
-     * @param state - The current state of the slice.
-     */
-    [fetchData.pending.type]: state => {
-      state.status = Status.LOADING;
-    },
-    /**
-     * Handles the fulfilled state of a fetch data request.
-     * @param state - The current state of the slice.
-     * @param action - The action that was dispatched.
-     */
-    [fetchData.fulfilled.type]: (state, action) => {
-      state.status = Status.SUCCEEDED;
-      state.data = action.payload;
-      state.error = null;
-    },
-    /**
-     * Handles the rejected state of a fetch data request.
-     * @param state - The current state of the slice.
-     * @param action - The action that was dispatched.
-     */
-    [fetchData.rejected.type]: (state, action) => {
-      state.status = Status.FAILED;
-      state.error = action.error.message;
-      state.data = null;
-    },
+  extraReducers: builder => {
+    builder
+      .addCase(fetchData.fulfilled, (state, action) => {
+        state.status = Status.SUCCEEDED;
+        state.data = action.payload;
+        state.error = null;
+      })
+      .addCase(fetchData.rejected, (state, action) => {
+        state.status = Status.FAILED;
+        state.error = action.error as Error;
+      });
   },
 });
 
