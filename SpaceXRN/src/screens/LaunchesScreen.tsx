@@ -6,11 +6,11 @@ import {useLaunches} from '../hooks/useLaunches';
 import {getStyle} from '../Styles';
 
 export const LaunchesScreen = () => {
-  const {data, status, error, onRefresh} = useLaunches();
+  const {loading, data, error, onRefresh} = useLaunches();
   const style = getStyle();
   return (
     <ScrollView style={style.screen}>
-      {status === 'loading' && (
+      {loading && (
         <ActivityIndicator
           style={style.progress}
           size={50}
@@ -18,8 +18,8 @@ export const LaunchesScreen = () => {
           color={MD3Colors.primary90}
         />
       )}
-      {status === 'succeeded' && <BodyText>{JSON.stringify(data)}</BodyText>}
-      {status === 'failed' && <BodyText>Error: {error.message}</BodyText>}
+      {data && <BodyText>{JSON.stringify(data)}</BodyText>}
+      {error && <BodyText>Error: {error.message}</BodyText>}
     </ScrollView>
   );
 };

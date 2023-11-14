@@ -16,12 +16,13 @@ import LottieView from 'lottie-react-native';
  * @returns JSX element containing the company information screen.
  */
 export const SpaceXCompanyInfoScreen = () => {
-  const {data, status, error, onRefresh} = useCompanyInfo();
+  //const {data, status, error, onRefresh} = useCompanyInfo();
+  const {loading, data, error, onRefresh} = useCompanyInfo();
   const style = getStyle();
 
   return (
     <ScrollView style={style.screen} contentInsetAdjustmentBehavior="automatic">
-      {status === 'loading' && (
+      {loading && (
         <ActivityIndicator
           style={style.progress}
           size={50}
@@ -29,7 +30,7 @@ export const SpaceXCompanyInfoScreen = () => {
           color={MD3Colors.primary90}
         />
       )}
-      {status === 'succeeded' && (
+      {data && (
         <View>
           <LottieView source={require('../assets/rocket_anim.json')} />
           <VerticalSpacer space={8} />
@@ -155,7 +156,7 @@ export const SpaceXCompanyInfoScreen = () => {
           </View>
         </View>
       )}
-      {status === 'failed' && <BodyText>Error: {error.message}</BodyText>}
+      {error && <BodyText>Error: {error.message}</BodyText>}
     </ScrollView>
   );
 };
