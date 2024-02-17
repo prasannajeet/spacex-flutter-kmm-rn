@@ -1,4 +1,4 @@
-name: Android CI
+name: Build Android and iOS artifacts
 
 on:
   workflow_dispatch:
@@ -17,6 +17,9 @@ jobs:
           cache: gradle
 
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+        run: |
+          cd ..
+          cd SpaceXKMM
+          chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
