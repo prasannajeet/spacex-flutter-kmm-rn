@@ -1,5 +1,12 @@
 package com.prasan.spacexkmm.di
 
+import com.prasan.spacexkmm.data.interfaces.IRemoteDataSource
+import com.prasan.spacexkmm.data.interfaces.IRepository
+import com.prasan.spacexkmm.data.models.mapper.CompanyInfoResponseMapper
+import com.prasan.spacexkmm.data.network.ApplicationRepository
+import com.prasan.spacexkmm.data.network.ApplicationWebService
+import com.prasan.spacexkmm.data.network.HttpWebServiceHandler
+import com.prasan.spacexkmm.domain.GetCompanyInfoUseCase
 import com.prasan.spacexkmm.expectactual.PlatformKtorClientEngine
 import io.ktor.client.*
 import io.ktor.client.plugins.*
@@ -15,6 +22,9 @@ import org.koin.core.qualifier.StringQualifier
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import com.prasan.spacexkmm.expectactual.platformModule
+import com.prasan.spacexkmm.presentation.screens.CompanyInfoViewModel
+import org.koin.core.module.dsl.bind
+import org.koin.core.module.dsl.singleOf
 
 fun initKoin(appModule: Module): KoinApplication {
     val koinApplication = startKoin {
@@ -43,7 +53,6 @@ private val coreModule = module {
     single(named("BaseUrl")) {
         "api.spacexdata.com/v5"
     }
-
     single {
         HttpClient(get<PlatformKtorClientEngine>().factory()) {
 
@@ -101,28 +110,16 @@ private val coreModule = module {
             }
         }
     }
-
-//    singleOf(::ApplicationWebService) {
-//        bind<IRemoteDataSource>()
-//    }
-//
-//    singleOf(::ApplicationRepository) {
-//        bind<IRepository>()
-//    }
-//    
-//    singleOf(::GetSpaceXCompanyInfoUseCase)
-//
-//    singleOf(::CompanyInfoResponseMapper)
-
-    // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
-    // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,
-    // that would likely go into platformModule expect/actual.
-    // See https://github.com/touchlab/Kermit
-//    val baseLogger =
-//        Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "SpaceX-KMM")
-//    factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
-//    single { HttpWebServiceHandler(get(), get(), get<Logger> { parametersOf(null) }) }
+    singleOf(::ApplicationWebService) {
+        bind<IRemoteDataSource>()
+    }
+    singleOf(::ApplicationRepository) {
+        bind<IRepository>()
+    }
+    single {
+        GetCompanyInfoUseCase(get())
+    }
+    single { CompanyInfoResponseMapper() }
+    factory { CompanyInfoViewModel(get()) }
+    single { HttpWebServiceHandler(get(), get()) }
 }
-
-// Simple function to clean up the syntax a bit
-//fun KoinComponent.injectLogger(tag: String): Lazy<Logger> = inject { parametersOf(tag) }

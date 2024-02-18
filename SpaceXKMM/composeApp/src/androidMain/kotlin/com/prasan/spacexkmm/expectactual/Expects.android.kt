@@ -14,7 +14,7 @@ import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
-internal actual class ConnectivityManager(private val connectivityMgr: android.net.ConnectivityManager): android.net.ConnectivityManager.NetworkCallback() {
+actual class ConnectivityManager(private val connectivityMgr: android.net.ConnectivityManager): android.net.ConnectivityManager.NetworkCallback() {
 
     private val _networkFlow =  MutableStateFlow(isNetworkAvailable())
     actual val networkConnectionStateFlow: SharedFlow<Boolean>

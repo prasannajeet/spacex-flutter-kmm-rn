@@ -13,7 +13,7 @@ kotlin {
     androidTarget {
         compilations.all {
             kotlinOptions {
-                jvmTarget = "11"
+                jvmTarget = "17"
             }
         }
     }
@@ -51,6 +51,9 @@ kotlin {
             implementation(libs.ktor.serialization)
             implementation(libs.sqldelight.runtime)
             //implementation(libs.kotlinx.datetime)
+            api(libs.tlaster.precompose)
+            api(libs.tlaster.precompose.viewmodel)
+            api(libs.tlaster.precompose.koin)
         }
         iosMain.dependencies {
             implementation(libs.ktor.ios)
@@ -91,8 +94,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)

@@ -1,15 +1,15 @@
 [versions]
-compose = "1.5.4"
+compose = "1.6.1"
 compose-plugin = "1.5.10"
 compose-compiler = "1.5.4"
 agp = "8.2.2"
 android-minSdk = "24"
 android-compileSdk = "34"
 android-targetSdk = "34"
-androidx-activityCompose = "1.8.0"
+androidx-activityCompose = "1.8.2"
 androidx-core-ktx = "1.12.0"
 androidx-appcompat = "1.6.1"
-androidx-material = "1.10.0"
+androidx-material = "1.11.0"
 androidx-constraintlayout = "2.1.4"
 androidx-test-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
@@ -22,6 +22,7 @@ sqlDelight = "1.5.5"
 dateTime = "0.4.1"
 serialization-plugin = "1.9.20"
 sqlDelight-plugin = "1.5.5"
+tlaster-precompose = "1.5.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -52,6 +53,9 @@ sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref =
 sqldelight-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqldelight-ios = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelight" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "dateTime" }
+tlaster-precompose = { module = "moe.tlaster:precompose", version.ref = "tlaster-precompose" }
+tlaster-precompose-viewmodel = { module = "moe.tlaster:precompose-viewmodel", version.ref = "tlaster-precompose" }
+tlaster-precompose-koin = { module = "moe.tlaster:precompose-koin", version.ref = "tlaster-precompose" }
 
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }

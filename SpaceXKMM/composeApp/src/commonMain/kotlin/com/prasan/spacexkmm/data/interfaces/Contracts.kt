@@ -10,14 +10,14 @@ interface IDataMapper<in MapFrom: Any, out MapTo: Any> {
     operator fun invoke(input: MapFrom): MapTo
 }
 
-internal interface ILocalDataSource
+interface ILocalDataSource
 
 interface IRemoteDataSource {
     suspend fun getSpaceXCompanyInfo(): Flow<Result<GetCompanyInfoResponse>>
 }
 
 interface IRepository {
-    suspend fun getSpaceXCompanyInfo(forceRefresh: Boolean): Flow<Result<CompanyInfo>>
+    suspend fun getSpaceXCompanyInfo(): Flow<Result<CompanyInfo>>
 }
 
 /**

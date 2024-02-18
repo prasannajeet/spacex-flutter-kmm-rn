@@ -14,12 +14,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.prasan.spacexkmm.presentation.bottomNavItems
+import moe.tlaster.precompose.koin.koinViewModel
 
 @Composable
 fun MainScreen() {
     var selectedItem by remember {
         mutableStateOf(bottomNavItems.first())
     }
+    val companyInfoVm = koinViewModel(vmClass = CompanyInfoViewModel::class)
     Scaffold(
         bottomBar = {
             BottomNavigation{
@@ -47,7 +49,7 @@ fun MainScreen() {
             Box(modifier = Modifier.fillMaxSize()) {
                 when(selectedItem.route) {
                     "rockets" -> RocketScreen()
-                    "company" -> CompanyInfoScreen()
+                    "company" -> CompanyInfoScreen(companyInfoVm)
                     "launches" -> LaunchesScreen()
                 }
             }

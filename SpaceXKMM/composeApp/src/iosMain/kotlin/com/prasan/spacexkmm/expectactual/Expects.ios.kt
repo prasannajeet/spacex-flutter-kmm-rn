@@ -9,7 +9,7 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 
-internal actual class ConnectivityManager {
+actual class ConnectivityManager {
     actual fun isNetworkAvailable(): Boolean {
         return true;
     }

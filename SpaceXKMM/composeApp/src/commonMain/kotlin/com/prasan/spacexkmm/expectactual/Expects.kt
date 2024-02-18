@@ -4,7 +4,7 @@ import io.ktor.client.engine.*
 import kotlinx.coroutines.flow.SharedFlow
 import org.koin.core.module.Module
 
-internal expect class ConnectivityManager {
+expect class ConnectivityManager {
     fun isNetworkAvailable(): Boolean
     val networkConnectionStateFlow: SharedFlow<Boolean>
 }
