@@ -1,7 +1,7 @@
 package com.prasan.spacexkmm.expectactual
 
-import io.ktor.client.engine.*
-import io.ktor.client.engine.darwin.*
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.engine.darwin.Darwin
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import org.koin.core.module.Module

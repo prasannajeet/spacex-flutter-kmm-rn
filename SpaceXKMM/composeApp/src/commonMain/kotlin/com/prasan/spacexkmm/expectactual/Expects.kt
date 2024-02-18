@@ -1,6 +1,6 @@
 package com.prasan.spacexkmm.expectactual
 
-import io.ktor.client.engine.*
+import io.ktor.client.engine.HttpClientEngine
 import kotlinx.coroutines.flow.SharedFlow
 import org.koin.core.module.Module
 

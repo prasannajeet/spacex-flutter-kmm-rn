@@ -4,9 +4,9 @@ import android.content.Context
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
-import io.ktor.client.*
-import io.ktor.client.engine.*
-import io.ktor.client.engine.android.*
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.HttpClientEngine
+import io.ktor.client.engine.android.Android
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asStateFlow

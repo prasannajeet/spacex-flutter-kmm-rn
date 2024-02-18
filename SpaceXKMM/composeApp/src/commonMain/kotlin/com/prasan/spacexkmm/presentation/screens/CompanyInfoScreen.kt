@@ -3,7 +3,6 @@ package com.prasan.spacexkmm.presentation.screens
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import com.prasan.spacexkmm.domain.GetCompanyInfoUseCase
 import moe.tlaster.precompose.navigation.BackHandler
 
 @Composable

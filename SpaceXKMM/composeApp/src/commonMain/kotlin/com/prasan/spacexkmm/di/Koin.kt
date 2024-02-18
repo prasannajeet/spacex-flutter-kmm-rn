@@ -8,23 +8,25 @@ import com.prasan.spacexkmm.data.network.ApplicationWebService
 import com.prasan.spacexkmm.data.network.HttpWebServiceHandler
 import com.prasan.spacexkmm.domain.GetCompanyInfoUseCase
 import com.prasan.spacexkmm.expectactual.PlatformKtorClientEngine
-import io.ktor.client.*
-import io.ktor.client.plugins.*
-import io.ktor.client.plugins.cache.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.http.*
-import io.ktor.serialization.kotlinx.json.*
+import com.prasan.spacexkmm.expectactual.platformModule
+import com.prasan.spacexkmm.presentation.screens.CompanyInfoViewModel
+import io.ktor.client.HttpClient
+import io.ktor.client.plugins.HttpRequestRetry
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.cache.HttpCache
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.defaultRequest
+import io.ktor.http.URLProtocol
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
+import org.koin.core.module.dsl.bind
+import org.koin.core.module.dsl.singleOf
 import org.koin.core.qualifier.StringQualifier
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
-import com.prasan.spacexkmm.expectactual.platformModule
-import com.prasan.spacexkmm.presentation.screens.CompanyInfoViewModel
-import org.koin.core.module.dsl.bind
-import org.koin.core.module.dsl.singleOf
 
 fun initKoin(appModule: Module): KoinApplication {
     val koinApplication = startKoin {
