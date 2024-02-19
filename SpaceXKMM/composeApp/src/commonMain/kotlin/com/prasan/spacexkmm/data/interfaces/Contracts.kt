@@ -1,7 +1,7 @@
 package com.prasan.spacexkmm.data.interfaces
 
-import com.prasan.spacexkmm.data.models.dao.CompanyInfo
 import com.prasan.spacexkmm.data.models.dto.GetCompanyInfoResponse
+import com.prasan.spacexkmm.data.models.dto.launches.GetSpaceXLaunchesItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -14,10 +14,14 @@ interface ILocalDataSource
 
 interface IRemoteDataSource {
     suspend fun getSpaceXCompanyInfo(): Flow<Result<GetCompanyInfoResponse>>
+    suspend fun getSpaceXLaunches(): Flow<Result<List<GetSpaceXLaunchesItem>>>
+    suspend fun getSpaceXRockets(): Flow<Result<String>>
 }
 
 interface IRepository {
-    suspend fun getSpaceXCompanyInfo(): Flow<Result<CompanyInfo>>
+    suspend fun getSpaceXCompanyInfo(): Flow<Result<GetCompanyInfoResponse>>
+    suspend fun getSpaceXLaunches(): Flow<Result<List<GetSpaceXLaunchesItem>>>
+    suspend fun getRockets(): Flow<Result<String>>
 }
 
 /**

@@ -1,5 +1,7 @@
 package com.prasan.spacexkmm.data.network
 
 enum class SpaceXEndpoint(val path: String) {
-    CompanyInfo("company")
+    CompanyInfo("company"),
+    Launches("launches"),
+    Rockets("rockets")
 }

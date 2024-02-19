@@ -13,10 +13,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.prasan.spacexkmm.presentation.bottomNavItems
+import com.prasan.spacexkmm.presentation.screens.companyInfo.CompanyInfoScreen
+import com.prasan.spacexkmm.presentation.screens.launches.LaunchesScreen
+import com.prasan.spacexkmm.presentation.screens.rockets.RocketScreen
 
 @Composable
 fun MainScreen() {
