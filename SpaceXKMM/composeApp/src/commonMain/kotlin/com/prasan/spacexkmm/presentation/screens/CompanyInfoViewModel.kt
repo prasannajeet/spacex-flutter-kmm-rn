@@ -16,11 +16,13 @@ class CompanyInfoViewModel(private val useCase: GetCompanyInfoUseCase): ViewMode
         viewModelScope.launch {
             useCase(Unit).collectLatest { result ->
                 result.onSuccess { data ->
+                    println("On Success:")
                     _viewState.value = _viewState.value.copy(
                         isLoading = false,
                         result = Result.success(data)
                     )
                 }.onFailure { error ->
+                    println("On Failure")
                     _viewState.value = _viewState.value.copy(
                         isLoading = false,
                         result = Result.failure(error)
@@ -32,6 +34,6 @@ class CompanyInfoViewModel(private val useCase: GetCompanyInfoUseCase): ViewMode
 }
 
 data class CompanyInfoState(
-    val isLoading: Boolean = false,
+    val isLoading: Boolean = true,
     val result: Result<CompanyInfo>? = null,
 )

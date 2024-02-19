@@ -15,7 +15,7 @@ androidx-test-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
 kotlin = "1.9.20"
 junit = "4.13.2"
-koin = "3.3.2"
+koin = "3.6.0-wasm-alpha2"
 coroutines = "1.7.3"
 ktor = "2.3.5"
 sqlDelight = "1.5.5"
@@ -43,6 +43,7 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-content = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }

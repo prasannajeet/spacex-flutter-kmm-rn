@@ -26,11 +26,11 @@ class HttpWebServiceHandler(
         httpConnectionType: HttpConnectivityType,
     ): Flow<Result<NetworkResponse>> {
 
-
+        println("Inside performHttpConnection")
         return flow {
             when {
                 connectivityMgr.isNetworkAvailable() -> {
-
+                    println("Network is available")
                     val response = httpClient.run {
 
                         request {
@@ -72,16 +72,12 @@ class HttpWebServiceHandler(
                             )
                         }
                     }
-
-//                    logger.d {
-//                        "Response code is ${response.status}"
-//                    }
-
+                    println("Response code is ${response.status}")
                     when (response.status) {
                         HttpStatusCode.NoContent -> throw IllegalStateException("Cannot get 204 as status code")
                         HttpStatusCode.OK -> {
                             val result = response.body<NetworkResponse>()
-                            //logger.d { "Sending success to UI" }
+                            println("Sending success to UI with result $result")
                             emit(Result.success(result))
                         }
                         else -> throw IOException("Received error from server with code ${response.status}")
@@ -93,9 +89,7 @@ class HttpWebServiceHandler(
 
             }
         }.catch { exception ->
-//            logger.d {
-//                "Exception is ${exception}"
-//            }
+            println("Exception is $exception")
             emit(Result.failure(exception))
             return@catch
         }.cancellable()

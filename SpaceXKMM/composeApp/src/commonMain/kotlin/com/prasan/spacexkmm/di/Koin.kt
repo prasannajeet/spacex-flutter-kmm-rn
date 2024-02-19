@@ -28,32 +28,33 @@ import org.koin.core.qualifier.StringQualifier
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
-fun initKoin(appModule: Module): KoinApplication {
-    val koinApplication = startKoin {
-        modules(
-            coreModule,
-            platformModule,
-            appModule
-        )
+fun initKoin(appModule: Module) {
+    //val koinApplication =
+        startKoin {
+            modules(
+                coreModule,
+                platformModule,
+                appModule
+            )
     }
 
-    // Dummy initialization logic, making use of appModule declarations for demonstration purposes.
-    val koin = koinApplication.koin
-    // doOnStartup is a lambda which is implemented in Swift on iOS side
-    val doOnStartup = koin.get<() -> Unit>(named("doOnStartup"))
-    doOnStartup.invoke()
+//    // Dummy initialization logic, making use of appModule declarations for demonstration purposes.
+//    val koin = koinApplication.koin
+//    // doOnStartup is a lambda which is implemented in Swift on iOS side
+//    val doOnStartup = koin.get<() -> Unit>(named("doOnStartup"))
+//    doOnStartup.invoke()
 
     //val kermit = koin.get<Logger> { parametersOf(null) }
     //val appId = koin.get<String>(named("bundle_identifier"))
     //kermit.log(Severity.Debug, message = "App Id ---- $appId", throwable = null)
 
-    return koinApplication
+    //return koinApplication
 }
 
 private val coreModule = module {
 
     single(named("BaseUrl")) {
-        "api.spacexdata.com/v5"
+        "api.spacexdata.com/v4"
     }
     single {
         HttpClient(get<PlatformKtorClientEngine>().factory()) {
@@ -106,6 +107,7 @@ private val coreModule = module {
                 url {
                     protocol = URLProtocol.HTTPS
                     host = get(StringQualifier("BaseUrl"))
+                    println("Host is $host")
                     /*parameters.append("appid", apiKey)
                     parameters.append("exclude", "minutely,hourly")*/
                 }
@@ -115,8 +117,11 @@ private val coreModule = module {
     singleOf(::ApplicationWebService) {
         bind<IRemoteDataSource>()
     }
-    singleOf(::ApplicationRepository) {
-        bind<IRepository>()
+    single<IRepository> {
+        ApplicationRepository(get(), get())
+    }
+    single<IRemoteDataSource> {
+        ApplicationWebService(get())
     }
     single {
         GetCompanyInfoUseCase(get())

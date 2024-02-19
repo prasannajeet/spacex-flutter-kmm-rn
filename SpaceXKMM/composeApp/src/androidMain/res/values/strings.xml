@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SpaceXKMM</string>
+    <string name="company_info_header">Company Info</string>
 </resources>

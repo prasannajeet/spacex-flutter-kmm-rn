@@ -14,6 +14,7 @@ class ApplicationRepository(
 ) : IRepository {
     override suspend fun getSpaceXCompanyInfo(): Flow<Result<CompanyInfo>> {
         return remoteDataSource.getSpaceXCompanyInfo().map { result ->
+            println("Inside ApplicationRepository getSpaceXCompanyInfo map block")
             when (result.isSuccess) {
                 true -> {
                     result.getOrNull()?.let { response ->
