@@ -3,6 +3,7 @@ package com.prasan.spacexkmm.data.network
 import com.prasan.spacexkmm.data.interfaces.IRemoteDataSource
 import com.prasan.spacexkmm.data.models.dto.GetCompanyInfoResponse
 import com.prasan.spacexkmm.data.models.dto.launches.GetSpaceXLaunchesItem
+import com.prasan.spacexkmm.data.models.dto.rockets.GetSpaceXRocketsItem
 import kotlinx.coroutines.flow.Flow
 
 internal class ApplicationWebService(
@@ -24,7 +25,7 @@ internal class ApplicationWebService(
         )
     }
 
-    override suspend fun getSpaceXRockets(): Flow<Result<String>> {
+    override suspend fun getSpaceXRockets(): Flow<Result<List<GetSpaceXRocketsItem>>> {
         return httpWebServiceHandler.performHttpConnection(
             HttpConnectivityType.GET(
                 SpaceXEndpoint.Rockets.path

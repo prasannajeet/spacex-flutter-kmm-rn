@@ -4,6 +4,7 @@ import com.prasan.spacexkmm.data.interfaces.IRemoteDataSource
 import com.prasan.spacexkmm.data.interfaces.IRepository
 import com.prasan.spacexkmm.data.models.dto.GetCompanyInfoResponse
 import com.prasan.spacexkmm.data.models.dto.launches.GetSpaceXLaunchesItem
+import com.prasan.spacexkmm.data.models.dto.rockets.GetSpaceXRocketsItem
 import kotlinx.coroutines.flow.Flow
 
 class ApplicationRepository(
@@ -18,7 +19,7 @@ class ApplicationRepository(
         return remoteDataSource.getSpaceXLaunches()
     }
 
-    override suspend fun getRockets(): Flow<Result<String>> {
+    override suspend fun getSpaceXRockets(): Flow<Result<List<GetSpaceXRocketsItem>>> {
         return remoteDataSource.getSpaceXRockets()
     }
 }

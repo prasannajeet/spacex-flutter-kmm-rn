@@ -8,10 +8,12 @@ import com.prasan.spacexkmm.data.network.ApplicationWebService
 import com.prasan.spacexkmm.data.network.HttpWebServiceHandler
 import com.prasan.spacexkmm.domain.GetCompanyInfoUseCase
 import com.prasan.spacexkmm.domain.GetLaunchesUseCase
+import com.prasan.spacexkmm.domain.GetSpaceXRocketsUseCase
 import com.prasan.spacexkmm.expectactual.PlatformKtorClientEngine
 import com.prasan.spacexkmm.expectactual.platformModule
 import com.prasan.spacexkmm.presentation.screens.companyInfo.CompanyInfoViewModel
 import com.prasan.spacexkmm.presentation.screens.launches.LaunchesViewModel
+import com.prasan.spacexkmm.presentation.screens.rockets.SpaceXRocketsViewModel
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpRequestRetry
 import io.ktor.client.plugins.HttpTimeout
@@ -122,8 +124,10 @@ private val coreModule = module {
     single<IRemoteDataSource> { ApplicationWebService(get()) }
     single { GetCompanyInfoUseCase(get(), get()) }
     single { GetLaunchesUseCase(get()) }
+    single { GetSpaceXRocketsUseCase(get()) }
     single { CompanyInfoResponseMapper() }
     factory { CompanyInfoViewModel(get()) }
     factory { LaunchesViewModel(get()) }
+    factory { SpaceXRocketsViewModel(get()) }
     single { HttpWebServiceHandler(get(), get()) }
 }
