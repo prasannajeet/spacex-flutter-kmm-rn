@@ -1,6 +1,6 @@
 [versions]
 compose = "1.6.1"
-compose-plugin = "1.5.10"
+compose-plugin = "1.5.12"
 compose-compiler = "1.5.4"
 agp = "8.2.2"
 android-minSdk = "24"
@@ -13,13 +13,13 @@ androidx-material = "1.11.0"
 androidx-constraintlayout = "2.1.4"
 androidx-test-junit = "1.1.5"
 androidx-espresso-core = "3.5.1"
-kotlin = "1.9.20"
+kotlin = "1.9.22"
 junit = "4.13.2"
 koin = "3.6.0-wasm-alpha2"
-coroutines = "1.7.3"
-ktor = "2.3.5"
+coroutines = "1.8.0"
+ktor = "2.3.8"
 sqlDelight = "1.5.5"
-dateTime = "0.4.1"
+dateTime = "0.5.0"
 serialization-plugin = "1.9.20"
 sqlDelight-plugin = "1.5.5"
 tlaster-precompose = "1.5.0"
@@ -44,7 +44,9 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-content = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
