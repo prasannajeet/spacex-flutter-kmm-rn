@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ScreenWithLoader(
+    modifier: Modifier = Modifier,
     isRefreshing: Boolean,
     onRefresh: () -> Unit,
     content: @Composable () -> Unit,
@@ -25,7 +26,7 @@ fun ScreenWithLoader(
         refreshing = isRefreshing,
         onRefresh = onRefresh)
     val scrollState = rememberScrollState()
-    Box(modifier = Modifier.fillMaxSize().pullRefresh(pullToRefreshState),
+    Box(modifier = modifier.then(Modifier.fillMaxSize().pullRefresh(pullToRefreshState)),
         contentAlignment = Alignment.TopCenter) {
         if(isRefreshing) {
             // Show a loader here

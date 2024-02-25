@@ -32,3 +32,9 @@ actual val platformModule : Module = module {
     singleOf(::ConnectivityManager)
     singleOf(::PlatformKtorClientEngine)
 }
+
+actual interface CommonParceler<T>
+
+@Target(AnnotationTarget.CLASS)
+@Retention(AnnotationRetention.BINARY)
+actual annotation class CommonParcelize actual constructor()

@@ -11,9 +11,14 @@ import com.prasan.spacexkmm.domain.GetLaunchesUseCase
 import com.prasan.spacexkmm.domain.GetSpaceXRocketsUseCase
 import com.prasan.spacexkmm.expectactual.PlatformKtorClientEngine
 import com.prasan.spacexkmm.expectactual.platformModule
+import com.prasan.spacexkmm.presentation.circuit.PresenterFactory
+import com.prasan.spacexkmm.presentation.circuit.ScreenFactory
 import com.prasan.spacexkmm.presentation.screens.companyInfo.CompanyInfoViewModel
 import com.prasan.spacexkmm.presentation.screens.launches.LaunchesViewModel
-import com.prasan.spacexkmm.presentation.screens.rockets.SpaceXRocketsViewModel
+import com.prasan.spacexkmm.presentation.screens.rockets.circuit.RocketPresenter
+import com.slack.circuit.foundation.Circuit
+import com.slack.circuit.runtime.presenter.Presenter
+import com.slack.circuit.runtime.ui.Ui
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.HttpRequestRetry
 import io.ktor.client.plugins.HttpTimeout
@@ -128,6 +133,11 @@ private val coreModule = module {
     single { CompanyInfoResponseMapper() }
     factory { CompanyInfoViewModel(get()) }
     factory { LaunchesViewModel(get()) }
-    factory { SpaceXRocketsViewModel(get()) }
     single { HttpWebServiceHandler(get(), get()) }
+    single { RocketPresenter(get()) }
+    single<Presenter.Factory> { PresenterFactory(get()) }
+    single<Ui.Factory> { ScreenFactory() }
+    single { Circuit.Builder().addUiFactory(get())
+        .addPresenterFactory(get())
+        .build() }
 }

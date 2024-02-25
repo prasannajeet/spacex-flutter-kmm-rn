@@ -2,32 +2,39 @@ package com.prasan.spacexkmm.presentation.screens.rockets
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalContext
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Modifier
+import com.prasan.spacexkmm.expectactual.CommonParcelize
 import com.prasan.spacexkmm.presentation.components.ScreenWithLoader
-import com.prasan.spacexkmm.presentation.screens.launches.LaunchesViewModel
-import moe.tlaster.precompose.flow.collectAsStateWithLifecycle
-import moe.tlaster.precompose.koin.koinViewModel
-import moe.tlaster.precompose.navigation.BackHandler
+import com.prasan.spacexkmm.presentation.screens.rockets.circuit.RocketEvent
+import com.prasan.spacexkmm.presentation.screens.rockets.circuit.RocketState
+import com.slack.circuit.runtime.screen.Screen
 
+@CommonParcelize
+object RocketScreen: Screen
 @Composable
-fun RocketScreen(
-    onBackPress: () -> Unit = {},
-    onCompose: () -> Unit = {}
+fun RocketScreenContent(
+    modifier: Modifier = Modifier,
+    state: RocketState,
 ) {
-    val viewModel = koinViewModel<SpaceXRocketsViewModel>()
-    BackHandler(onBack = onBackPress)
+
+    val coroutineScope = rememberCoroutineScope()
+    /*val viewModel = koinViewModel<SpaceXRocketsViewModel>()
+    BackHandler(onBack = onBackPress)*/
     LaunchedEffect(key1 = "state") {
-        onCompose()
+        state.eventSink(RocketEvent.OnLoad, coroutineScope)
     }
-    val stateValue = viewModel.viewState.collectAsStateWithLifecycle()
-    ScreenWithLoader(isRefreshing = stateValue.value.isLoading, onRefresh = {viewModel.refresh()}) {
-        val state = stateValue.value.result
-        state?.let {result ->
+    ScreenWithLoader(modifier = modifier, isRefreshing = state.isLoading, onRefresh = {state.eventSink(RocketEvent.OnRefresh, coroutineScope)}) {
+        /*state?.let {result ->
             result.onSuccess {
                 Text(text = it.toString())
             }.onFailure {
                 Text(text = "Error: ${it.message}")
             }
-        } ?: {}
+        } ?: {}*/
+
+        Text(text = state.toString())
     }
 }

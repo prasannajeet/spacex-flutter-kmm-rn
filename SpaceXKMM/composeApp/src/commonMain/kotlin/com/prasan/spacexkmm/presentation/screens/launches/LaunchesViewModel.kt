@@ -7,17 +7,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import moe.tlaster.precompose.viewmodel.ViewModel
-import moe.tlaster.precompose.viewmodel.viewModelScope
 
-class LaunchesViewModel(private val getLaunchesUseCase: GetLaunchesUseCase): ViewModel() {
+class LaunchesViewModel(private val getLaunchesUseCase: GetLaunchesUseCase) {
     private val _viewState = MutableStateFlow(LaunchesScreenState())
     val viewState = _viewState.asStateFlow()
     init {
         refresh()
     }
     fun refresh() {
-        viewModelScope.launch {
+        /*viewModelScope.launch {
             getLaunchesUseCase(Unit).collectLatest { result ->
                 result.onSuccess { data ->
                     println("On Success:")
@@ -33,7 +31,7 @@ class LaunchesViewModel(private val getLaunchesUseCase: GetLaunchesUseCase): Vie
                     )
                 }
             }
-        }
+        }*/
     }
 }
 

@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.serialization)
     alias(libs.plugins.sqldelight)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 kotlin {
@@ -25,9 +26,10 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            binaryOption("bundleId", "com.prasan.spacexkmm")
         }
     }
-    
+
     sourceSets {
         
         androidMain.dependencies {
@@ -37,11 +39,12 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
             implementation(libs.koin.android)
             implementation(libs.ktor.android)
-            implementation(libs.sqldelight.android)
+            //implementation(libs.sqldelight.android)
         }
         commonMain.dependencies {
-            implementation(compose.runtime)
+            api(compose.runtime)
             implementation(compose.foundation)
+            implementation(compose.animation)
             implementation(compose.material)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
@@ -51,15 +54,13 @@ kotlin {
             implementation(libs.ktor.core)
             implementation(libs.ktor.content)
             implementation(libs.ktor.serialization)
-            implementation(libs.sqldelight.runtime)
+            //implementation(libs.sqldelight.runtime)
             implementation(libs.kotlinx.datetime)
-            api(libs.tlaster.precompose)
-            api(libs.tlaster.precompose.viewmodel)
-            api(libs.tlaster.precompose.koin)
+            api(libs.slack.circuit)
         }
         iosMain.dependencies {
             implementation(libs.ktor.ios)
-            implementation(libs.sqldelight.ios)
+            //implementation(libs.sqldelight.ios)
         }
     }
 }

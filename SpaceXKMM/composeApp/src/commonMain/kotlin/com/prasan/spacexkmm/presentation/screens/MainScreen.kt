@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import com.prasan.spacexkmm.presentation.bottomNavItems
 import com.prasan.spacexkmm.presentation.screens.companyInfo.CompanyInfoScreen
 import com.prasan.spacexkmm.presentation.screens.launches.LaunchesScreen
-import com.prasan.spacexkmm.presentation.screens.rockets.RocketScreen
+import com.prasan.spacexkmm.presentation.screens.rockets.RocketScreenContent
 
 @Composable
 fun MainScreen() {
@@ -50,11 +50,11 @@ fun MainScreen() {
         },
         content = {
             Box(modifier = Modifier.fillMaxSize().then(Modifier.padding(16.dp))) {
-                when(selectedItem.route) {
-                    "rockets" -> RocketScreen()
+                /*when(selectedItem.route) {
+                    "rockets" -> RocketScreenContent()
                     "company" -> CompanyInfoScreen()
                     "launches" -> LaunchesScreen()
-                }
+                }*/
             }
         }
     )

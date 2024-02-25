@@ -1,9 +1,9 @@
 [versions]
-compose = "1.6.1"
+compose = "1.6.2"
 compose-plugin = "1.5.12"
 compose-compiler = "1.5.4"
 agp = "8.2.2"
-android-minSdk = "24"
+android-minSdk = "28"
 android-compileSdk = "34"
 android-targetSdk = "34"
 androidx-activityCompose = "1.8.2"
@@ -20,9 +20,9 @@ coroutines = "1.8.0"
 ktor = "2.3.8"
 sqlDelight = "1.5.5"
 dateTime = "0.5.0"
-serialization-plugin = "1.9.20"
+serialization-plugin = "1.9.22"
 sqlDelight-plugin = "1.5.5"
-tlaster-precompose = "1.5.0"
+circuit = "0.19.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -32,6 +32,7 @@ compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-animation = { module = "androidx.compose.foundation:animation", version.ref = "compose" }
 compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
 androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
@@ -46,7 +47,6 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
-
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-content = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
@@ -56,11 +56,10 @@ sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref =
 sqldelight-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqldelight-ios = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelight" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "dateTime" }
-tlaster-precompose = { module = "moe.tlaster:precompose", version.ref = "tlaster-precompose" }
-tlaster-precompose-viewmodel = { module = "moe.tlaster:precompose-viewmodel", version.ref = "tlaster-precompose" }
-tlaster-precompose-koin = { module = "moe.tlaster:precompose-koin", version.ref = "tlaster-precompose" }
+slack-circuit = { module = "com.slack.circuit:circuit-foundation", version.ref = "circuit" }
 
 [plugins]
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
