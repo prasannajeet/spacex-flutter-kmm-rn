@@ -44,7 +44,7 @@ kotlin {
             //export(project(":anotherKMMModule"))
             //transitiveExport = false // This is default.
             // Bitcode embedding
-            embedBitcode(BitcodeEmbeddingMode.BITCODE)
+            //embedBitcode(BitcodeEmbeddingMode.BITCODE)
 
             binaryOption("bundleId", "com.prasan.spacexkmm")
         }
