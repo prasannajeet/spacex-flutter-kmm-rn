@@ -1,12 +1,14 @@
 import org.jetbrains.compose.ExperimentalComposeLibrary
+import org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode
+import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.serialization)
-    alias(libs.plugins.sqldelight)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.native.cocoapods)
 }
 
 kotlin {
@@ -22,12 +24,37 @@ kotlin {
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
+    )
+
+    cocoapods {
+        version = "1.0"
+        summary = "Cocoapods for KMM project"
+        name = "ComposeApp"
+        authors = "Prasan"
+        ios.deploymentTarget = "16"
+        framework {
+            // Required properties
+            // Framework name configuration. Use this property instead of deprecated 'frameworkName'
             baseName = "ComposeApp"
-            isStatic = true
+
+            // Optional properties
+            // Specify the framework linking type. It's dynamic by default.
+            isStatic = false
+            // Dependency export
+            //export(project(":anotherKMMModule"))
+            //transitiveExport = false // This is default.
+            // Bitcode embedding
+            embedBitcode(BitcodeEmbeddingMode.BITCODE)
+
             binaryOption("bundleId", "com.prasan.spacexkmm")
         }
+
+        pod("AFNetworking") {
+            version = "~> 4.0.1"
+        }
+        // Maps custom Xcode configuration to NativeBuildType
+        xcodeConfigurationToNativeBuildType["CUSTOM_DEBUG"] = NativeBuildType.DEBUG
+        xcodeConfigurationToNativeBuildType["CUSTOM_RELEASE"] = NativeBuildType.RELEASE
     }
 
     sourceSets {
@@ -39,7 +66,6 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
             implementation(libs.koin.android)
             implementation(libs.ktor.android)
-            //implementation(libs.sqldelight.android)
         }
         commonMain.dependencies {
             api(compose.runtime)
@@ -54,13 +80,11 @@ kotlin {
             implementation(libs.ktor.core)
             implementation(libs.ktor.content)
             implementation(libs.ktor.serialization)
-            //implementation(libs.sqldelight.runtime)
             implementation(libs.kotlinx.datetime)
             api(libs.slack.circuit)
         }
         iosMain.dependencies {
             implementation(libs.ktor.ios)
-            //implementation(libs.sqldelight.ios)
         }
     }
 }
