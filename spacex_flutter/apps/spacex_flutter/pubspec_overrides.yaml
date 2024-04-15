@@ -1,0 +1,12 @@
+# melos_managed_dependency_overrides: spacex_company_info,spacex_design,spacex_launches,spacex_network,spacex_rockets
+dependency_overrides:
+  spacex_company_info:
+    path: ../../features/spacex_company_info
+  spacex_design:
+    path: ../../packages/spacex_design
+  spacex_launches:
+    path: ../../features/spacex_launches
+  spacex_network:
+    path: ../../packages/spacex_network
+  spacex_rockets:
+    path: ../../features/spacex_rockets

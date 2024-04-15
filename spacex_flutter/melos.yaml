@@ -1,0 +1,8 @@
+name: SpaceXFlutter
+packages:
+  - apps/*
+  - features/*
+  - packages/*
+  - packages/*/*
+  - packages/*/*/*
+  - tests
