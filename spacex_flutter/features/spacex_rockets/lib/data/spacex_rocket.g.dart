@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'spacex_rockets.dart';
+part of 'spacex_rocket.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$Spacex_rocketsImpl _$$Spacex_rocketsImplFromJson(Map<String, dynamic> json) =>
-    _$Spacex_rocketsImpl(
+_$Spacex_rocketImpl _$$Spacex_rocketImplFromJson(Map<String, dynamic> json) =>
+    _$Spacex_rocketImpl(
       height: json['height'] == null
           ? null
           : HeightBean.fromJson(json['height'] as Map<String, dynamic>),
@@ -19,21 +19,21 @@ _$Spacex_rocketsImpl _$$Spacex_rocketsImplFromJson(Map<String, dynamic> json) =>
           : MassBean.fromJson(json['mass'] as Map<String, dynamic>),
       firstStage: json['first_stage'] == null
           ? null
-          : FirstStageBean.fromJson(
+          : First_stageBean.fromJson(
               json['first_stage'] as Map<String, dynamic>),
       secondStage: json['second_stage'] == null
           ? null
-          : SecondStageBean.fromJson(
+          : Second_stageBean.fromJson(
               json['second_stage'] as Map<String, dynamic>),
       engines: json['engines'] == null
           ? null
           : EnginesBean.fromJson(json['engines'] as Map<String, dynamic>),
       landingLegs: json['landing_legs'] == null
           ? null
-          : LandingLegsBean.fromJson(
+          : Landing_legsBean.fromJson(
               json['landing_legs'] as Map<String, dynamic>),
       payloadWeights: (json['payload_weights'] as List<dynamic>?)
-          ?.map((e) => PayloadWeightsBean.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Payload_weightsBean.fromJson(e as Map<String, dynamic>))
           .toList(),
       flickrImages: (json['flickr_images'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -41,10 +41,10 @@ _$Spacex_rocketsImpl _$$Spacex_rocketsImplFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
       type: json['type'] as String?,
       active: json['active'] as bool?,
-      stages: json['stages'] as int?,
-      boosters: json['boosters'] as int?,
-      costPerLaunch: json['cost_per_launch'] as int?,
-      successRatePct: json['success_rate_pct'] as int?,
+      stages: json['stages'] as num?,
+      boosters: json['boosters'] as num?,
+      costPerLaunch: json['cost_per_launch'] as num?,
+      successRatePct: json['success_rate_pct'] as num?,
       firstFlight: json['first_flight'] as String?,
       country: json['country'] as String?,
       company: json['company'] as String?,
@@ -53,8 +53,7 @@ _$Spacex_rocketsImpl _$$Spacex_rocketsImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
     );
 
-Map<String, dynamic> _$$Spacex_rocketsImplToJson(
-        _$Spacex_rocketsImpl instance) =>
+Map<String, dynamic> _$$Spacex_rocketImplToJson(_$Spacex_rocketImpl instance) =>
     <String, dynamic>{
       'height': instance.height,
       'diameter': instance.diameter,
@@ -80,17 +79,17 @@ Map<String, dynamic> _$$Spacex_rocketsImplToJson(
       'id': instance.id,
     };
 
-_$PayloadWeightsBeanImpl _$$PayloadWeightsBeanImplFromJson(
+_$Payload_weightsBeanImpl _$$Payload_weightsBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$PayloadWeightsBeanImpl(
+    _$Payload_weightsBeanImpl(
       id: json['id'] as String?,
       name: json['name'] as String?,
-      kg: json['kg'] as int?,
-      lb: json['lb'] as int?,
+      kg: json['kg'] as num?,
+      lb: json['lb'] as num?,
     );
 
-Map<String, dynamic> _$$PayloadWeightsBeanImplToJson(
-        _$PayloadWeightsBeanImpl instance) =>
+Map<String, dynamic> _$$Payload_weightsBeanImplToJson(
+        _$Payload_weightsBeanImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -98,14 +97,14 @@ Map<String, dynamic> _$$PayloadWeightsBeanImplToJson(
       'lb': instance.lb,
     };
 
-_$LandingLegsBeanImpl _$$LandingLegsBeanImplFromJson(
+_$Landing_legsBeanImpl _$$Landing_legsBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$LandingLegsBeanImpl(
-      number: json['number'] as int?,
+    _$Landing_legsBeanImpl(
+      number: json['number'] as num?,
     );
 
-Map<String, dynamic> _$$LandingLegsBeanImplToJson(
-        _$LandingLegsBeanImpl instance) =>
+Map<String, dynamic> _$$Landing_legsBeanImplToJson(
+        _$Landing_legsBeanImpl instance) =>
     <String, dynamic>{
       'number': instance.number,
     };
@@ -117,20 +116,20 @@ _$EnginesBeanImpl _$$EnginesBeanImplFromJson(Map<String, dynamic> json) =>
           : IspBean.fromJson(json['isp'] as Map<String, dynamic>),
       thrustSeaLevel: json['thrust_sea_level'] == null
           ? null
-          : ThrustSeaLevelBean.fromJson(
+          : Thrust_sea_levelBean.fromJson(
               json['thrust_sea_level'] as Map<String, dynamic>),
       thrustVacuum: json['thrust_vacuum'] == null
           ? null
-          : ThrustVacuumBean.fromJson(
+          : Thrust_vacuumBean.fromJson(
               json['thrust_vacuum'] as Map<String, dynamic>),
-      number: json['number'] as int?,
+      number: json['number'] as num?,
       type: json['type'] as String?,
       version: json['version'] as String?,
       layout: json['layout'] as String?,
-      engineLossMax: json['engine_loss_max'] as int?,
+      engineLossMax: json['engine_loss_max'] as num?,
       propellant1: json['propellant_1'] as String?,
       propellant2: json['propellant_2'] as String?,
-      thrustToWeight: json['thrust_to_weight'] as int?,
+      thrustToWeight: json['thrust_to_weight'] as num?,
     );
 
 Map<String, dynamic> _$$EnginesBeanImplToJson(_$EnginesBeanImpl instance) =>
@@ -148,29 +147,29 @@ Map<String, dynamic> _$$EnginesBeanImplToJson(_$EnginesBeanImpl instance) =>
       'thrust_to_weight': instance.thrustToWeight,
     };
 
-_$ThrustVacuumBeanImpl _$$ThrustVacuumBeanImplFromJson(
+_$Thrust_vacuumBeanImpl _$$Thrust_vacuumBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$ThrustVacuumBeanImpl(
-      kN: json['kN'] as int?,
-      lbf: json['lbf'] as int?,
+    _$Thrust_vacuumBeanImpl(
+      kN: json['kN'] as num?,
+      lbf: json['lbf'] as num?,
     );
 
-Map<String, dynamic> _$$ThrustVacuumBeanImplToJson(
-        _$ThrustVacuumBeanImpl instance) =>
+Map<String, dynamic> _$$Thrust_vacuumBeanImplToJson(
+        _$Thrust_vacuumBeanImpl instance) =>
     <String, dynamic>{
       'kN': instance.kN,
       'lbf': instance.lbf,
     };
 
-_$ThrustSeaLevelBeanImpl _$$ThrustSeaLevelBeanImplFromJson(
+_$Thrust_sea_levelBeanImpl _$$Thrust_sea_levelBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$ThrustSeaLevelBeanImpl(
-      kN: json['kN'] as int?,
-      lbf: json['lbf'] as int?,
+    _$Thrust_sea_levelBeanImpl(
+      kN: json['kN'] as num?,
+      lbf: json['lbf'] as num?,
     );
 
-Map<String, dynamic> _$$ThrustSeaLevelBeanImplToJson(
-        _$ThrustSeaLevelBeanImpl instance) =>
+Map<String, dynamic> _$$Thrust_sea_levelBeanImplToJson(
+        _$Thrust_sea_levelBeanImpl instance) =>
     <String, dynamic>{
       'kN': instance.kN,
       'lbf': instance.lbf,
@@ -178,8 +177,8 @@ Map<String, dynamic> _$$ThrustSeaLevelBeanImplToJson(
 
 _$IspBeanImpl _$$IspBeanImplFromJson(Map<String, dynamic> json) =>
     _$IspBeanImpl(
-      seaLevel: json['sea_level'] as int?,
-      vacuum: json['vacuum'] as int?,
+      seaLevel: json['sea_level'] as num?,
+      vacuum: json['vacuum'] as num?,
     );
 
 Map<String, dynamic> _$$IspBeanImplToJson(_$IspBeanImpl instance) =>
@@ -188,9 +187,9 @@ Map<String, dynamic> _$$IspBeanImplToJson(_$IspBeanImpl instance) =>
       'vacuum': instance.vacuum,
     };
 
-_$SecondStageBeanImpl _$$SecondStageBeanImplFromJson(
+_$Second_stageBeanImpl _$$Second_stageBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$SecondStageBeanImpl(
+    _$Second_stageBeanImpl(
       thrust: json['thrust'] == null
           ? null
           : ThrustBean.fromJson(json['thrust'] as Map<String, dynamic>),
@@ -198,13 +197,13 @@ _$SecondStageBeanImpl _$$SecondStageBeanImplFromJson(
           ? null
           : PayloadsBean.fromJson(json['payloads'] as Map<String, dynamic>),
       reusable: json['reusable'] as bool?,
-      engines: json['engines'] as int?,
-      fuelAmountTons: (json['fuel_amount_tons'] as num?)?.toDouble(),
-      burnTimeSec: json['burn_time_sec'] as int?,
+      engines: json['engines'] as num?,
+      fuelAmountTons: json['fuel_amount_tons'] as num?,
+      burnTimeSec: json['burn_time_sec'] as num?,
     );
 
-Map<String, dynamic> _$$SecondStageBeanImplToJson(
-        _$SecondStageBeanImpl instance) =>
+Map<String, dynamic> _$$Second_stageBeanImplToJson(
+        _$Second_stageBeanImpl instance) =>
     <String, dynamic>{
       'thrust': instance.thrust,
       'payloads': instance.payloads,
@@ -218,7 +217,7 @@ _$PayloadsBeanImpl _$$PayloadsBeanImplFromJson(Map<String, dynamic> json) =>
     _$PayloadsBeanImpl(
       compositeFairing: json['composite_fairing'] == null
           ? null
-          : CompositeFairingBean.fromJson(
+          : Composite_fairingBean.fromJson(
               json['composite_fairing'] as Map<String, dynamic>),
       option1: json['option_1'] as String?,
     );
@@ -229,9 +228,9 @@ Map<String, dynamic> _$$PayloadsBeanImplToJson(_$PayloadsBeanImpl instance) =>
       'option_1': instance.option1,
     };
 
-_$CompositeFairingBeanImpl _$$CompositeFairingBeanImplFromJson(
+_$Composite_fairingBeanImpl _$$Composite_fairingBeanImplFromJson(
         Map<String, dynamic> json) =>
-    _$CompositeFairingBeanImpl(
+    _$Composite_fairingBeanImpl(
       height: json['height'] == null
           ? null
           : HeightBean.fromJson(json['height'] as Map<String, dynamic>),
@@ -240,8 +239,8 @@ _$CompositeFairingBeanImpl _$$CompositeFairingBeanImplFromJson(
           : DiameterBean.fromJson(json['diameter'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CompositeFairingBeanImplToJson(
-        _$CompositeFairingBeanImpl instance) =>
+Map<String, dynamic> _$$Composite_fairingBeanImplToJson(
+        _$Composite_fairingBeanImpl instance) =>
     <String, dynamic>{
       'height': instance.height,
       'diameter': instance.diameter,
@@ -249,8 +248,8 @@ Map<String, dynamic> _$$CompositeFairingBeanImplToJson(
 
 _$DiameterBeanImpl _$$DiameterBeanImplFromJson(Map<String, dynamic> json) =>
     _$DiameterBeanImpl(
-      meters: (json['meters'] as num?)?.toDouble(),
-      feet: (json['feet'] as num?)?.toDouble(),
+      meters: json['meters'] as num?,
+      feet: json['feet'] as num?,
     );
 
 Map<String, dynamic> _$$DiameterBeanImplToJson(_$DiameterBeanImpl instance) =>
@@ -261,8 +260,8 @@ Map<String, dynamic> _$$DiameterBeanImplToJson(_$DiameterBeanImpl instance) =>
 
 _$HeightBeanImpl _$$HeightBeanImplFromJson(Map<String, dynamic> json) =>
     _$HeightBeanImpl(
-      meters: (json['meters'] as num?)?.toDouble(),
-      feet: (json['feet'] as num?)?.toDouble(),
+      meters: json['meters'] as num?,
+      feet: json['feet'] as num?,
     );
 
 Map<String, dynamic> _$$HeightBeanImplToJson(_$HeightBeanImpl instance) =>
@@ -273,8 +272,8 @@ Map<String, dynamic> _$$HeightBeanImplToJson(_$HeightBeanImpl instance) =>
 
 _$ThrustBeanImpl _$$ThrustBeanImplFromJson(Map<String, dynamic> json) =>
     _$ThrustBeanImpl(
-      kN: json['kN'] as int?,
-      lbf: json['lbf'] as int?,
+      kN: json['kN'] as num?,
+      lbf: json['lbf'] as num?,
     );
 
 Map<String, dynamic> _$$ThrustBeanImplToJson(_$ThrustBeanImpl instance) =>
@@ -283,24 +282,25 @@ Map<String, dynamic> _$$ThrustBeanImplToJson(_$ThrustBeanImpl instance) =>
       'lbf': instance.lbf,
     };
 
-_$FirstStageBeanImpl _$$FirstStageBeanImplFromJson(Map<String, dynamic> json) =>
-    _$FirstStageBeanImpl(
+_$First_stageBeanImpl _$$First_stageBeanImplFromJson(
+        Map<String, dynamic> json) =>
+    _$First_stageBeanImpl(
       thrustSeaLevel: json['thrust_sea_level'] == null
           ? null
-          : ThrustSeaLevelBean.fromJson(
+          : Thrust_sea_levelBean.fromJson(
               json['thrust_sea_level'] as Map<String, dynamic>),
       thrustVacuum: json['thrust_vacuum'] == null
           ? null
-          : ThrustVacuumBean.fromJson(
+          : Thrust_vacuumBean.fromJson(
               json['thrust_vacuum'] as Map<String, dynamic>),
       reusable: json['reusable'] as bool?,
-      engines: json['engines'] as int?,
-      fuelAmountTons: (json['fuel_amount_tons'] as num?)?.toDouble(),
-      burnTimeSec: json['burn_time_sec'] as int?,
+      engines: json['engines'] as num?,
+      fuelAmountTons: json['fuel_amount_tons'] as num?,
+      burnTimeSec: json['burn_time_sec'] as num?,
     );
 
-Map<String, dynamic> _$$FirstStageBeanImplToJson(
-        _$FirstStageBeanImpl instance) =>
+Map<String, dynamic> _$$First_stageBeanImplToJson(
+        _$First_stageBeanImpl instance) =>
     <String, dynamic>{
       'thrust_sea_level': instance.thrustSeaLevel,
       'thrust_vacuum': instance.thrustVacuum,
@@ -312,8 +312,8 @@ Map<String, dynamic> _$$FirstStageBeanImplToJson(
 
 _$MassBeanImpl _$$MassBeanImplFromJson(Map<String, dynamic> json) =>
     _$MassBeanImpl(
-      kg: json['kg'] as int?,
-      lb: json['lb'] as int?,
+      kg: json['kg'] as num?,
+      lb: json['lb'] as num?,
     );
 
 Map<String, dynamic> _$$MassBeanImplToJson(_$MassBeanImpl instance) =>

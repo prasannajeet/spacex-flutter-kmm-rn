@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'spacex_rockets.dart';
+part of 'spacex_rocket.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-SpaceXRockets _$SpaceXRocketsFromJson(Map<String, dynamic> json) {
-  return _Spacex_rockets.fromJson(json);
+Spacex_rocket _$Spacex_rocketFromJson(Map<String, dynamic> json) {
+  return _Spacex_rocket.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SpaceXRockets {
+mixin _$Spacex_rocket {
   @JsonKey(name: 'height')
   HeightBean? get height => throw _privateConstructorUsedError;
   @JsonKey(name: 'diameter')
@@ -27,15 +27,15 @@ mixin _$SpaceXRockets {
   @JsonKey(name: 'mass')
   MassBean? get mass => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_stage')
-  FirstStageBean? get firstStage => throw _privateConstructorUsedError;
+  First_stageBean? get firstStage => throw _privateConstructorUsedError;
   @JsonKey(name: 'second_stage')
-  SecondStageBean? get secondStage => throw _privateConstructorUsedError;
+  Second_stageBean? get secondStage => throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
   EnginesBean? get engines => throw _privateConstructorUsedError;
   @JsonKey(name: 'landing_legs')
-  LandingLegsBean? get landingLegs => throw _privateConstructorUsedError;
+  Landing_legsBean? get landingLegs => throw _privateConstructorUsedError;
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightsBean>? get payloadWeights =>
+  List<Payload_weightsBean>? get payloadWeights =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages => throw _privateConstructorUsedError;
@@ -46,13 +46,13 @@ mixin _$SpaceXRockets {
   @JsonKey(name: 'active')
   bool? get active => throw _privateConstructorUsedError;
   @JsonKey(name: 'stages')
-  int? get stages => throw _privateConstructorUsedError;
+  num? get stages => throw _privateConstructorUsedError;
   @JsonKey(name: 'boosters')
-  int? get boosters => throw _privateConstructorUsedError;
+  num? get boosters => throw _privateConstructorUsedError;
   @JsonKey(name: 'cost_per_launch')
-  int? get costPerLaunch => throw _privateConstructorUsedError;
+  num? get costPerLaunch => throw _privateConstructorUsedError;
   @JsonKey(name: 'success_rate_pct')
-  int? get successRatePct => throw _privateConstructorUsedError;
+  num? get successRatePct => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_flight')
   String? get firstFlight => throw _privateConstructorUsedError;
   @JsonKey(name: 'country')
@@ -68,34 +68,34 @@ mixin _$SpaceXRockets {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SpaceXRocketsCopyWith<SpaceXRockets> get copyWith =>
+  $Spacex_rocketCopyWith<Spacex_rocket> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SpaceXRocketsCopyWith<$Res> {
-  factory $SpaceXRocketsCopyWith(
-          SpaceXRockets value, $Res Function(SpaceXRockets) then) =
-      _$SpaceXRocketsCopyWithImpl<$Res, SpaceXRockets>;
+abstract class $Spacex_rocketCopyWith<$Res> {
+  factory $Spacex_rocketCopyWith(
+          Spacex_rocket value, $Res Function(Spacex_rocket) then) =
+      _$Spacex_rocketCopyWithImpl<$Res, Spacex_rocket>;
   @useResult
   $Res call(
       {@JsonKey(name: 'height') HeightBean? height,
       @JsonKey(name: 'diameter') DiameterBean? diameter,
       @JsonKey(name: 'mass') MassBean? mass,
-      @JsonKey(name: 'first_stage') FirstStageBean? firstStage,
-      @JsonKey(name: 'second_stage') SecondStageBean? secondStage,
+      @JsonKey(name: 'first_stage') First_stageBean? firstStage,
+      @JsonKey(name: 'second_stage') Second_stageBean? secondStage,
       @JsonKey(name: 'engines') EnginesBean? engines,
-      @JsonKey(name: 'landing_legs') LandingLegsBean? landingLegs,
+      @JsonKey(name: 'landing_legs') Landing_legsBean? landingLegs,
       @JsonKey(name: 'payload_weights')
-      List<PayloadWeightsBean>? payloadWeights,
+      List<Payload_weightsBean>? payloadWeights,
       @JsonKey(name: 'flickr_images') List<String>? flickrImages,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'active') bool? active,
-      @JsonKey(name: 'stages') int? stages,
-      @JsonKey(name: 'boosters') int? boosters,
-      @JsonKey(name: 'cost_per_launch') int? costPerLaunch,
-      @JsonKey(name: 'success_rate_pct') int? successRatePct,
+      @JsonKey(name: 'stages') num? stages,
+      @JsonKey(name: 'boosters') num? boosters,
+      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+      @JsonKey(name: 'success_rate_pct') num? successRatePct,
       @JsonKey(name: 'first_flight') String? firstFlight,
       @JsonKey(name: 'country') String? country,
       @JsonKey(name: 'company') String? company,
@@ -106,16 +106,16 @@ abstract class $SpaceXRocketsCopyWith<$Res> {
   $HeightBeanCopyWith<$Res>? get height;
   $DiameterBeanCopyWith<$Res>? get diameter;
   $MassBeanCopyWith<$Res>? get mass;
-  $FirstStageBeanCopyWith<$Res>? get firstStage;
-  $SecondStageBeanCopyWith<$Res>? get secondStage;
+  $First_stageBeanCopyWith<$Res>? get firstStage;
+  $Second_stageBeanCopyWith<$Res>? get secondStage;
   $EnginesBeanCopyWith<$Res>? get engines;
-  $LandingLegsBeanCopyWith<$Res>? get landingLegs;
+  $Landing_legsBeanCopyWith<$Res>? get landingLegs;
 }
 
 /// @nodoc
-class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
-    implements $SpaceXRocketsCopyWith<$Res> {
-  _$SpaceXRocketsCopyWithImpl(this._value, this._then);
+class _$Spacex_rocketCopyWithImpl<$Res, $Val extends Spacex_rocket>
+    implements $Spacex_rocketCopyWith<$Res> {
+  _$Spacex_rocketCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -164,11 +164,11 @@ class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
       firstStage: freezed == firstStage
           ? _value.firstStage
           : firstStage // ignore: cast_nullable_to_non_nullable
-              as FirstStageBean?,
+              as First_stageBean?,
       secondStage: freezed == secondStage
           ? _value.secondStage
           : secondStage // ignore: cast_nullable_to_non_nullable
-              as SecondStageBean?,
+              as Second_stageBean?,
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
@@ -176,11 +176,11 @@ class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
       landingLegs: freezed == landingLegs
           ? _value.landingLegs
           : landingLegs // ignore: cast_nullable_to_non_nullable
-              as LandingLegsBean?,
+              as Landing_legsBean?,
       payloadWeights: freezed == payloadWeights
           ? _value.payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
-              as List<PayloadWeightsBean>?,
+              as List<Payload_weightsBean>?,
       flickrImages: freezed == flickrImages
           ? _value.flickrImages
           : flickrImages // ignore: cast_nullable_to_non_nullable
@@ -200,19 +200,19 @@ class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
       stages: freezed == stages
           ? _value.stages
           : stages // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       boosters: freezed == boosters
           ? _value.boosters
           : boosters // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       costPerLaunch: freezed == costPerLaunch
           ? _value.costPerLaunch
           : costPerLaunch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       successRatePct: freezed == successRatePct
           ? _value.successRatePct
           : successRatePct // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       firstFlight: freezed == firstFlight
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
@@ -278,24 +278,24 @@ class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
 
   @override
   @pragma('vm:prefer-inline')
-  $FirstStageBeanCopyWith<$Res>? get firstStage {
+  $First_stageBeanCopyWith<$Res>? get firstStage {
     if (_value.firstStage == null) {
       return null;
     }
 
-    return $FirstStageBeanCopyWith<$Res>(_value.firstStage!, (value) {
+    return $First_stageBeanCopyWith<$Res>(_value.firstStage!, (value) {
       return _then(_value.copyWith(firstStage: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SecondStageBeanCopyWith<$Res>? get secondStage {
+  $Second_stageBeanCopyWith<$Res>? get secondStage {
     if (_value.secondStage == null) {
       return null;
     }
 
-    return $SecondStageBeanCopyWith<$Res>(_value.secondStage!, (value) {
+    return $Second_stageBeanCopyWith<$Res>(_value.secondStage!, (value) {
       return _then(_value.copyWith(secondStage: value) as $Val);
     });
   }
@@ -314,43 +314,43 @@ class _$SpaceXRocketsCopyWithImpl<$Res, $Val extends SpaceXRockets>
 
   @override
   @pragma('vm:prefer-inline')
-  $LandingLegsBeanCopyWith<$Res>? get landingLegs {
+  $Landing_legsBeanCopyWith<$Res>? get landingLegs {
     if (_value.landingLegs == null) {
       return null;
     }
 
-    return $LandingLegsBeanCopyWith<$Res>(_value.landingLegs!, (value) {
+    return $Landing_legsBeanCopyWith<$Res>(_value.landingLegs!, (value) {
       return _then(_value.copyWith(landingLegs: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$Spacex_rocketsImplCopyWith<$Res>
-    implements $SpaceXRocketsCopyWith<$Res> {
-  factory _$$Spacex_rocketsImplCopyWith(_$Spacex_rocketsImpl value,
-          $Res Function(_$Spacex_rocketsImpl) then) =
-      __$$Spacex_rocketsImplCopyWithImpl<$Res>;
+abstract class _$$Spacex_rocketImplCopyWith<$Res>
+    implements $Spacex_rocketCopyWith<$Res> {
+  factory _$$Spacex_rocketImplCopyWith(
+          _$Spacex_rocketImpl value, $Res Function(_$Spacex_rocketImpl) then) =
+      __$$Spacex_rocketImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'height') HeightBean? height,
       @JsonKey(name: 'diameter') DiameterBean? diameter,
       @JsonKey(name: 'mass') MassBean? mass,
-      @JsonKey(name: 'first_stage') FirstStageBean? firstStage,
-      @JsonKey(name: 'second_stage') SecondStageBean? secondStage,
+      @JsonKey(name: 'first_stage') First_stageBean? firstStage,
+      @JsonKey(name: 'second_stage') Second_stageBean? secondStage,
       @JsonKey(name: 'engines') EnginesBean? engines,
-      @JsonKey(name: 'landing_legs') LandingLegsBean? landingLegs,
+      @JsonKey(name: 'landing_legs') Landing_legsBean? landingLegs,
       @JsonKey(name: 'payload_weights')
-      List<PayloadWeightsBean>? payloadWeights,
+      List<Payload_weightsBean>? payloadWeights,
       @JsonKey(name: 'flickr_images') List<String>? flickrImages,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'active') bool? active,
-      @JsonKey(name: 'stages') int? stages,
-      @JsonKey(name: 'boosters') int? boosters,
-      @JsonKey(name: 'cost_per_launch') int? costPerLaunch,
-      @JsonKey(name: 'success_rate_pct') int? successRatePct,
+      @JsonKey(name: 'stages') num? stages,
+      @JsonKey(name: 'boosters') num? boosters,
+      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+      @JsonKey(name: 'success_rate_pct') num? successRatePct,
       @JsonKey(name: 'first_flight') String? firstFlight,
       @JsonKey(name: 'country') String? country,
       @JsonKey(name: 'company') String? company,
@@ -365,21 +365,21 @@ abstract class _$$Spacex_rocketsImplCopyWith<$Res>
   @override
   $MassBeanCopyWith<$Res>? get mass;
   @override
-  $FirstStageBeanCopyWith<$Res>? get firstStage;
+  $First_stageBeanCopyWith<$Res>? get firstStage;
   @override
-  $SecondStageBeanCopyWith<$Res>? get secondStage;
+  $Second_stageBeanCopyWith<$Res>? get secondStage;
   @override
   $EnginesBeanCopyWith<$Res>? get engines;
   @override
-  $LandingLegsBeanCopyWith<$Res>? get landingLegs;
+  $Landing_legsBeanCopyWith<$Res>? get landingLegs;
 }
 
 /// @nodoc
-class __$$Spacex_rocketsImplCopyWithImpl<$Res>
-    extends _$SpaceXRocketsCopyWithImpl<$Res, _$Spacex_rocketsImpl>
-    implements _$$Spacex_rocketsImplCopyWith<$Res> {
-  __$$Spacex_rocketsImplCopyWithImpl(
-      _$Spacex_rocketsImpl _value, $Res Function(_$Spacex_rocketsImpl) _then)
+class __$$Spacex_rocketImplCopyWithImpl<$Res>
+    extends _$Spacex_rocketCopyWithImpl<$Res, _$Spacex_rocketImpl>
+    implements _$$Spacex_rocketImplCopyWith<$Res> {
+  __$$Spacex_rocketImplCopyWithImpl(
+      _$Spacex_rocketImpl _value, $Res Function(_$Spacex_rocketImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -408,7 +408,7 @@ class __$$Spacex_rocketsImplCopyWithImpl<$Res>
     Object? description = freezed,
     Object? id = freezed,
   }) {
-    return _then(_$Spacex_rocketsImpl(
+    return _then(_$Spacex_rocketImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -424,11 +424,11 @@ class __$$Spacex_rocketsImplCopyWithImpl<$Res>
       firstStage: freezed == firstStage
           ? _value.firstStage
           : firstStage // ignore: cast_nullable_to_non_nullable
-              as FirstStageBean?,
+              as First_stageBean?,
       secondStage: freezed == secondStage
           ? _value.secondStage
           : secondStage // ignore: cast_nullable_to_non_nullable
-              as SecondStageBean?,
+              as Second_stageBean?,
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
@@ -436,11 +436,11 @@ class __$$Spacex_rocketsImplCopyWithImpl<$Res>
       landingLegs: freezed == landingLegs
           ? _value.landingLegs
           : landingLegs // ignore: cast_nullable_to_non_nullable
-              as LandingLegsBean?,
+              as Landing_legsBean?,
       payloadWeights: freezed == payloadWeights
           ? _value._payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
-              as List<PayloadWeightsBean>?,
+              as List<Payload_weightsBean>?,
       flickrImages: freezed == flickrImages
           ? _value._flickrImages
           : flickrImages // ignore: cast_nullable_to_non_nullable
@@ -460,19 +460,19 @@ class __$$Spacex_rocketsImplCopyWithImpl<$Res>
       stages: freezed == stages
           ? _value.stages
           : stages // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       boosters: freezed == boosters
           ? _value.boosters
           : boosters // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       costPerLaunch: freezed == costPerLaunch
           ? _value.costPerLaunch
           : costPerLaunch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       successRatePct: freezed == successRatePct
           ? _value.successRatePct
           : successRatePct // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       firstFlight: freezed == firstFlight
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
@@ -503,8 +503,8 @@ class __$$Spacex_rocketsImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$Spacex_rocketsImpl implements _Spacex_rockets {
-  const _$Spacex_rocketsImpl(
+class _$Spacex_rocketImpl implements _Spacex_rocket {
+  const _$Spacex_rocketImpl(
       {@JsonKey(name: 'height') this.height,
       @JsonKey(name: 'diameter') this.diameter,
       @JsonKey(name: 'mass') this.mass,
@@ -513,7 +513,7 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
       @JsonKey(name: 'engines') this.engines,
       @JsonKey(name: 'landing_legs') this.landingLegs,
       @JsonKey(name: 'payload_weights')
-      final List<PayloadWeightsBean>? payloadWeights,
+      final List<Payload_weightsBean>? payloadWeights,
       @JsonKey(name: 'flickr_images') final List<String>? flickrImages,
       @JsonKey(name: 'name') this.name,
       @JsonKey(name: 'type') this.type,
@@ -531,8 +531,8 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
       : _payloadWeights = payloadWeights,
         _flickrImages = flickrImages;
 
-  factory _$Spacex_rocketsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$Spacex_rocketsImplFromJson(json);
+  factory _$Spacex_rocketImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Spacex_rocketImplFromJson(json);
 
   @override
   @JsonKey(name: 'height')
@@ -545,20 +545,20 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
   final MassBean? mass;
   @override
   @JsonKey(name: 'first_stage')
-  final FirstStageBean? firstStage;
+  final First_stageBean? firstStage;
   @override
   @JsonKey(name: 'second_stage')
-  final SecondStageBean? secondStage;
+  final Second_stageBean? secondStage;
   @override
   @JsonKey(name: 'engines')
   final EnginesBean? engines;
   @override
   @JsonKey(name: 'landing_legs')
-  final LandingLegsBean? landingLegs;
-  final List<PayloadWeightsBean>? _payloadWeights;
+  final Landing_legsBean? landingLegs;
+  final List<Payload_weightsBean>? _payloadWeights;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightsBean>? get payloadWeights {
+  List<Payload_weightsBean>? get payloadWeights {
     final value = _payloadWeights;
     if (value == null) return null;
     if (_payloadWeights is EqualUnmodifiableListView) return _payloadWeights;
@@ -588,16 +588,16 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
   final bool? active;
   @override
   @JsonKey(name: 'stages')
-  final int? stages;
+  final num? stages;
   @override
   @JsonKey(name: 'boosters')
-  final int? boosters;
+  final num? boosters;
   @override
   @JsonKey(name: 'cost_per_launch')
-  final int? costPerLaunch;
+  final num? costPerLaunch;
   @override
   @JsonKey(name: 'success_rate_pct')
-  final int? successRatePct;
+  final num? successRatePct;
   @override
   @JsonKey(name: 'first_flight')
   final String? firstFlight;
@@ -619,14 +619,14 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
 
   @override
   String toString() {
-    return 'SpaceXRockets(height: $height, diameter: $diameter, mass: $mass, firstStage: $firstStage, secondStage: $secondStage, engines: $engines, landingLegs: $landingLegs, payloadWeights: $payloadWeights, flickrImages: $flickrImages, name: $name, type: $type, active: $active, stages: $stages, boosters: $boosters, costPerLaunch: $costPerLaunch, successRatePct: $successRatePct, firstFlight: $firstFlight, country: $country, company: $company, wikipedia: $wikipedia, description: $description, id: $id)';
+    return 'Spacex_rocket(height: $height, diameter: $diameter, mass: $mass, firstStage: $firstStage, secondStage: $secondStage, engines: $engines, landingLegs: $landingLegs, payloadWeights: $payloadWeights, flickrImages: $flickrImages, name: $name, type: $type, active: $active, stages: $stages, boosters: $boosters, costPerLaunch: $costPerLaunch, successRatePct: $successRatePct, firstFlight: $firstFlight, country: $country, company: $company, wikipedia: $wikipedia, description: $description, id: $id)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Spacex_rocketsImpl &&
+            other is _$Spacex_rocketImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.diameter, diameter) ||
                 other.diameter == diameter) &&
@@ -694,46 +694,45 @@ class _$Spacex_rocketsImpl implements _Spacex_rockets {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Spacex_rocketsImplCopyWith<_$Spacex_rocketsImpl> get copyWith =>
-      __$$Spacex_rocketsImplCopyWithImpl<_$Spacex_rocketsImpl>(
-          this, _$identity);
+  _$$Spacex_rocketImplCopyWith<_$Spacex_rocketImpl> get copyWith =>
+      __$$Spacex_rocketImplCopyWithImpl<_$Spacex_rocketImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$Spacex_rocketsImplToJson(
+    return _$$Spacex_rocketImplToJson(
       this,
     );
   }
 }
 
-abstract class _Spacex_rockets implements SpaceXRockets {
-  const factory _Spacex_rockets(
+abstract class _Spacex_rocket implements Spacex_rocket {
+  const factory _Spacex_rocket(
       {@JsonKey(name: 'height') final HeightBean? height,
       @JsonKey(name: 'diameter') final DiameterBean? diameter,
       @JsonKey(name: 'mass') final MassBean? mass,
-      @JsonKey(name: 'first_stage') final FirstStageBean? firstStage,
-      @JsonKey(name: 'second_stage') final SecondStageBean? secondStage,
+      @JsonKey(name: 'first_stage') final First_stageBean? firstStage,
+      @JsonKey(name: 'second_stage') final Second_stageBean? secondStage,
       @JsonKey(name: 'engines') final EnginesBean? engines,
-      @JsonKey(name: 'landing_legs') final LandingLegsBean? landingLegs,
+      @JsonKey(name: 'landing_legs') final Landing_legsBean? landingLegs,
       @JsonKey(name: 'payload_weights')
-      final List<PayloadWeightsBean>? payloadWeights,
+      final List<Payload_weightsBean>? payloadWeights,
       @JsonKey(name: 'flickr_images') final List<String>? flickrImages,
       @JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'type') final String? type,
       @JsonKey(name: 'active') final bool? active,
-      @JsonKey(name: 'stages') final int? stages,
-      @JsonKey(name: 'boosters') final int? boosters,
-      @JsonKey(name: 'cost_per_launch') final int? costPerLaunch,
-      @JsonKey(name: 'success_rate_pct') final int? successRatePct,
+      @JsonKey(name: 'stages') final num? stages,
+      @JsonKey(name: 'boosters') final num? boosters,
+      @JsonKey(name: 'cost_per_launch') final num? costPerLaunch,
+      @JsonKey(name: 'success_rate_pct') final num? successRatePct,
       @JsonKey(name: 'first_flight') final String? firstFlight,
       @JsonKey(name: 'country') final String? country,
       @JsonKey(name: 'company') final String? company,
       @JsonKey(name: 'wikipedia') final String? wikipedia,
       @JsonKey(name: 'description') final String? description,
-      @JsonKey(name: 'id') final String? id}) = _$Spacex_rocketsImpl;
+      @JsonKey(name: 'id') final String? id}) = _$Spacex_rocketImpl;
 
-  factory _Spacex_rockets.fromJson(Map<String, dynamic> json) =
-      _$Spacex_rocketsImpl.fromJson;
+  factory _Spacex_rocket.fromJson(Map<String, dynamic> json) =
+      _$Spacex_rocketImpl.fromJson;
 
   @override
   @JsonKey(name: 'height')
@@ -746,19 +745,19 @@ abstract class _Spacex_rockets implements SpaceXRockets {
   MassBean? get mass;
   @override
   @JsonKey(name: 'first_stage')
-  FirstStageBean? get firstStage;
+  First_stageBean? get firstStage;
   @override
   @JsonKey(name: 'second_stage')
-  SecondStageBean? get secondStage;
+  Second_stageBean? get secondStage;
   @override
   @JsonKey(name: 'engines')
   EnginesBean? get engines;
   @override
   @JsonKey(name: 'landing_legs')
-  LandingLegsBean? get landingLegs;
+  Landing_legsBean? get landingLegs;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightsBean>? get payloadWeights;
+  List<Payload_weightsBean>? get payloadWeights;
   @override
   @JsonKey(name: 'flickr_images')
   List<String>? get flickrImages;
@@ -773,16 +772,16 @@ abstract class _Spacex_rockets implements SpaceXRockets {
   bool? get active;
   @override
   @JsonKey(name: 'stages')
-  int? get stages;
+  num? get stages;
   @override
   @JsonKey(name: 'boosters')
-  int? get boosters;
+  num? get boosters;
   @override
   @JsonKey(name: 'cost_per_launch')
-  int? get costPerLaunch;
+  num? get costPerLaunch;
   @override
   @JsonKey(name: 'success_rate_pct')
-  int? get successRatePct;
+  num? get successRatePct;
   @override
   @JsonKey(name: 'first_flight')
   String? get firstFlight;
@@ -803,48 +802,48 @@ abstract class _Spacex_rockets implements SpaceXRockets {
   String? get id;
   @override
   @JsonKey(ignore: true)
-  _$$Spacex_rocketsImplCopyWith<_$Spacex_rocketsImpl> get copyWith =>
+  _$$Spacex_rocketImplCopyWith<_$Spacex_rocketImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-PayloadWeightsBean _$PayloadWeightsBeanFromJson(Map<String, dynamic> json) {
-  return _PayloadWeightsBean.fromJson(json);
+Payload_weightsBean _$Payload_weightsBeanFromJson(Map<String, dynamic> json) {
+  return _Payload_weightsBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PayloadWeightsBean {
+mixin _$Payload_weightsBean {
   @JsonKey(name: 'id')
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'kg')
-  int? get kg => throw _privateConstructorUsedError;
+  num? get kg => throw _privateConstructorUsedError;
   @JsonKey(name: 'lb')
-  int? get lb => throw _privateConstructorUsedError;
+  num? get lb => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PayloadWeightsBeanCopyWith<PayloadWeightsBean> get copyWith =>
+  $Payload_weightsBeanCopyWith<Payload_weightsBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PayloadWeightsBeanCopyWith<$Res> {
-  factory $PayloadWeightsBeanCopyWith(
-          PayloadWeightsBean value, $Res Function(PayloadWeightsBean) then) =
-      _$PayloadWeightsBeanCopyWithImpl<$Res, PayloadWeightsBean>;
+abstract class $Payload_weightsBeanCopyWith<$Res> {
+  factory $Payload_weightsBeanCopyWith(
+          Payload_weightsBean value, $Res Function(Payload_weightsBean) then) =
+      _$Payload_weightsBeanCopyWithImpl<$Res, Payload_weightsBean>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'kg') int? kg,
-      @JsonKey(name: 'lb') int? lb});
+      @JsonKey(name: 'kg') num? kg,
+      @JsonKey(name: 'lb') num? lb});
 }
 
 /// @nodoc
-class _$PayloadWeightsBeanCopyWithImpl<$Res, $Val extends PayloadWeightsBean>
-    implements $PayloadWeightsBeanCopyWith<$Res> {
-  _$PayloadWeightsBeanCopyWithImpl(this._value, this._then);
+class _$Payload_weightsBeanCopyWithImpl<$Res, $Val extends Payload_weightsBean>
+    implements $Payload_weightsBeanCopyWith<$Res> {
+  _$Payload_weightsBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -871,36 +870,36 @@ class _$PayloadWeightsBeanCopyWithImpl<$Res, $Val extends PayloadWeightsBean>
       kg: freezed == kg
           ? _value.kg
           : kg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lb: freezed == lb
           ? _value.lb
           : lb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$PayloadWeightsBeanImplCopyWith<$Res>
-    implements $PayloadWeightsBeanCopyWith<$Res> {
-  factory _$$PayloadWeightsBeanImplCopyWith(_$PayloadWeightsBeanImpl value,
-          $Res Function(_$PayloadWeightsBeanImpl) then) =
-      __$$PayloadWeightsBeanImplCopyWithImpl<$Res>;
+abstract class _$$Payload_weightsBeanImplCopyWith<$Res>
+    implements $Payload_weightsBeanCopyWith<$Res> {
+  factory _$$Payload_weightsBeanImplCopyWith(_$Payload_weightsBeanImpl value,
+          $Res Function(_$Payload_weightsBeanImpl) then) =
+      __$$Payload_weightsBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'kg') int? kg,
-      @JsonKey(name: 'lb') int? lb});
+      @JsonKey(name: 'kg') num? kg,
+      @JsonKey(name: 'lb') num? lb});
 }
 
 /// @nodoc
-class __$$PayloadWeightsBeanImplCopyWithImpl<$Res>
-    extends _$PayloadWeightsBeanCopyWithImpl<$Res, _$PayloadWeightsBeanImpl>
-    implements _$$PayloadWeightsBeanImplCopyWith<$Res> {
-  __$$PayloadWeightsBeanImplCopyWithImpl(_$PayloadWeightsBeanImpl _value,
-      $Res Function(_$PayloadWeightsBeanImpl) _then)
+class __$$Payload_weightsBeanImplCopyWithImpl<$Res>
+    extends _$Payload_weightsBeanCopyWithImpl<$Res, _$Payload_weightsBeanImpl>
+    implements _$$Payload_weightsBeanImplCopyWith<$Res> {
+  __$$Payload_weightsBeanImplCopyWithImpl(_$Payload_weightsBeanImpl _value,
+      $Res Function(_$Payload_weightsBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -911,7 +910,7 @@ class __$$PayloadWeightsBeanImplCopyWithImpl<$Res>
     Object? kg = freezed,
     Object? lb = freezed,
   }) {
-    return _then(_$PayloadWeightsBeanImpl(
+    return _then(_$Payload_weightsBeanImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -923,26 +922,26 @@ class __$$PayloadWeightsBeanImplCopyWithImpl<$Res>
       kg: freezed == kg
           ? _value.kg
           : kg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lb: freezed == lb
           ? _value.lb
           : lb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PayloadWeightsBeanImpl implements _PayloadWeightsBean {
-  const _$PayloadWeightsBeanImpl(
+class _$Payload_weightsBeanImpl implements _Payload_weightsBean {
+  const _$Payload_weightsBeanImpl(
       {@JsonKey(name: 'id') this.id,
       @JsonKey(name: 'name') this.name,
       @JsonKey(name: 'kg') this.kg,
       @JsonKey(name: 'lb') this.lb});
 
-  factory _$PayloadWeightsBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PayloadWeightsBeanImplFromJson(json);
+  factory _$Payload_weightsBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Payload_weightsBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -952,21 +951,21 @@ class _$PayloadWeightsBeanImpl implements _PayloadWeightsBean {
   final String? name;
   @override
   @JsonKey(name: 'kg')
-  final int? kg;
+  final num? kg;
   @override
   @JsonKey(name: 'lb')
-  final int? lb;
+  final num? lb;
 
   @override
   String toString() {
-    return 'PayloadWeightsBean(id: $id, name: $name, kg: $kg, lb: $lb)';
+    return 'Payload_weightsBean(id: $id, name: $name, kg: $kg, lb: $lb)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PayloadWeightsBeanImpl &&
+            other is _$Payload_weightsBeanImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.kg, kg) || other.kg == kg) &&
@@ -980,27 +979,27 @@ class _$PayloadWeightsBeanImpl implements _PayloadWeightsBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PayloadWeightsBeanImplCopyWith<_$PayloadWeightsBeanImpl> get copyWith =>
-      __$$PayloadWeightsBeanImplCopyWithImpl<_$PayloadWeightsBeanImpl>(
+  _$$Payload_weightsBeanImplCopyWith<_$Payload_weightsBeanImpl> get copyWith =>
+      __$$Payload_weightsBeanImplCopyWithImpl<_$Payload_weightsBeanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PayloadWeightsBeanImplToJson(
+    return _$$Payload_weightsBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _PayloadWeightsBean implements PayloadWeightsBean {
-  const factory _PayloadWeightsBean(
+abstract class _Payload_weightsBean implements Payload_weightsBean {
+  const factory _Payload_weightsBean(
       {@JsonKey(name: 'id') final String? id,
       @JsonKey(name: 'name') final String? name,
-      @JsonKey(name: 'kg') final int? kg,
-      @JsonKey(name: 'lb') final int? lb}) = _$PayloadWeightsBeanImpl;
+      @JsonKey(name: 'kg') final num? kg,
+      @JsonKey(name: 'lb') final num? lb}) = _$Payload_weightsBeanImpl;
 
-  factory _PayloadWeightsBean.fromJson(Map<String, dynamic> json) =
-      _$PayloadWeightsBeanImpl.fromJson;
+  factory _Payload_weightsBean.fromJson(Map<String, dynamic> json) =
+      _$Payload_weightsBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1010,44 +1009,44 @@ abstract class _PayloadWeightsBean implements PayloadWeightsBean {
   String? get name;
   @override
   @JsonKey(name: 'kg')
-  int? get kg;
+  num? get kg;
   @override
   @JsonKey(name: 'lb')
-  int? get lb;
+  num? get lb;
   @override
   @JsonKey(ignore: true)
-  _$$PayloadWeightsBeanImplCopyWith<_$PayloadWeightsBeanImpl> get copyWith =>
+  _$$Payload_weightsBeanImplCopyWith<_$Payload_weightsBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-LandingLegsBean _$LandingLegsBeanFromJson(Map<String, dynamic> json) {
-  return _LandingLegsBean.fromJson(json);
+Landing_legsBean _$Landing_legsBeanFromJson(Map<String, dynamic> json) {
+  return _Landing_legsBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LandingLegsBean {
+mixin _$Landing_legsBean {
   @JsonKey(name: 'number')
-  int? get number => throw _privateConstructorUsedError;
+  num? get number => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LandingLegsBeanCopyWith<LandingLegsBean> get copyWith =>
+  $Landing_legsBeanCopyWith<Landing_legsBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LandingLegsBeanCopyWith<$Res> {
-  factory $LandingLegsBeanCopyWith(
-          LandingLegsBean value, $Res Function(LandingLegsBean) then) =
-      _$LandingLegsBeanCopyWithImpl<$Res, LandingLegsBean>;
+abstract class $Landing_legsBeanCopyWith<$Res> {
+  factory $Landing_legsBeanCopyWith(
+          Landing_legsBean value, $Res Function(Landing_legsBean) then) =
+      _$Landing_legsBeanCopyWithImpl<$Res, Landing_legsBean>;
   @useResult
-  $Res call({@JsonKey(name: 'number') int? number});
+  $Res call({@JsonKey(name: 'number') num? number});
 }
 
 /// @nodoc
-class _$LandingLegsBeanCopyWithImpl<$Res, $Val extends LandingLegsBean>
-    implements $LandingLegsBeanCopyWith<$Res> {
-  _$LandingLegsBeanCopyWithImpl(this._value, this._then);
+class _$Landing_legsBeanCopyWithImpl<$Res, $Val extends Landing_legsBean>
+    implements $Landing_legsBeanCopyWith<$Res> {
+  _$Landing_legsBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1063,28 +1062,28 @@ class _$LandingLegsBeanCopyWithImpl<$Res, $Val extends LandingLegsBean>
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$LandingLegsBeanImplCopyWith<$Res>
-    implements $LandingLegsBeanCopyWith<$Res> {
-  factory _$$LandingLegsBeanImplCopyWith(_$LandingLegsBeanImpl value,
-          $Res Function(_$LandingLegsBeanImpl) then) =
-      __$$LandingLegsBeanImplCopyWithImpl<$Res>;
+abstract class _$$Landing_legsBeanImplCopyWith<$Res>
+    implements $Landing_legsBeanCopyWith<$Res> {
+  factory _$$Landing_legsBeanImplCopyWith(_$Landing_legsBeanImpl value,
+          $Res Function(_$Landing_legsBeanImpl) then) =
+      __$$Landing_legsBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'number') int? number});
+  $Res call({@JsonKey(name: 'number') num? number});
 }
 
 /// @nodoc
-class __$$LandingLegsBeanImplCopyWithImpl<$Res>
-    extends _$LandingLegsBeanCopyWithImpl<$Res, _$LandingLegsBeanImpl>
-    implements _$$LandingLegsBeanImplCopyWith<$Res> {
-  __$$LandingLegsBeanImplCopyWithImpl(
-      _$LandingLegsBeanImpl _value, $Res Function(_$LandingLegsBeanImpl) _then)
+class __$$Landing_legsBeanImplCopyWithImpl<$Res>
+    extends _$Landing_legsBeanCopyWithImpl<$Res, _$Landing_legsBeanImpl>
+    implements _$$Landing_legsBeanImplCopyWith<$Res> {
+  __$$Landing_legsBeanImplCopyWithImpl(_$Landing_legsBeanImpl _value,
+      $Res Function(_$Landing_legsBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1092,37 +1091,37 @@ class __$$LandingLegsBeanImplCopyWithImpl<$Res>
   $Res call({
     Object? number = freezed,
   }) {
-    return _then(_$LandingLegsBeanImpl(
+    return _then(_$Landing_legsBeanImpl(
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LandingLegsBeanImpl implements _LandingLegsBean {
-  const _$LandingLegsBeanImpl({@JsonKey(name: 'number') this.number});
+class _$Landing_legsBeanImpl implements _Landing_legsBean {
+  const _$Landing_legsBeanImpl({@JsonKey(name: 'number') this.number});
 
-  factory _$LandingLegsBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LandingLegsBeanImplFromJson(json);
+  factory _$Landing_legsBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Landing_legsBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'number')
-  final int? number;
+  final num? number;
 
   @override
   String toString() {
-    return 'LandingLegsBean(number: $number)';
+    return 'Landing_legsBean(number: $number)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LandingLegsBeanImpl &&
+            other is _$Landing_legsBeanImpl &&
             (identical(other.number, number) || other.number == number));
   }
 
@@ -1133,31 +1132,31 @@ class _$LandingLegsBeanImpl implements _LandingLegsBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LandingLegsBeanImplCopyWith<_$LandingLegsBeanImpl> get copyWith =>
-      __$$LandingLegsBeanImplCopyWithImpl<_$LandingLegsBeanImpl>(
+  _$$Landing_legsBeanImplCopyWith<_$Landing_legsBeanImpl> get copyWith =>
+      __$$Landing_legsBeanImplCopyWithImpl<_$Landing_legsBeanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LandingLegsBeanImplToJson(
+    return _$$Landing_legsBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _LandingLegsBean implements LandingLegsBean {
-  const factory _LandingLegsBean({@JsonKey(name: 'number') final int? number}) =
-      _$LandingLegsBeanImpl;
+abstract class _Landing_legsBean implements Landing_legsBean {
+  const factory _Landing_legsBean(
+      {@JsonKey(name: 'number') final num? number}) = _$Landing_legsBeanImpl;
 
-  factory _LandingLegsBean.fromJson(Map<String, dynamic> json) =
-      _$LandingLegsBeanImpl.fromJson;
+  factory _Landing_legsBean.fromJson(Map<String, dynamic> json) =
+      _$Landing_legsBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'number')
-  int? get number;
+  num? get number;
   @override
   @JsonKey(ignore: true)
-  _$$LandingLegsBeanImplCopyWith<_$LandingLegsBeanImpl> get copyWith =>
+  _$$Landing_legsBeanImplCopyWith<_$Landing_legsBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1170,11 +1169,12 @@ mixin _$EnginesBean {
   @JsonKey(name: 'isp')
   IspBean? get isp => throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_sea_level')
-  ThrustSeaLevelBean? get thrustSeaLevel => throw _privateConstructorUsedError;
+  Thrust_sea_levelBean? get thrustSeaLevel =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_vacuum')
-  ThrustVacuumBean? get thrustVacuum => throw _privateConstructorUsedError;
+  Thrust_vacuumBean? get thrustVacuum => throw _privateConstructorUsedError;
   @JsonKey(name: 'number')
-  int? get number => throw _privateConstructorUsedError;
+  num? get number => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
   String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'version')
@@ -1182,13 +1182,13 @@ mixin _$EnginesBean {
   @JsonKey(name: 'layout')
   String? get layout => throw _privateConstructorUsedError;
   @JsonKey(name: 'engine_loss_max')
-  int? get engineLossMax => throw _privateConstructorUsedError;
+  num? get engineLossMax => throw _privateConstructorUsedError;
   @JsonKey(name: 'propellant_1')
   String? get propellant1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'propellant_2')
   String? get propellant2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_to_weight')
-  int? get thrustToWeight => throw _privateConstructorUsedError;
+  num? get thrustToWeight => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1204,20 +1204,20 @@ abstract class $EnginesBeanCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'isp') IspBean? isp,
-      @JsonKey(name: 'thrust_sea_level') ThrustSeaLevelBean? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') ThrustVacuumBean? thrustVacuum,
-      @JsonKey(name: 'number') int? number,
+      @JsonKey(name: 'thrust_sea_level') Thrust_sea_levelBean? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') Thrust_vacuumBean? thrustVacuum,
+      @JsonKey(name: 'number') num? number,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'version') String? version,
       @JsonKey(name: 'layout') String? layout,
-      @JsonKey(name: 'engine_loss_max') int? engineLossMax,
+      @JsonKey(name: 'engine_loss_max') num? engineLossMax,
       @JsonKey(name: 'propellant_1') String? propellant1,
       @JsonKey(name: 'propellant_2') String? propellant2,
-      @JsonKey(name: 'thrust_to_weight') int? thrustToWeight});
+      @JsonKey(name: 'thrust_to_weight') num? thrustToWeight});
 
   $IspBeanCopyWith<$Res>? get isp;
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel;
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum;
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel;
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -1253,15 +1253,15 @@ class _$EnginesBeanCopyWithImpl<$Res, $Val extends EnginesBean>
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as ThrustSeaLevelBean?,
+              as Thrust_sea_levelBean?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as ThrustVacuumBean?,
+              as Thrust_vacuumBean?,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1277,7 +1277,7 @@ class _$EnginesBeanCopyWithImpl<$Res, $Val extends EnginesBean>
       engineLossMax: freezed == engineLossMax
           ? _value.engineLossMax
           : engineLossMax // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       propellant1: freezed == propellant1
           ? _value.propellant1
           : propellant1 // ignore: cast_nullable_to_non_nullable
@@ -1289,7 +1289,7 @@ class _$EnginesBeanCopyWithImpl<$Res, $Val extends EnginesBean>
       thrustToWeight: freezed == thrustToWeight
           ? _value.thrustToWeight
           : thrustToWeight // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 
@@ -1307,24 +1307,24 @@ class _$EnginesBeanCopyWithImpl<$Res, $Val extends EnginesBean>
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel {
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel {
     if (_value.thrustSeaLevel == null) {
       return null;
     }
 
-    return $ThrustSeaLevelBeanCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
+    return $Thrust_sea_levelBeanCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
       return _then(_value.copyWith(thrustSeaLevel: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum {
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum {
     if (_value.thrustVacuum == null) {
       return null;
     }
 
-    return $ThrustVacuumBeanCopyWith<$Res>(_value.thrustVacuum!, (value) {
+    return $Thrust_vacuumBeanCopyWith<$Res>(_value.thrustVacuum!, (value) {
       return _then(_value.copyWith(thrustVacuum: value) as $Val);
     });
   }
@@ -1340,23 +1340,23 @@ abstract class _$$EnginesBeanImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'isp') IspBean? isp,
-      @JsonKey(name: 'thrust_sea_level') ThrustSeaLevelBean? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') ThrustVacuumBean? thrustVacuum,
-      @JsonKey(name: 'number') int? number,
+      @JsonKey(name: 'thrust_sea_level') Thrust_sea_levelBean? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') Thrust_vacuumBean? thrustVacuum,
+      @JsonKey(name: 'number') num? number,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'version') String? version,
       @JsonKey(name: 'layout') String? layout,
-      @JsonKey(name: 'engine_loss_max') int? engineLossMax,
+      @JsonKey(name: 'engine_loss_max') num? engineLossMax,
       @JsonKey(name: 'propellant_1') String? propellant1,
       @JsonKey(name: 'propellant_2') String? propellant2,
-      @JsonKey(name: 'thrust_to_weight') int? thrustToWeight});
+      @JsonKey(name: 'thrust_to_weight') num? thrustToWeight});
 
   @override
   $IspBeanCopyWith<$Res>? get isp;
   @override
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel;
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel;
   @override
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum;
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -1390,15 +1390,15 @@ class __$$EnginesBeanImplCopyWithImpl<$Res>
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as ThrustSeaLevelBean?,
+              as Thrust_sea_levelBean?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as ThrustVacuumBean?,
+              as Thrust_vacuumBean?,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1414,7 +1414,7 @@ class __$$EnginesBeanImplCopyWithImpl<$Res>
       engineLossMax: freezed == engineLossMax
           ? _value.engineLossMax
           : engineLossMax // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       propellant1: freezed == propellant1
           ? _value.propellant1
           : propellant1 // ignore: cast_nullable_to_non_nullable
@@ -1426,7 +1426,7 @@ class __$$EnginesBeanImplCopyWithImpl<$Res>
       thrustToWeight: freezed == thrustToWeight
           ? _value.thrustToWeight
           : thrustToWeight // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -1455,13 +1455,13 @@ class _$EnginesBeanImpl implements _EnginesBean {
   final IspBean? isp;
   @override
   @JsonKey(name: 'thrust_sea_level')
-  final ThrustSeaLevelBean? thrustSeaLevel;
+  final Thrust_sea_levelBean? thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  final ThrustVacuumBean? thrustVacuum;
+  final Thrust_vacuumBean? thrustVacuum;
   @override
   @JsonKey(name: 'number')
-  final int? number;
+  final num? number;
   @override
   @JsonKey(name: 'type')
   final String? type;
@@ -1473,7 +1473,7 @@ class _$EnginesBeanImpl implements _EnginesBean {
   final String? layout;
   @override
   @JsonKey(name: 'engine_loss_max')
-  final int? engineLossMax;
+  final num? engineLossMax;
   @override
   @JsonKey(name: 'propellant_1')
   final String? propellant1;
@@ -1482,7 +1482,7 @@ class _$EnginesBeanImpl implements _EnginesBean {
   final String? propellant2;
   @override
   @JsonKey(name: 'thrust_to_weight')
-  final int? thrustToWeight;
+  final num? thrustToWeight;
 
   @override
   String toString() {
@@ -1547,16 +1547,16 @@ abstract class _EnginesBean implements EnginesBean {
   const factory _EnginesBean(
           {@JsonKey(name: 'isp') final IspBean? isp,
           @JsonKey(name: 'thrust_sea_level')
-          final ThrustSeaLevelBean? thrustSeaLevel,
-          @JsonKey(name: 'thrust_vacuum') final ThrustVacuumBean? thrustVacuum,
-          @JsonKey(name: 'number') final int? number,
+          final Thrust_sea_levelBean? thrustSeaLevel,
+          @JsonKey(name: 'thrust_vacuum') final Thrust_vacuumBean? thrustVacuum,
+          @JsonKey(name: 'number') final num? number,
           @JsonKey(name: 'type') final String? type,
           @JsonKey(name: 'version') final String? version,
           @JsonKey(name: 'layout') final String? layout,
-          @JsonKey(name: 'engine_loss_max') final int? engineLossMax,
+          @JsonKey(name: 'engine_loss_max') final num? engineLossMax,
           @JsonKey(name: 'propellant_1') final String? propellant1,
           @JsonKey(name: 'propellant_2') final String? propellant2,
-          @JsonKey(name: 'thrust_to_weight') final int? thrustToWeight}) =
+          @JsonKey(name: 'thrust_to_weight') final num? thrustToWeight}) =
       _$EnginesBeanImpl;
 
   factory _EnginesBean.fromJson(Map<String, dynamic> json) =
@@ -1567,13 +1567,13 @@ abstract class _EnginesBean implements EnginesBean {
   IspBean? get isp;
   @override
   @JsonKey(name: 'thrust_sea_level')
-  ThrustSeaLevelBean? get thrustSeaLevel;
+  Thrust_sea_levelBean? get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  ThrustVacuumBean? get thrustVacuum;
+  Thrust_vacuumBean? get thrustVacuum;
   @override
   @JsonKey(name: 'number')
-  int? get number;
+  num? get number;
   @override
   @JsonKey(name: 'type')
   String? get type;
@@ -1585,7 +1585,7 @@ abstract class _EnginesBean implements EnginesBean {
   String? get layout;
   @override
   @JsonKey(name: 'engine_loss_max')
-  int? get engineLossMax;
+  num? get engineLossMax;
   @override
   @JsonKey(name: 'propellant_1')
   String? get propellant1;
@@ -1594,43 +1594,43 @@ abstract class _EnginesBean implements EnginesBean {
   String? get propellant2;
   @override
   @JsonKey(name: 'thrust_to_weight')
-  int? get thrustToWeight;
+  num? get thrustToWeight;
   @override
   @JsonKey(ignore: true)
   _$$EnginesBeanImplCopyWith<_$EnginesBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ThrustVacuumBean _$ThrustVacuumBeanFromJson(Map<String, dynamic> json) {
-  return _ThrustVacuumBean.fromJson(json);
+Thrust_vacuumBean _$Thrust_vacuumBeanFromJson(Map<String, dynamic> json) {
+  return _Thrust_vacuumBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ThrustVacuumBean {
+mixin _$Thrust_vacuumBean {
   @JsonKey(name: 'kN')
-  int? get kN => throw _privateConstructorUsedError;
+  num? get kN => throw _privateConstructorUsedError;
   @JsonKey(name: 'lbf')
-  int? get lbf => throw _privateConstructorUsedError;
+  num? get lbf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ThrustVacuumBeanCopyWith<ThrustVacuumBean> get copyWith =>
+  $Thrust_vacuumBeanCopyWith<Thrust_vacuumBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ThrustVacuumBeanCopyWith<$Res> {
-  factory $ThrustVacuumBeanCopyWith(
-          ThrustVacuumBean value, $Res Function(ThrustVacuumBean) then) =
-      _$ThrustVacuumBeanCopyWithImpl<$Res, ThrustVacuumBean>;
+abstract class $Thrust_vacuumBeanCopyWith<$Res> {
+  factory $Thrust_vacuumBeanCopyWith(
+          Thrust_vacuumBean value, $Res Function(Thrust_vacuumBean) then) =
+      _$Thrust_vacuumBeanCopyWithImpl<$Res, Thrust_vacuumBean>;
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
-class _$ThrustVacuumBeanCopyWithImpl<$Res, $Val extends ThrustVacuumBean>
-    implements $ThrustVacuumBeanCopyWith<$Res> {
-  _$ThrustVacuumBeanCopyWithImpl(this._value, this._then);
+class _$Thrust_vacuumBeanCopyWithImpl<$Res, $Val extends Thrust_vacuumBean>
+    implements $Thrust_vacuumBeanCopyWith<$Res> {
+  _$Thrust_vacuumBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1647,32 +1647,32 @@ class _$ThrustVacuumBeanCopyWithImpl<$Res, $Val extends ThrustVacuumBean>
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ThrustVacuumBeanImplCopyWith<$Res>
-    implements $ThrustVacuumBeanCopyWith<$Res> {
-  factory _$$ThrustVacuumBeanImplCopyWith(_$ThrustVacuumBeanImpl value,
-          $Res Function(_$ThrustVacuumBeanImpl) then) =
-      __$$ThrustVacuumBeanImplCopyWithImpl<$Res>;
+abstract class _$$Thrust_vacuumBeanImplCopyWith<$Res>
+    implements $Thrust_vacuumBeanCopyWith<$Res> {
+  factory _$$Thrust_vacuumBeanImplCopyWith(_$Thrust_vacuumBeanImpl value,
+          $Res Function(_$Thrust_vacuumBeanImpl) then) =
+      __$$Thrust_vacuumBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
-class __$$ThrustVacuumBeanImplCopyWithImpl<$Res>
-    extends _$ThrustVacuumBeanCopyWithImpl<$Res, _$ThrustVacuumBeanImpl>
-    implements _$$ThrustVacuumBeanImplCopyWith<$Res> {
-  __$$ThrustVacuumBeanImplCopyWithImpl(_$ThrustVacuumBeanImpl _value,
-      $Res Function(_$ThrustVacuumBeanImpl) _then)
+class __$$Thrust_vacuumBeanImplCopyWithImpl<$Res>
+    extends _$Thrust_vacuumBeanCopyWithImpl<$Res, _$Thrust_vacuumBeanImpl>
+    implements _$$Thrust_vacuumBeanImplCopyWith<$Res> {
+  __$$Thrust_vacuumBeanImplCopyWithImpl(_$Thrust_vacuumBeanImpl _value,
+      $Res Function(_$Thrust_vacuumBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1681,45 +1681,45 @@ class __$$ThrustVacuumBeanImplCopyWithImpl<$Res>
     Object? kN = freezed,
     Object? lbf = freezed,
   }) {
-    return _then(_$ThrustVacuumBeanImpl(
+    return _then(_$Thrust_vacuumBeanImpl(
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ThrustVacuumBeanImpl implements _ThrustVacuumBean {
-  const _$ThrustVacuumBeanImpl(
+class _$Thrust_vacuumBeanImpl implements _Thrust_vacuumBean {
+  const _$Thrust_vacuumBeanImpl(
       {@JsonKey(name: 'kN') this.kN, @JsonKey(name: 'lbf') this.lbf});
 
-  factory _$ThrustVacuumBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ThrustVacuumBeanImplFromJson(json);
+  factory _$Thrust_vacuumBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Thrust_vacuumBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'kN')
-  final int? kN;
+  final num? kN;
   @override
   @JsonKey(name: 'lbf')
-  final int? lbf;
+  final num? lbf;
 
   @override
   String toString() {
-    return 'ThrustVacuumBean(kN: $kN, lbf: $lbf)';
+    return 'Thrust_vacuumBean(kN: $kN, lbf: $lbf)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ThrustVacuumBeanImpl &&
+            other is _$Thrust_vacuumBeanImpl &&
             (identical(other.kN, kN) || other.kN == kN) &&
             (identical(other.lbf, lbf) || other.lbf == lbf));
   }
@@ -1731,68 +1731,69 @@ class _$ThrustVacuumBeanImpl implements _ThrustVacuumBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ThrustVacuumBeanImplCopyWith<_$ThrustVacuumBeanImpl> get copyWith =>
-      __$$ThrustVacuumBeanImplCopyWithImpl<_$ThrustVacuumBeanImpl>(
+  _$$Thrust_vacuumBeanImplCopyWith<_$Thrust_vacuumBeanImpl> get copyWith =>
+      __$$Thrust_vacuumBeanImplCopyWithImpl<_$Thrust_vacuumBeanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ThrustVacuumBeanImplToJson(
+    return _$$Thrust_vacuumBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _ThrustVacuumBean implements ThrustVacuumBean {
-  const factory _ThrustVacuumBean(
-      {@JsonKey(name: 'kN') final int? kN,
-      @JsonKey(name: 'lbf') final int? lbf}) = _$ThrustVacuumBeanImpl;
+abstract class _Thrust_vacuumBean implements Thrust_vacuumBean {
+  const factory _Thrust_vacuumBean(
+      {@JsonKey(name: 'kN') final num? kN,
+      @JsonKey(name: 'lbf') final num? lbf}) = _$Thrust_vacuumBeanImpl;
 
-  factory _ThrustVacuumBean.fromJson(Map<String, dynamic> json) =
-      _$ThrustVacuumBeanImpl.fromJson;
+  factory _Thrust_vacuumBean.fromJson(Map<String, dynamic> json) =
+      _$Thrust_vacuumBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'kN')
-  int? get kN;
+  num? get kN;
   @override
   @JsonKey(name: 'lbf')
-  int? get lbf;
+  num? get lbf;
   @override
   @JsonKey(ignore: true)
-  _$$ThrustVacuumBeanImplCopyWith<_$ThrustVacuumBeanImpl> get copyWith =>
+  _$$Thrust_vacuumBeanImplCopyWith<_$Thrust_vacuumBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ThrustSeaLevelBean _$ThrustSeaLevelBeanFromJson(Map<String, dynamic> json) {
-  return _ThrustSeaLevelBean.fromJson(json);
+Thrust_sea_levelBean _$Thrust_sea_levelBeanFromJson(Map<String, dynamic> json) {
+  return _Thrust_sea_levelBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ThrustSeaLevelBean {
+mixin _$Thrust_sea_levelBean {
   @JsonKey(name: 'kN')
-  int? get kN => throw _privateConstructorUsedError;
+  num? get kN => throw _privateConstructorUsedError;
   @JsonKey(name: 'lbf')
-  int? get lbf => throw _privateConstructorUsedError;
+  num? get lbf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ThrustSeaLevelBeanCopyWith<ThrustSeaLevelBean> get copyWith =>
+  $Thrust_sea_levelBeanCopyWith<Thrust_sea_levelBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ThrustSeaLevelBeanCopyWith<$Res> {
-  factory $ThrustSeaLevelBeanCopyWith(
-          ThrustSeaLevelBean value, $Res Function(ThrustSeaLevelBean) then) =
-      _$ThrustSeaLevelBeanCopyWithImpl<$Res, ThrustSeaLevelBean>;
+abstract class $Thrust_sea_levelBeanCopyWith<$Res> {
+  factory $Thrust_sea_levelBeanCopyWith(Thrust_sea_levelBean value,
+          $Res Function(Thrust_sea_levelBean) then) =
+      _$Thrust_sea_levelBeanCopyWithImpl<$Res, Thrust_sea_levelBean>;
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
-class _$ThrustSeaLevelBeanCopyWithImpl<$Res, $Val extends ThrustSeaLevelBean>
-    implements $ThrustSeaLevelBeanCopyWith<$Res> {
-  _$ThrustSeaLevelBeanCopyWithImpl(this._value, this._then);
+class _$Thrust_sea_levelBeanCopyWithImpl<$Res,
+        $Val extends Thrust_sea_levelBean>
+    implements $Thrust_sea_levelBeanCopyWith<$Res> {
+  _$Thrust_sea_levelBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1809,32 +1810,32 @@ class _$ThrustSeaLevelBeanCopyWithImpl<$Res, $Val extends ThrustSeaLevelBean>
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ThrustSeaLevelBeanImplCopyWith<$Res>
-    implements $ThrustSeaLevelBeanCopyWith<$Res> {
-  factory _$$ThrustSeaLevelBeanImplCopyWith(_$ThrustSeaLevelBeanImpl value,
-          $Res Function(_$ThrustSeaLevelBeanImpl) then) =
-      __$$ThrustSeaLevelBeanImplCopyWithImpl<$Res>;
+abstract class _$$Thrust_sea_levelBeanImplCopyWith<$Res>
+    implements $Thrust_sea_levelBeanCopyWith<$Res> {
+  factory _$$Thrust_sea_levelBeanImplCopyWith(_$Thrust_sea_levelBeanImpl value,
+          $Res Function(_$Thrust_sea_levelBeanImpl) then) =
+      __$$Thrust_sea_levelBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
-class __$$ThrustSeaLevelBeanImplCopyWithImpl<$Res>
-    extends _$ThrustSeaLevelBeanCopyWithImpl<$Res, _$ThrustSeaLevelBeanImpl>
-    implements _$$ThrustSeaLevelBeanImplCopyWith<$Res> {
-  __$$ThrustSeaLevelBeanImplCopyWithImpl(_$ThrustSeaLevelBeanImpl _value,
-      $Res Function(_$ThrustSeaLevelBeanImpl) _then)
+class __$$Thrust_sea_levelBeanImplCopyWithImpl<$Res>
+    extends _$Thrust_sea_levelBeanCopyWithImpl<$Res, _$Thrust_sea_levelBeanImpl>
+    implements _$$Thrust_sea_levelBeanImplCopyWith<$Res> {
+  __$$Thrust_sea_levelBeanImplCopyWithImpl(_$Thrust_sea_levelBeanImpl _value,
+      $Res Function(_$Thrust_sea_levelBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1843,45 +1844,45 @@ class __$$ThrustSeaLevelBeanImplCopyWithImpl<$Res>
     Object? kN = freezed,
     Object? lbf = freezed,
   }) {
-    return _then(_$ThrustSeaLevelBeanImpl(
+    return _then(_$Thrust_sea_levelBeanImpl(
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ThrustSeaLevelBeanImpl implements _ThrustSeaLevelBean {
-  const _$ThrustSeaLevelBeanImpl(
+class _$Thrust_sea_levelBeanImpl implements _Thrust_sea_levelBean {
+  const _$Thrust_sea_levelBeanImpl(
       {@JsonKey(name: 'kN') this.kN, @JsonKey(name: 'lbf') this.lbf});
 
-  factory _$ThrustSeaLevelBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ThrustSeaLevelBeanImplFromJson(json);
+  factory _$Thrust_sea_levelBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Thrust_sea_levelBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'kN')
-  final int? kN;
+  final num? kN;
   @override
   @JsonKey(name: 'lbf')
-  final int? lbf;
+  final num? lbf;
 
   @override
   String toString() {
-    return 'ThrustSeaLevelBean(kN: $kN, lbf: $lbf)';
+    return 'Thrust_sea_levelBean(kN: $kN, lbf: $lbf)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ThrustSeaLevelBeanImpl &&
+            other is _$Thrust_sea_levelBeanImpl &&
             (identical(other.kN, kN) || other.kN == kN) &&
             (identical(other.lbf, lbf) || other.lbf == lbf));
   }
@@ -1893,36 +1894,37 @@ class _$ThrustSeaLevelBeanImpl implements _ThrustSeaLevelBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ThrustSeaLevelBeanImplCopyWith<_$ThrustSeaLevelBeanImpl> get copyWith =>
-      __$$ThrustSeaLevelBeanImplCopyWithImpl<_$ThrustSeaLevelBeanImpl>(
-          this, _$identity);
+  _$$Thrust_sea_levelBeanImplCopyWith<_$Thrust_sea_levelBeanImpl>
+      get copyWith =>
+          __$$Thrust_sea_levelBeanImplCopyWithImpl<_$Thrust_sea_levelBeanImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ThrustSeaLevelBeanImplToJson(
+    return _$$Thrust_sea_levelBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _ThrustSeaLevelBean implements ThrustSeaLevelBean {
-  const factory _ThrustSeaLevelBean(
-      {@JsonKey(name: 'kN') final int? kN,
-      @JsonKey(name: 'lbf') final int? lbf}) = _$ThrustSeaLevelBeanImpl;
+abstract class _Thrust_sea_levelBean implements Thrust_sea_levelBean {
+  const factory _Thrust_sea_levelBean(
+      {@JsonKey(name: 'kN') final num? kN,
+      @JsonKey(name: 'lbf') final num? lbf}) = _$Thrust_sea_levelBeanImpl;
 
-  factory _ThrustSeaLevelBean.fromJson(Map<String, dynamic> json) =
-      _$ThrustSeaLevelBeanImpl.fromJson;
+  factory _Thrust_sea_levelBean.fromJson(Map<String, dynamic> json) =
+      _$Thrust_sea_levelBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'kN')
-  int? get kN;
+  num? get kN;
   @override
   @JsonKey(name: 'lbf')
-  int? get lbf;
+  num? get lbf;
   @override
   @JsonKey(ignore: true)
-  _$$ThrustSeaLevelBeanImplCopyWith<_$ThrustSeaLevelBeanImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$Thrust_sea_levelBeanImplCopyWith<_$Thrust_sea_levelBeanImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 IspBean _$IspBeanFromJson(Map<String, dynamic> json) {
@@ -1932,9 +1934,9 @@ IspBean _$IspBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$IspBean {
   @JsonKey(name: 'sea_level')
-  int? get seaLevel => throw _privateConstructorUsedError;
+  num? get seaLevel => throw _privateConstructorUsedError;
   @JsonKey(name: 'vacuum')
-  int? get vacuum => throw _privateConstructorUsedError;
+  num? get vacuum => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1947,8 +1949,8 @@ abstract class $IspBeanCopyWith<$Res> {
       _$IspBeanCopyWithImpl<$Res, IspBean>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'sea_level') int? seaLevel,
-      @JsonKey(name: 'vacuum') int? vacuum});
+      {@JsonKey(name: 'sea_level') num? seaLevel,
+      @JsonKey(name: 'vacuum') num? vacuum});
 }
 
 /// @nodoc
@@ -1971,11 +1973,11 @@ class _$IspBeanCopyWithImpl<$Res, $Val extends IspBean>
       seaLevel: freezed == seaLevel
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       vacuum: freezed == vacuum
           ? _value.vacuum
           : vacuum // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
@@ -1988,8 +1990,8 @@ abstract class _$$IspBeanImplCopyWith<$Res> implements $IspBeanCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'sea_level') int? seaLevel,
-      @JsonKey(name: 'vacuum') int? vacuum});
+      {@JsonKey(name: 'sea_level') num? seaLevel,
+      @JsonKey(name: 'vacuum') num? vacuum});
 }
 
 /// @nodoc
@@ -2010,11 +2012,11 @@ class __$$IspBeanImplCopyWithImpl<$Res>
       seaLevel: freezed == seaLevel
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       vacuum: freezed == vacuum
           ? _value.vacuum
           : vacuum // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -2031,10 +2033,10 @@ class _$IspBeanImpl implements _IspBean {
 
   @override
   @JsonKey(name: 'sea_level')
-  final int? seaLevel;
+  final num? seaLevel;
   @override
   @JsonKey(name: 'vacuum')
-  final int? vacuum;
+  final num? vacuum;
 
   @override
   String toString() {
@@ -2071,29 +2073,29 @@ class _$IspBeanImpl implements _IspBean {
 
 abstract class _IspBean implements IspBean {
   const factory _IspBean(
-      {@JsonKey(name: 'sea_level') final int? seaLevel,
-      @JsonKey(name: 'vacuum') final int? vacuum}) = _$IspBeanImpl;
+      {@JsonKey(name: 'sea_level') final num? seaLevel,
+      @JsonKey(name: 'vacuum') final num? vacuum}) = _$IspBeanImpl;
 
   factory _IspBean.fromJson(Map<String, dynamic> json) = _$IspBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'sea_level')
-  int? get seaLevel;
+  num? get seaLevel;
   @override
   @JsonKey(name: 'vacuum')
-  int? get vacuum;
+  num? get vacuum;
   @override
   @JsonKey(ignore: true)
   _$$IspBeanImplCopyWith<_$IspBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-SecondStageBean _$SecondStageBeanFromJson(Map<String, dynamic> json) {
-  return _SecondStageBean.fromJson(json);
+Second_stageBean _$Second_stageBeanFromJson(Map<String, dynamic> json) {
+  return _Second_stageBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SecondStageBean {
+mixin _$Second_stageBean {
   @JsonKey(name: 'thrust')
   ThrustBean? get thrust => throw _privateConstructorUsedError;
   @JsonKey(name: 'payloads')
@@ -2101,40 +2103,40 @@ mixin _$SecondStageBean {
   @JsonKey(name: 'reusable')
   bool? get reusable => throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
-  int? get engines => throw _privateConstructorUsedError;
+  num? get engines => throw _privateConstructorUsedError;
   @JsonKey(name: 'fuel_amount_tons')
-  double? get fuelAmountTons => throw _privateConstructorUsedError;
+  num? get fuelAmountTons => throw _privateConstructorUsedError;
   @JsonKey(name: 'burn_time_sec')
-  int? get burnTimeSec => throw _privateConstructorUsedError;
+  num? get burnTimeSec => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SecondStageBeanCopyWith<SecondStageBean> get copyWith =>
+  $Second_stageBeanCopyWith<Second_stageBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SecondStageBeanCopyWith<$Res> {
-  factory $SecondStageBeanCopyWith(
-          SecondStageBean value, $Res Function(SecondStageBean) then) =
-      _$SecondStageBeanCopyWithImpl<$Res, SecondStageBean>;
+abstract class $Second_stageBeanCopyWith<$Res> {
+  factory $Second_stageBeanCopyWith(
+          Second_stageBean value, $Res Function(Second_stageBean) then) =
+      _$Second_stageBeanCopyWithImpl<$Res, Second_stageBean>;
   @useResult
   $Res call(
       {@JsonKey(name: 'thrust') ThrustBean? thrust,
       @JsonKey(name: 'payloads') PayloadsBean? payloads,
       @JsonKey(name: 'reusable') bool? reusable,
-      @JsonKey(name: 'engines') int? engines,
-      @JsonKey(name: 'fuel_amount_tons') double? fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') num? burnTimeSec});
 
   $ThrustBeanCopyWith<$Res>? get thrust;
   $PayloadsBeanCopyWith<$Res>? get payloads;
 }
 
 /// @nodoc
-class _$SecondStageBeanCopyWithImpl<$Res, $Val extends SecondStageBean>
-    implements $SecondStageBeanCopyWith<$Res> {
-  _$SecondStageBeanCopyWithImpl(this._value, this._then);
+class _$Second_stageBeanCopyWithImpl<$Res, $Val extends Second_stageBean>
+    implements $Second_stageBeanCopyWith<$Res> {
+  _$Second_stageBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2167,15 +2169,15 @@ class _$SecondStageBeanCopyWithImpl<$Res, $Val extends SecondStageBean>
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       fuelAmountTons: freezed == fuelAmountTons
           ? _value.fuelAmountTons
           : fuelAmountTons // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       burnTimeSec: freezed == burnTimeSec
           ? _value.burnTimeSec
           : burnTimeSec // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 
@@ -2205,20 +2207,20 @@ class _$SecondStageBeanCopyWithImpl<$Res, $Val extends SecondStageBean>
 }
 
 /// @nodoc
-abstract class _$$SecondStageBeanImplCopyWith<$Res>
-    implements $SecondStageBeanCopyWith<$Res> {
-  factory _$$SecondStageBeanImplCopyWith(_$SecondStageBeanImpl value,
-          $Res Function(_$SecondStageBeanImpl) then) =
-      __$$SecondStageBeanImplCopyWithImpl<$Res>;
+abstract class _$$Second_stageBeanImplCopyWith<$Res>
+    implements $Second_stageBeanCopyWith<$Res> {
+  factory _$$Second_stageBeanImplCopyWith(_$Second_stageBeanImpl value,
+          $Res Function(_$Second_stageBeanImpl) then) =
+      __$$Second_stageBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'thrust') ThrustBean? thrust,
       @JsonKey(name: 'payloads') PayloadsBean? payloads,
       @JsonKey(name: 'reusable') bool? reusable,
-      @JsonKey(name: 'engines') int? engines,
-      @JsonKey(name: 'fuel_amount_tons') double? fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') num? burnTimeSec});
 
   @override
   $ThrustBeanCopyWith<$Res>? get thrust;
@@ -2227,11 +2229,11 @@ abstract class _$$SecondStageBeanImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SecondStageBeanImplCopyWithImpl<$Res>
-    extends _$SecondStageBeanCopyWithImpl<$Res, _$SecondStageBeanImpl>
-    implements _$$SecondStageBeanImplCopyWith<$Res> {
-  __$$SecondStageBeanImplCopyWithImpl(
-      _$SecondStageBeanImpl _value, $Res Function(_$SecondStageBeanImpl) _then)
+class __$$Second_stageBeanImplCopyWithImpl<$Res>
+    extends _$Second_stageBeanCopyWithImpl<$Res, _$Second_stageBeanImpl>
+    implements _$$Second_stageBeanImplCopyWith<$Res> {
+  __$$Second_stageBeanImplCopyWithImpl(_$Second_stageBeanImpl _value,
+      $Res Function(_$Second_stageBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2244,7 +2246,7 @@ class __$$SecondStageBeanImplCopyWithImpl<$Res>
     Object? fuelAmountTons = freezed,
     Object? burnTimeSec = freezed,
   }) {
-    return _then(_$SecondStageBeanImpl(
+    return _then(_$Second_stageBeanImpl(
       thrust: freezed == thrust
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
@@ -2260,23 +2262,23 @@ class __$$SecondStageBeanImplCopyWithImpl<$Res>
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       fuelAmountTons: freezed == fuelAmountTons
           ? _value.fuelAmountTons
           : fuelAmountTons // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       burnTimeSec: freezed == burnTimeSec
           ? _value.burnTimeSec
           : burnTimeSec // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$SecondStageBeanImpl implements _SecondStageBean {
-  const _$SecondStageBeanImpl(
+class _$Second_stageBeanImpl implements _Second_stageBean {
+  const _$Second_stageBeanImpl(
       {@JsonKey(name: 'thrust') this.thrust,
       @JsonKey(name: 'payloads') this.payloads,
       @JsonKey(name: 'reusable') this.reusable,
@@ -2284,8 +2286,8 @@ class _$SecondStageBeanImpl implements _SecondStageBean {
       @JsonKey(name: 'fuel_amount_tons') this.fuelAmountTons,
       @JsonKey(name: 'burn_time_sec') this.burnTimeSec});
 
-  factory _$SecondStageBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SecondStageBeanImplFromJson(json);
+  factory _$Second_stageBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Second_stageBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'thrust')
@@ -2298,24 +2300,24 @@ class _$SecondStageBeanImpl implements _SecondStageBean {
   final bool? reusable;
   @override
   @JsonKey(name: 'engines')
-  final int? engines;
+  final num? engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  final double? fuelAmountTons;
+  final num? fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  final int? burnTimeSec;
+  final num? burnTimeSec;
 
   @override
   String toString() {
-    return 'SecondStageBean(thrust: $thrust, payloads: $payloads, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
+    return 'Second_stageBean(thrust: $thrust, payloads: $payloads, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SecondStageBeanImpl &&
+            other is _$Second_stageBeanImpl &&
             (identical(other.thrust, thrust) || other.thrust == thrust) &&
             (identical(other.payloads, payloads) ||
                 other.payloads == payloads) &&
@@ -2336,30 +2338,30 @@ class _$SecondStageBeanImpl implements _SecondStageBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SecondStageBeanImplCopyWith<_$SecondStageBeanImpl> get copyWith =>
-      __$$SecondStageBeanImplCopyWithImpl<_$SecondStageBeanImpl>(
+  _$$Second_stageBeanImplCopyWith<_$Second_stageBeanImpl> get copyWith =>
+      __$$Second_stageBeanImplCopyWithImpl<_$Second_stageBeanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SecondStageBeanImplToJson(
+    return _$$Second_stageBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _SecondStageBean implements SecondStageBean {
-  const factory _SecondStageBean(
+abstract class _Second_stageBean implements Second_stageBean {
+  const factory _Second_stageBean(
           {@JsonKey(name: 'thrust') final ThrustBean? thrust,
           @JsonKey(name: 'payloads') final PayloadsBean? payloads,
           @JsonKey(name: 'reusable') final bool? reusable,
-          @JsonKey(name: 'engines') final int? engines,
-          @JsonKey(name: 'fuel_amount_tons') final double? fuelAmountTons,
-          @JsonKey(name: 'burn_time_sec') final int? burnTimeSec}) =
-      _$SecondStageBeanImpl;
+          @JsonKey(name: 'engines') final num? engines,
+          @JsonKey(name: 'fuel_amount_tons') final num? fuelAmountTons,
+          @JsonKey(name: 'burn_time_sec') final num? burnTimeSec}) =
+      _$Second_stageBeanImpl;
 
-  factory _SecondStageBean.fromJson(Map<String, dynamic> json) =
-      _$SecondStageBeanImpl.fromJson;
+  factory _Second_stageBean.fromJson(Map<String, dynamic> json) =
+      _$Second_stageBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'thrust')
@@ -2372,16 +2374,16 @@ abstract class _SecondStageBean implements SecondStageBean {
   bool? get reusable;
   @override
   @JsonKey(name: 'engines')
-  int? get engines;
+  num? get engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  double? get fuelAmountTons;
+  num? get fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  int? get burnTimeSec;
+  num? get burnTimeSec;
   @override
   @JsonKey(ignore: true)
-  _$$SecondStageBeanImplCopyWith<_$SecondStageBeanImpl> get copyWith =>
+  _$$Second_stageBeanImplCopyWith<_$Second_stageBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2392,7 +2394,7 @@ PayloadsBean _$PayloadsBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PayloadsBean {
   @JsonKey(name: 'composite_fairing')
-  CompositeFairingBean? get compositeFairing =>
+  Composite_fairingBean? get compositeFairing =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'option_1')
   String? get option1 => throw _privateConstructorUsedError;
@@ -2411,10 +2413,10 @@ abstract class $PayloadsBeanCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'composite_fairing')
-      CompositeFairingBean? compositeFairing,
+      Composite_fairingBean? compositeFairing,
       @JsonKey(name: 'option_1') String? option1});
 
-  $CompositeFairingBeanCopyWith<$Res>? get compositeFairing;
+  $Composite_fairingBeanCopyWith<$Res>? get compositeFairing;
 }
 
 /// @nodoc
@@ -2437,7 +2439,7 @@ class _$PayloadsBeanCopyWithImpl<$Res, $Val extends PayloadsBean>
       compositeFairing: freezed == compositeFairing
           ? _value.compositeFairing
           : compositeFairing // ignore: cast_nullable_to_non_nullable
-              as CompositeFairingBean?,
+              as Composite_fairingBean?,
       option1: freezed == option1
           ? _value.option1
           : option1 // ignore: cast_nullable_to_non_nullable
@@ -2447,12 +2449,12 @@ class _$PayloadsBeanCopyWithImpl<$Res, $Val extends PayloadsBean>
 
   @override
   @pragma('vm:prefer-inline')
-  $CompositeFairingBeanCopyWith<$Res>? get compositeFairing {
+  $Composite_fairingBeanCopyWith<$Res>? get compositeFairing {
     if (_value.compositeFairing == null) {
       return null;
     }
 
-    return $CompositeFairingBeanCopyWith<$Res>(_value.compositeFairing!,
+    return $Composite_fairingBeanCopyWith<$Res>(_value.compositeFairing!,
         (value) {
       return _then(_value.copyWith(compositeFairing: value) as $Val);
     });
@@ -2469,11 +2471,11 @@ abstract class _$$PayloadsBeanImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'composite_fairing')
-      CompositeFairingBean? compositeFairing,
+      Composite_fairingBean? compositeFairing,
       @JsonKey(name: 'option_1') String? option1});
 
   @override
-  $CompositeFairingBeanCopyWith<$Res>? get compositeFairing;
+  $Composite_fairingBeanCopyWith<$Res>? get compositeFairing;
 }
 
 /// @nodoc
@@ -2494,7 +2496,7 @@ class __$$PayloadsBeanImplCopyWithImpl<$Res>
       compositeFairing: freezed == compositeFairing
           ? _value.compositeFairing
           : compositeFairing // ignore: cast_nullable_to_non_nullable
-              as CompositeFairingBean?,
+              as Composite_fairingBean?,
       option1: freezed == option1
           ? _value.option1
           : option1 // ignore: cast_nullable_to_non_nullable
@@ -2515,7 +2517,7 @@ class _$PayloadsBeanImpl implements _PayloadsBean {
 
   @override
   @JsonKey(name: 'composite_fairing')
-  final CompositeFairingBean? compositeFairing;
+  final Composite_fairingBean? compositeFairing;
   @override
   @JsonKey(name: 'option_1')
   final String? option1;
@@ -2556,7 +2558,7 @@ class _$PayloadsBeanImpl implements _PayloadsBean {
 abstract class _PayloadsBean implements PayloadsBean {
   const factory _PayloadsBean(
       {@JsonKey(name: 'composite_fairing')
-      final CompositeFairingBean? compositeFairing,
+      final Composite_fairingBean? compositeFairing,
       @JsonKey(name: 'option_1') final String? option1}) = _$PayloadsBeanImpl;
 
   factory _PayloadsBean.fromJson(Map<String, dynamic> json) =
@@ -2564,7 +2566,7 @@ abstract class _PayloadsBean implements PayloadsBean {
 
   @override
   @JsonKey(name: 'composite_fairing')
-  CompositeFairingBean? get compositeFairing;
+  Composite_fairingBean? get compositeFairing;
   @override
   @JsonKey(name: 'option_1')
   String? get option1;
@@ -2574,12 +2576,13 @@ abstract class _PayloadsBean implements PayloadsBean {
       throw _privateConstructorUsedError;
 }
 
-CompositeFairingBean _$CompositeFairingBeanFromJson(Map<String, dynamic> json) {
-  return _CompositeFairingBean.fromJson(json);
+Composite_fairingBean _$Composite_fairingBeanFromJson(
+    Map<String, dynamic> json) {
+  return _Composite_fairingBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CompositeFairingBean {
+mixin _$Composite_fairingBean {
   @JsonKey(name: 'height')
   HeightBean? get height => throw _privateConstructorUsedError;
   @JsonKey(name: 'diameter')
@@ -2587,15 +2590,15 @@ mixin _$CompositeFairingBean {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CompositeFairingBeanCopyWith<CompositeFairingBean> get copyWith =>
+  $Composite_fairingBeanCopyWith<Composite_fairingBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CompositeFairingBeanCopyWith<$Res> {
-  factory $CompositeFairingBeanCopyWith(CompositeFairingBean value,
-          $Res Function(CompositeFairingBean) then) =
-      _$CompositeFairingBeanCopyWithImpl<$Res, CompositeFairingBean>;
+abstract class $Composite_fairingBeanCopyWith<$Res> {
+  factory $Composite_fairingBeanCopyWith(Composite_fairingBean value,
+          $Res Function(Composite_fairingBean) then) =
+      _$Composite_fairingBeanCopyWithImpl<$Res, Composite_fairingBean>;
   @useResult
   $Res call(
       {@JsonKey(name: 'height') HeightBean? height,
@@ -2606,10 +2609,10 @@ abstract class $CompositeFairingBeanCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CompositeFairingBeanCopyWithImpl<$Res,
-        $Val extends CompositeFairingBean>
-    implements $CompositeFairingBeanCopyWith<$Res> {
-  _$CompositeFairingBeanCopyWithImpl(this._value, this._then);
+class _$Composite_fairingBeanCopyWithImpl<$Res,
+        $Val extends Composite_fairingBean>
+    implements $Composite_fairingBeanCopyWith<$Res> {
+  _$Composite_fairingBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2660,11 +2663,12 @@ class _$CompositeFairingBeanCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CompositeFairingBeanImplCopyWith<$Res>
-    implements $CompositeFairingBeanCopyWith<$Res> {
-  factory _$$CompositeFairingBeanImplCopyWith(_$CompositeFairingBeanImpl value,
-          $Res Function(_$CompositeFairingBeanImpl) then) =
-      __$$CompositeFairingBeanImplCopyWithImpl<$Res>;
+abstract class _$$Composite_fairingBeanImplCopyWith<$Res>
+    implements $Composite_fairingBeanCopyWith<$Res> {
+  factory _$$Composite_fairingBeanImplCopyWith(
+          _$Composite_fairingBeanImpl value,
+          $Res Function(_$Composite_fairingBeanImpl) then) =
+      __$$Composite_fairingBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2678,11 +2682,12 @@ abstract class _$$CompositeFairingBeanImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CompositeFairingBeanImplCopyWithImpl<$Res>
-    extends _$CompositeFairingBeanCopyWithImpl<$Res, _$CompositeFairingBeanImpl>
-    implements _$$CompositeFairingBeanImplCopyWith<$Res> {
-  __$$CompositeFairingBeanImplCopyWithImpl(_$CompositeFairingBeanImpl _value,
-      $Res Function(_$CompositeFairingBeanImpl) _then)
+class __$$Composite_fairingBeanImplCopyWithImpl<$Res>
+    extends _$Composite_fairingBeanCopyWithImpl<$Res,
+        _$Composite_fairingBeanImpl>
+    implements _$$Composite_fairingBeanImplCopyWith<$Res> {
+  __$$Composite_fairingBeanImplCopyWithImpl(_$Composite_fairingBeanImpl _value,
+      $Res Function(_$Composite_fairingBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2691,7 +2696,7 @@ class __$$CompositeFairingBeanImplCopyWithImpl<$Res>
     Object? height = freezed,
     Object? diameter = freezed,
   }) {
-    return _then(_$CompositeFairingBeanImpl(
+    return _then(_$Composite_fairingBeanImpl(
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -2706,13 +2711,13 @@ class __$$CompositeFairingBeanImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CompositeFairingBeanImpl implements _CompositeFairingBean {
-  const _$CompositeFairingBeanImpl(
+class _$Composite_fairingBeanImpl implements _Composite_fairingBean {
+  const _$Composite_fairingBeanImpl(
       {@JsonKey(name: 'height') this.height,
       @JsonKey(name: 'diameter') this.diameter});
 
-  factory _$CompositeFairingBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CompositeFairingBeanImplFromJson(json);
+  factory _$Composite_fairingBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$Composite_fairingBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'height')
@@ -2723,14 +2728,14 @@ class _$CompositeFairingBeanImpl implements _CompositeFairingBean {
 
   @override
   String toString() {
-    return 'CompositeFairingBean(height: $height, diameter: $diameter)';
+    return 'Composite_fairingBean(height: $height, diameter: $diameter)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CompositeFairingBeanImpl &&
+            other is _$Composite_fairingBeanImpl &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.diameter, diameter) ||
                 other.diameter == diameter));
@@ -2743,27 +2748,26 @@ class _$CompositeFairingBeanImpl implements _CompositeFairingBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CompositeFairingBeanImplCopyWith<_$CompositeFairingBeanImpl>
-      get copyWith =>
-          __$$CompositeFairingBeanImplCopyWithImpl<_$CompositeFairingBeanImpl>(
-              this, _$identity);
+  _$$Composite_fairingBeanImplCopyWith<_$Composite_fairingBeanImpl>
+      get copyWith => __$$Composite_fairingBeanImplCopyWithImpl<
+          _$Composite_fairingBeanImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CompositeFairingBeanImplToJson(
+    return _$$Composite_fairingBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _CompositeFairingBean implements CompositeFairingBean {
-  const factory _CompositeFairingBean(
+abstract class _Composite_fairingBean implements Composite_fairingBean {
+  const factory _Composite_fairingBean(
           {@JsonKey(name: 'height') final HeightBean? height,
           @JsonKey(name: 'diameter') final DiameterBean? diameter}) =
-      _$CompositeFairingBeanImpl;
+      _$Composite_fairingBeanImpl;
 
-  factory _CompositeFairingBean.fromJson(Map<String, dynamic> json) =
-      _$CompositeFairingBeanImpl.fromJson;
+  factory _Composite_fairingBean.fromJson(Map<String, dynamic> json) =
+      _$Composite_fairingBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'height')
@@ -2773,7 +2777,7 @@ abstract class _CompositeFairingBean implements CompositeFairingBean {
   DiameterBean? get diameter;
   @override
   @JsonKey(ignore: true)
-  _$$CompositeFairingBeanImplCopyWith<_$CompositeFairingBeanImpl>
+  _$$Composite_fairingBeanImplCopyWith<_$Composite_fairingBeanImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2784,9 +2788,9 @@ DiameterBean _$DiameterBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DiameterBean {
   @JsonKey(name: 'meters')
-  double? get meters => throw _privateConstructorUsedError;
+  num? get meters => throw _privateConstructorUsedError;
   @JsonKey(name: 'feet')
-  double? get feet => throw _privateConstructorUsedError;
+  num? get feet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2801,8 +2805,7 @@ abstract class $DiameterBeanCopyWith<$Res> {
       _$DiameterBeanCopyWithImpl<$Res, DiameterBean>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'meters') double? meters,
-      @JsonKey(name: 'feet') double? feet});
+      {@JsonKey(name: 'meters') num? meters, @JsonKey(name: 'feet') num? feet});
 }
 
 /// @nodoc
@@ -2825,11 +2828,11 @@ class _$DiameterBeanCopyWithImpl<$Res, $Val extends DiameterBean>
       meters: freezed == meters
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       feet: freezed == feet
           ? _value.feet
           : feet // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ) as $Val);
   }
 }
@@ -2843,8 +2846,7 @@ abstract class _$$DiameterBeanImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'meters') double? meters,
-      @JsonKey(name: 'feet') double? feet});
+      {@JsonKey(name: 'meters') num? meters, @JsonKey(name: 'feet') num? feet});
 }
 
 /// @nodoc
@@ -2865,11 +2867,11 @@ class __$$DiameterBeanImplCopyWithImpl<$Res>
       meters: freezed == meters
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       feet: freezed == feet
           ? _value.feet
           : feet // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -2885,10 +2887,10 @@ class _$DiameterBeanImpl implements _DiameterBean {
 
   @override
   @JsonKey(name: 'meters')
-  final double? meters;
+  final num? meters;
   @override
   @JsonKey(name: 'feet')
-  final double? feet;
+  final num? feet;
 
   @override
   String toString() {
@@ -2924,18 +2926,18 @@ class _$DiameterBeanImpl implements _DiameterBean {
 
 abstract class _DiameterBean implements DiameterBean {
   const factory _DiameterBean(
-      {@JsonKey(name: 'meters') final double? meters,
-      @JsonKey(name: 'feet') final double? feet}) = _$DiameterBeanImpl;
+      {@JsonKey(name: 'meters') final num? meters,
+      @JsonKey(name: 'feet') final num? feet}) = _$DiameterBeanImpl;
 
   factory _DiameterBean.fromJson(Map<String, dynamic> json) =
       _$DiameterBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'meters')
-  double? get meters;
+  num? get meters;
   @override
   @JsonKey(name: 'feet')
-  double? get feet;
+  num? get feet;
   @override
   @JsonKey(ignore: true)
   _$$DiameterBeanImplCopyWith<_$DiameterBeanImpl> get copyWith =>
@@ -2949,9 +2951,9 @@ HeightBean _$HeightBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$HeightBean {
   @JsonKey(name: 'meters')
-  double? get meters => throw _privateConstructorUsedError;
+  num? get meters => throw _privateConstructorUsedError;
   @JsonKey(name: 'feet')
-  double? get feet => throw _privateConstructorUsedError;
+  num? get feet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2966,8 +2968,7 @@ abstract class $HeightBeanCopyWith<$Res> {
       _$HeightBeanCopyWithImpl<$Res, HeightBean>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'meters') double? meters,
-      @JsonKey(name: 'feet') double? feet});
+      {@JsonKey(name: 'meters') num? meters, @JsonKey(name: 'feet') num? feet});
 }
 
 /// @nodoc
@@ -2990,11 +2991,11 @@ class _$HeightBeanCopyWithImpl<$Res, $Val extends HeightBean>
       meters: freezed == meters
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       feet: freezed == feet
           ? _value.feet
           : feet // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ) as $Val);
   }
 }
@@ -3008,8 +3009,7 @@ abstract class _$$HeightBeanImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'meters') double? meters,
-      @JsonKey(name: 'feet') double? feet});
+      {@JsonKey(name: 'meters') num? meters, @JsonKey(name: 'feet') num? feet});
 }
 
 /// @nodoc
@@ -3030,11 +3030,11 @@ class __$$HeightBeanImplCopyWithImpl<$Res>
       meters: freezed == meters
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       feet: freezed == feet
           ? _value.feet
           : feet // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
     ));
   }
 }
@@ -3050,10 +3050,10 @@ class _$HeightBeanImpl implements _HeightBean {
 
   @override
   @JsonKey(name: 'meters')
-  final double? meters;
+  final num? meters;
   @override
   @JsonKey(name: 'feet')
-  final double? feet;
+  final num? feet;
 
   @override
   String toString() {
@@ -3089,18 +3089,18 @@ class _$HeightBeanImpl implements _HeightBean {
 
 abstract class _HeightBean implements HeightBean {
   const factory _HeightBean(
-      {@JsonKey(name: 'meters') final double? meters,
-      @JsonKey(name: 'feet') final double? feet}) = _$HeightBeanImpl;
+      {@JsonKey(name: 'meters') final num? meters,
+      @JsonKey(name: 'feet') final num? feet}) = _$HeightBeanImpl;
 
   factory _HeightBean.fromJson(Map<String, dynamic> json) =
       _$HeightBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'meters')
-  double? get meters;
+  num? get meters;
   @override
   @JsonKey(name: 'feet')
-  double? get feet;
+  num? get feet;
   @override
   @JsonKey(ignore: true)
   _$$HeightBeanImplCopyWith<_$HeightBeanImpl> get copyWith =>
@@ -3114,9 +3114,9 @@ ThrustBean _$ThrustBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ThrustBean {
   @JsonKey(name: 'kN')
-  int? get kN => throw _privateConstructorUsedError;
+  num? get kN => throw _privateConstructorUsedError;
   @JsonKey(name: 'lbf')
-  int? get lbf => throw _privateConstructorUsedError;
+  num? get lbf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3130,7 +3130,7 @@ abstract class $ThrustBeanCopyWith<$Res> {
           ThrustBean value, $Res Function(ThrustBean) then) =
       _$ThrustBeanCopyWithImpl<$Res, ThrustBean>;
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
@@ -3153,11 +3153,11 @@ class _$ThrustBeanCopyWithImpl<$Res, $Val extends ThrustBean>
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
@@ -3170,7 +3170,7 @@ abstract class _$$ThrustBeanImplCopyWith<$Res>
       __$$ThrustBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'kN') int? kN, @JsonKey(name: 'lbf') int? lbf});
+  $Res call({@JsonKey(name: 'kN') num? kN, @JsonKey(name: 'lbf') num? lbf});
 }
 
 /// @nodoc
@@ -3191,11 +3191,11 @@ class __$$ThrustBeanImplCopyWithImpl<$Res>
       kN: freezed == kN
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lbf: freezed == lbf
           ? _value.lbf
           : lbf // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -3211,10 +3211,10 @@ class _$ThrustBeanImpl implements _ThrustBean {
 
   @override
   @JsonKey(name: 'kN')
-  final int? kN;
+  final num? kN;
   @override
   @JsonKey(name: 'lbf')
-  final int? lbf;
+  final num? lbf;
 
   @override
   String toString() {
@@ -3250,71 +3250,72 @@ class _$ThrustBeanImpl implements _ThrustBean {
 
 abstract class _ThrustBean implements ThrustBean {
   const factory _ThrustBean(
-      {@JsonKey(name: 'kN') final int? kN,
-      @JsonKey(name: 'lbf') final int? lbf}) = _$ThrustBeanImpl;
+      {@JsonKey(name: 'kN') final num? kN,
+      @JsonKey(name: 'lbf') final num? lbf}) = _$ThrustBeanImpl;
 
   factory _ThrustBean.fromJson(Map<String, dynamic> json) =
       _$ThrustBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'kN')
-  int? get kN;
+  num? get kN;
   @override
   @JsonKey(name: 'lbf')
-  int? get lbf;
+  num? get lbf;
   @override
   @JsonKey(ignore: true)
   _$$ThrustBeanImplCopyWith<_$ThrustBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-FirstStageBean _$FirstStageBeanFromJson(Map<String, dynamic> json) {
-  return _FirstStageBean.fromJson(json);
+First_stageBean _$First_stageBeanFromJson(Map<String, dynamic> json) {
+  return _First_stageBean.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FirstStageBean {
+mixin _$First_stageBean {
   @JsonKey(name: 'thrust_sea_level')
-  ThrustSeaLevelBean? get thrustSeaLevel => throw _privateConstructorUsedError;
+  Thrust_sea_levelBean? get thrustSeaLevel =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_vacuum')
-  ThrustVacuumBean? get thrustVacuum => throw _privateConstructorUsedError;
+  Thrust_vacuumBean? get thrustVacuum => throw _privateConstructorUsedError;
   @JsonKey(name: 'reusable')
   bool? get reusable => throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
-  int? get engines => throw _privateConstructorUsedError;
+  num? get engines => throw _privateConstructorUsedError;
   @JsonKey(name: 'fuel_amount_tons')
-  double? get fuelAmountTons => throw _privateConstructorUsedError;
+  num? get fuelAmountTons => throw _privateConstructorUsedError;
   @JsonKey(name: 'burn_time_sec')
-  int? get burnTimeSec => throw _privateConstructorUsedError;
+  num? get burnTimeSec => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FirstStageBeanCopyWith<FirstStageBean> get copyWith =>
+  $First_stageBeanCopyWith<First_stageBean> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FirstStageBeanCopyWith<$Res> {
-  factory $FirstStageBeanCopyWith(
-          FirstStageBean value, $Res Function(FirstStageBean) then) =
-      _$FirstStageBeanCopyWithImpl<$Res, FirstStageBean>;
+abstract class $First_stageBeanCopyWith<$Res> {
+  factory $First_stageBeanCopyWith(
+          First_stageBean value, $Res Function(First_stageBean) then) =
+      _$First_stageBeanCopyWithImpl<$Res, First_stageBean>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust_sea_level') ThrustSeaLevelBean? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') ThrustVacuumBean? thrustVacuum,
+      {@JsonKey(name: 'thrust_sea_level') Thrust_sea_levelBean? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') Thrust_vacuumBean? thrustVacuum,
       @JsonKey(name: 'reusable') bool? reusable,
-      @JsonKey(name: 'engines') int? engines,
-      @JsonKey(name: 'fuel_amount_tons') double? fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') num? burnTimeSec});
 
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel;
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum;
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel;
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
-class _$FirstStageBeanCopyWithImpl<$Res, $Val extends FirstStageBean>
-    implements $FirstStageBeanCopyWith<$Res> {
-  _$FirstStageBeanCopyWithImpl(this._value, this._then);
+class _$First_stageBeanCopyWithImpl<$Res, $Val extends First_stageBean>
+    implements $First_stageBeanCopyWith<$Res> {
+  _$First_stageBeanCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3335,11 +3336,11 @@ class _$FirstStageBeanCopyWithImpl<$Res, $Val extends FirstStageBean>
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as ThrustSeaLevelBean?,
+              as Thrust_sea_levelBean?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as ThrustVacuumBean?,
+              as Thrust_vacuumBean?,
       reusable: freezed == reusable
           ? _value.reusable
           : reusable // ignore: cast_nullable_to_non_nullable
@@ -3347,71 +3348,71 @@ class _$FirstStageBeanCopyWithImpl<$Res, $Val extends FirstStageBean>
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       fuelAmountTons: freezed == fuelAmountTons
           ? _value.fuelAmountTons
           : fuelAmountTons // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       burnTimeSec: freezed == burnTimeSec
           ? _value.burnTimeSec
           : burnTimeSec // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel {
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel {
     if (_value.thrustSeaLevel == null) {
       return null;
     }
 
-    return $ThrustSeaLevelBeanCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
+    return $Thrust_sea_levelBeanCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
       return _then(_value.copyWith(thrustSeaLevel: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum {
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum {
     if (_value.thrustVacuum == null) {
       return null;
     }
 
-    return $ThrustVacuumBeanCopyWith<$Res>(_value.thrustVacuum!, (value) {
+    return $Thrust_vacuumBeanCopyWith<$Res>(_value.thrustVacuum!, (value) {
       return _then(_value.copyWith(thrustVacuum: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$FirstStageBeanImplCopyWith<$Res>
-    implements $FirstStageBeanCopyWith<$Res> {
-  factory _$$FirstStageBeanImplCopyWith(_$FirstStageBeanImpl value,
-          $Res Function(_$FirstStageBeanImpl) then) =
-      __$$FirstStageBeanImplCopyWithImpl<$Res>;
+abstract class _$$First_stageBeanImplCopyWith<$Res>
+    implements $First_stageBeanCopyWith<$Res> {
+  factory _$$First_stageBeanImplCopyWith(_$First_stageBeanImpl value,
+          $Res Function(_$First_stageBeanImpl) then) =
+      __$$First_stageBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust_sea_level') ThrustSeaLevelBean? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') ThrustVacuumBean? thrustVacuum,
+      {@JsonKey(name: 'thrust_sea_level') Thrust_sea_levelBean? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') Thrust_vacuumBean? thrustVacuum,
       @JsonKey(name: 'reusable') bool? reusable,
-      @JsonKey(name: 'engines') int? engines,
-      @JsonKey(name: 'fuel_amount_tons') double? fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') num? burnTimeSec});
 
   @override
-  $ThrustSeaLevelBeanCopyWith<$Res>? get thrustSeaLevel;
+  $Thrust_sea_levelBeanCopyWith<$Res>? get thrustSeaLevel;
   @override
-  $ThrustVacuumBeanCopyWith<$Res>? get thrustVacuum;
+  $Thrust_vacuumBeanCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
-class __$$FirstStageBeanImplCopyWithImpl<$Res>
-    extends _$FirstStageBeanCopyWithImpl<$Res, _$FirstStageBeanImpl>
-    implements _$$FirstStageBeanImplCopyWith<$Res> {
-  __$$FirstStageBeanImplCopyWithImpl(
-      _$FirstStageBeanImpl _value, $Res Function(_$FirstStageBeanImpl) _then)
+class __$$First_stageBeanImplCopyWithImpl<$Res>
+    extends _$First_stageBeanCopyWithImpl<$Res, _$First_stageBeanImpl>
+    implements _$$First_stageBeanImplCopyWith<$Res> {
+  __$$First_stageBeanImplCopyWithImpl(
+      _$First_stageBeanImpl _value, $Res Function(_$First_stageBeanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3424,15 +3425,15 @@ class __$$FirstStageBeanImplCopyWithImpl<$Res>
     Object? fuelAmountTons = freezed,
     Object? burnTimeSec = freezed,
   }) {
-    return _then(_$FirstStageBeanImpl(
+    return _then(_$First_stageBeanImpl(
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as ThrustSeaLevelBean?,
+              as Thrust_sea_levelBean?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as ThrustVacuumBean?,
+              as Thrust_vacuumBean?,
       reusable: freezed == reusable
           ? _value.reusable
           : reusable // ignore: cast_nullable_to_non_nullable
@@ -3440,23 +3441,23 @@ class __$$FirstStageBeanImplCopyWithImpl<$Res>
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       fuelAmountTons: freezed == fuelAmountTons
           ? _value.fuelAmountTons
           : fuelAmountTons // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       burnTimeSec: freezed == burnTimeSec
           ? _value.burnTimeSec
           : burnTimeSec // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$FirstStageBeanImpl implements _FirstStageBean {
-  const _$FirstStageBeanImpl(
+class _$First_stageBeanImpl implements _First_stageBean {
+  const _$First_stageBeanImpl(
       {@JsonKey(name: 'thrust_sea_level') this.thrustSeaLevel,
       @JsonKey(name: 'thrust_vacuum') this.thrustVacuum,
       @JsonKey(name: 'reusable') this.reusable,
@@ -3464,38 +3465,38 @@ class _$FirstStageBeanImpl implements _FirstStageBean {
       @JsonKey(name: 'fuel_amount_tons') this.fuelAmountTons,
       @JsonKey(name: 'burn_time_sec') this.burnTimeSec});
 
-  factory _$FirstStageBeanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FirstStageBeanImplFromJson(json);
+  factory _$First_stageBeanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$First_stageBeanImplFromJson(json);
 
   @override
   @JsonKey(name: 'thrust_sea_level')
-  final ThrustSeaLevelBean? thrustSeaLevel;
+  final Thrust_sea_levelBean? thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  final ThrustVacuumBean? thrustVacuum;
+  final Thrust_vacuumBean? thrustVacuum;
   @override
   @JsonKey(name: 'reusable')
   final bool? reusable;
   @override
   @JsonKey(name: 'engines')
-  final int? engines;
+  final num? engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  final double? fuelAmountTons;
+  final num? fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  final int? burnTimeSec;
+  final num? burnTimeSec;
 
   @override
   String toString() {
-    return 'FirstStageBean(thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
+    return 'First_stageBean(thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FirstStageBeanImpl &&
+            other is _$First_stageBeanImpl &&
             (identical(other.thrustSeaLevel, thrustSeaLevel) ||
                 other.thrustSeaLevel == thrustSeaLevel) &&
             (identical(other.thrustVacuum, thrustVacuum) ||
@@ -3517,53 +3518,53 @@ class _$FirstStageBeanImpl implements _FirstStageBean {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FirstStageBeanImplCopyWith<_$FirstStageBeanImpl> get copyWith =>
-      __$$FirstStageBeanImplCopyWithImpl<_$FirstStageBeanImpl>(
+  _$$First_stageBeanImplCopyWith<_$First_stageBeanImpl> get copyWith =>
+      __$$First_stageBeanImplCopyWithImpl<_$First_stageBeanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$FirstStageBeanImplToJson(
+    return _$$First_stageBeanImplToJson(
       this,
     );
   }
 }
 
-abstract class _FirstStageBean implements FirstStageBean {
-  const factory _FirstStageBean(
+abstract class _First_stageBean implements First_stageBean {
+  const factory _First_stageBean(
           {@JsonKey(name: 'thrust_sea_level')
-          final ThrustSeaLevelBean? thrustSeaLevel,
-          @JsonKey(name: 'thrust_vacuum') final ThrustVacuumBean? thrustVacuum,
+          final Thrust_sea_levelBean? thrustSeaLevel,
+          @JsonKey(name: 'thrust_vacuum') final Thrust_vacuumBean? thrustVacuum,
           @JsonKey(name: 'reusable') final bool? reusable,
-          @JsonKey(name: 'engines') final int? engines,
-          @JsonKey(name: 'fuel_amount_tons') final double? fuelAmountTons,
-          @JsonKey(name: 'burn_time_sec') final int? burnTimeSec}) =
-      _$FirstStageBeanImpl;
+          @JsonKey(name: 'engines') final num? engines,
+          @JsonKey(name: 'fuel_amount_tons') final num? fuelAmountTons,
+          @JsonKey(name: 'burn_time_sec') final num? burnTimeSec}) =
+      _$First_stageBeanImpl;
 
-  factory _FirstStageBean.fromJson(Map<String, dynamic> json) =
-      _$FirstStageBeanImpl.fromJson;
+  factory _First_stageBean.fromJson(Map<String, dynamic> json) =
+      _$First_stageBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'thrust_sea_level')
-  ThrustSeaLevelBean? get thrustSeaLevel;
+  Thrust_sea_levelBean? get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  ThrustVacuumBean? get thrustVacuum;
+  Thrust_vacuumBean? get thrustVacuum;
   @override
   @JsonKey(name: 'reusable')
   bool? get reusable;
   @override
   @JsonKey(name: 'engines')
-  int? get engines;
+  num? get engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  double? get fuelAmountTons;
+  num? get fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  int? get burnTimeSec;
+  num? get burnTimeSec;
   @override
   @JsonKey(ignore: true)
-  _$$FirstStageBeanImplCopyWith<_$FirstStageBeanImpl> get copyWith =>
+  _$$First_stageBeanImplCopyWith<_$First_stageBeanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3574,9 +3575,9 @@ MassBean _$MassBeanFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MassBean {
   @JsonKey(name: 'kg')
-  int? get kg => throw _privateConstructorUsedError;
+  num? get kg => throw _privateConstructorUsedError;
   @JsonKey(name: 'lb')
-  int? get lb => throw _privateConstructorUsedError;
+  num? get lb => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3589,7 +3590,7 @@ abstract class $MassBeanCopyWith<$Res> {
   factory $MassBeanCopyWith(MassBean value, $Res Function(MassBean) then) =
       _$MassBeanCopyWithImpl<$Res, MassBean>;
   @useResult
-  $Res call({@JsonKey(name: 'kg') int? kg, @JsonKey(name: 'lb') int? lb});
+  $Res call({@JsonKey(name: 'kg') num? kg, @JsonKey(name: 'lb') num? lb});
 }
 
 /// @nodoc
@@ -3612,11 +3613,11 @@ class _$MassBeanCopyWithImpl<$Res, $Val extends MassBean>
       kg: freezed == kg
           ? _value.kg
           : kg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lb: freezed == lb
           ? _value.lb
           : lb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ) as $Val);
   }
 }
@@ -3629,7 +3630,7 @@ abstract class _$$MassBeanImplCopyWith<$Res>
       __$$MassBeanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'kg') int? kg, @JsonKey(name: 'lb') int? lb});
+  $Res call({@JsonKey(name: 'kg') num? kg, @JsonKey(name: 'lb') num? lb});
 }
 
 /// @nodoc
@@ -3650,11 +3651,11 @@ class __$$MassBeanImplCopyWithImpl<$Res>
       kg: freezed == kg
           ? _value.kg
           : kg // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lb: freezed == lb
           ? _value.lb
           : lb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
     ));
   }
 }
@@ -3670,10 +3671,10 @@ class _$MassBeanImpl implements _MassBean {
 
   @override
   @JsonKey(name: 'kg')
-  final int? kg;
+  final num? kg;
   @override
   @JsonKey(name: 'lb')
-  final int? lb;
+  final num? lb;
 
   @override
   String toString() {
@@ -3709,18 +3710,18 @@ class _$MassBeanImpl implements _MassBean {
 
 abstract class _MassBean implements MassBean {
   const factory _MassBean(
-      {@JsonKey(name: 'kg') final int? kg,
-      @JsonKey(name: 'lb') final int? lb}) = _$MassBeanImpl;
+      {@JsonKey(name: 'kg') final num? kg,
+      @JsonKey(name: 'lb') final num? lb}) = _$MassBeanImpl;
 
   factory _MassBean.fromJson(Map<String, dynamic> json) =
       _$MassBeanImpl.fromJson;
 
   @override
   @JsonKey(name: 'kg')
-  int? get kg;
+  num? get kg;
   @override
   @JsonKey(name: 'lb')
-  int? get lb;
+  num? get lb;
   @override
   @JsonKey(ignore: true)
   _$$MassBeanImplCopyWith<_$MassBeanImpl> get copyWith =>

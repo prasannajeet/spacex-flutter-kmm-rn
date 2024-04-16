@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spacex_network/spacex_api_di.dart';
-import '../data/spacex_rockets.dart';
+import 'package:spacex_rockets/data/spacex_rocket.dart';
 import '../domain/get_rockets_usecase.dart';
 
 final spacexRocketsUseCaseProvider = Provider<GetSpaceXRocketsUseCase>((ref) {
@@ -8,12 +8,12 @@ final spacexRocketsUseCaseProvider = Provider<GetSpaceXRocketsUseCase>((ref) {
   return GetSpaceXRocketsUseCase(remoteService);
 });
 
-final spacexRocketsStateProvider = StateNotifierProvider<SpaceXRocketsNotifier, AsyncValue<List<SpaceXRockets>>>((ref) {
+final spacexRocketsStateProvider = StateNotifierProvider<SpaceXRocketsNotifier, AsyncValue<List<Spacex_rocket>>>((ref) {
   final useCase = ref.read(spacexRocketsUseCaseProvider);
   return SpaceXRocketsNotifier(useCase);
 });
 
-class SpaceXRocketsNotifier extends StateNotifier<AsyncValue<List<SpaceXRockets>>> {
+class SpaceXRocketsNotifier extends StateNotifier<AsyncValue<List<Spacex_rocket>>> {
   final GetSpaceXRocketsUseCase _getSpaceXRocketsUseCase;
 
   SpaceXRocketsNotifier(this._getSpaceXRocketsUseCase) : super(const AsyncLoading()) {
