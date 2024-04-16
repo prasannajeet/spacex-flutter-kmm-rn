@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spacex_company_info/presentation/company_info_screen.dart';
 import 'package:spacex_flutter/presentation/spacex_home_tab_item.dart';
 import 'package:spacex_launches/presentation/spacex_launches_screen.dart';
+import 'package:spacex_rockets/presentation/spacex_rockets_screen.dart';
 
 class SpaceXHomeScreen extends StatefulWidget {
   const SpaceXHomeScreen({super.key});
@@ -22,9 +23,7 @@ class _SpaceXHomeScreenState extends State<SpaceXHomeScreen> {
       case SpaceXHomeTabItem.launches:
         return const SpaceXLaunchesScreen();
       case SpaceXHomeTabItem.rockets:
-        return const Center(
-          child: Text('Rockets Screen'),
-        );
+        return const SpaceXRocketsScreen();
       default:
         return const Center(
           child: Text('Invalid Tab'),

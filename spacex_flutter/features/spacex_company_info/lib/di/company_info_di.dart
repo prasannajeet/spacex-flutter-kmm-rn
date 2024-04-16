@@ -6,25 +6,25 @@ import '../domain/company_info_usecase.dart';
 part 'company_info_di.g.dart';
 
 @riverpod
-CompanyInfoUseCase companyInfoUseCase(CompanyInfoUseCaseRef ref) {
-  return CompanyInfoUseCase(ref.watch(spaceXApiClientProvider));
+GetCompanyInfoUseCase companyInfoUseCase(CompanyInfoUseCaseRef ref) {
+  return GetCompanyInfoUseCase(ref.watch(spaceXApiClientProvider));
 }
 
-final companyInfoProvider = StateNotifierProvider<CompanyInfoNotifier, AsyncValue<SpacexCompanyInfo>>((ref) {
+final companyInfoStateProvider = StateNotifierProvider<CompanyInfoNotifier, AsyncValue<SpacexCompanyInfo>>((ref) {
   final useCase = ref.read(companyInfoUseCaseProvider);
   return CompanyInfoNotifier(useCase);
 });
 
 class CompanyInfoNotifier extends StateNotifier<AsyncValue<SpacexCompanyInfo>> {
-  final CompanyInfoUseCase _useCase;
+  final GetCompanyInfoUseCase _getCompanyInfoUseCase;
 
-  CompanyInfoNotifier(this._useCase) : super(const AsyncValue.loading()) {
+  CompanyInfoNotifier(this._getCompanyInfoUseCase) : super(const AsyncValue.loading()) {
     fetchCompanyInfo();
   }
 
   Future<void> fetchCompanyInfo() async {
     try {
-      final info = await _useCase();
+      final info = await _getCompanyInfoUseCase();
       state = AsyncValue.data(info);
     } catch (e) {
       state = AsyncValue.error(e, StackTrace.current);

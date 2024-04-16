@@ -1,28 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'launches_di.dart';
+part of 'rockets_di.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$spacexLaunchesUseCaseHash() =>
-    r'adedd4ee32ac2c730c7d2b7385bd1704b5d97c1e';
+String _$spacexRocketsUseCaseHash() =>
+    r'a8df09de416526e5d8fff0c5c687d08468747da3';
 
-/// See also [spacexLaunchesUseCase].
-@ProviderFor(spacexLaunchesUseCase)
-final spacexLaunchesUseCaseProvider =
-    AutoDisposeProvider<GetSpaceXLaunchesUseCase>.internal(
-  spacexLaunchesUseCase,
-  name: r'spacexLaunchesUseCaseProvider',
+/// See also [spacexRocketsUseCase].
+@ProviderFor(spacexRocketsUseCase)
+final spacexRocketsUseCaseProvider =
+    AutoDisposeProvider<GetSpaceXRocketsUseCase>.internal(
+  spacexRocketsUseCase,
+  name: r'spacexRocketsUseCaseProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$spacexLaunchesUseCaseHash,
+      : _$spacexRocketsUseCaseHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef SpacexLaunchesUseCaseRef
-    = AutoDisposeProviderRef<GetSpaceXLaunchesUseCase>;
+typedef SpacexRocketsUseCaseRef
+    = AutoDisposeProviderRef<GetSpaceXRocketsUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

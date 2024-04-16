@@ -7,12 +7,12 @@ part of 'company_info_di.dart';
 // **************************************************************************
 
 String _$companyInfoUseCaseHash() =>
-    r'b842ab71966c460985bfa9077bd64bc594f11b4e';
+    r'35b87fefffe304cb28dfe7776fbacb190e256bce';
 
 /// See also [companyInfoUseCase].
 @ProviderFor(companyInfoUseCase)
 final companyInfoUseCaseProvider =
-    AutoDisposeProvider<CompanyInfoUseCase>.internal(
+    AutoDisposeProvider<GetCompanyInfoUseCase>.internal(
   companyInfoUseCase,
   name: r'companyInfoUseCaseProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -22,6 +22,6 @@ final companyInfoUseCaseProvider =
   allTransitiveDependencies: null,
 );
 
-typedef CompanyInfoUseCaseRef = AutoDisposeProviderRef<CompanyInfoUseCase>;
+typedef CompanyInfoUseCaseRef = AutoDisposeProviderRef<GetCompanyInfoUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

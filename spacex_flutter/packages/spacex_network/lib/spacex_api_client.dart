@@ -32,7 +32,7 @@ class SpaceXApiClient {
     }
   }
 
-  Future<Map<String, dynamic>> fetchRockets() async {
+  Future<List<dynamic>> fetchRockets() async {
     try {
       var response = await _dio.get('$baseUrl/rockets');
       if(response.statusCode == 200) {

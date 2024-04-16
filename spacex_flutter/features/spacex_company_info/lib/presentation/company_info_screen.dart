@@ -8,12 +8,12 @@ class CompanyInfoScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(companyInfoProvider);
+    final state = ref.watch(companyInfoStateProvider);
     return Scaffold(
       backgroundColor: Colors.grey,
       body: RefreshIndicator(
         onRefresh: () {
-          return ref.read(companyInfoProvider.notifier).fetchCompanyInfo();
+          return ref.read(companyInfoStateProvider.notifier).fetchCompanyInfo();
         },
         child: StateDisplayWidget(state: state, onSuccess: (data) => Text(data.toString())
       ),
