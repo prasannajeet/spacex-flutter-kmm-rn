@@ -1,15 +1,13 @@
-
 import 'package:spacex_company_info/data/spacex_company_info.dart';
-import 'package:spacex_network/spacex_api_client.dart';
+import 'package:spacex_network/abstract_use_case.dart';
 
 
-class GetCompanyInfoUseCase {
-  final SpaceXApiClient _apiClient;
+class GetCompanyInfoUseCase extends IUseCase<SpacexCompanyInfo> {
+  GetCompanyInfoUseCase(super.remoteService);
 
-  GetCompanyInfoUseCase(this._apiClient);
-
+  @override
   Future<SpacexCompanyInfo> call() async {
-    final response = await _apiClient.fetchCompanyInfo();
+    final response = await remoteService.fetchCompanyInfo();
     return SpacexCompanyInfo.fromJson(response);
   }
 }

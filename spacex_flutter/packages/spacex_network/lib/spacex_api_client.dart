@@ -1,48 +1,29 @@
-import 'package:dio/dio.dart';
+import 'spacex_service.dart';
 
-class SpaceXApiClient {
-  final Dio _dio;
-  final baseUrl = 'https://api.spacexdata.com/v4';
+abstract class IRemoteService {
+  Future<Map<String, dynamic>> fetchCompanyInfo();
+  Future<List<dynamic>> fetchLaunches();
+  Future<List<dynamic>> fetchRockets();
+}
 
-  SpaceXApiClient(this._dio);
+class SpaceXRemoteService implements IRemoteService {
+  final IApiClient _apiClient;
 
+  SpaceXRemoteService(this._apiClient);
+
+  @override
   Future<Map<String, dynamic>> fetchCompanyInfo() async {
-    try {
-      var response = await _dio.get('$baseUrl/company');
-      if(response.statusCode == 200) {
-        return response.data;
-      } else {
-        throw Exception('Status code: ${response.statusCode}');
-      }
-    } catch (e) {
-      throw Exception(e.toString());
-    }
+    return await _apiClient.get('/company');
   }
 
+  @override
   Future<List<dynamic>> fetchLaunches() async {
-    try {
-      var response = await _dio.get('$baseUrl/launches');
-      if(response.statusCode == 200) {
-        return response.data;
-      } else {
-        throw Exception('Status code: ${response.statusCode}');
-      }
-    } catch (e) {
-      throw Exception(e.toString());
-    }
+    return await _apiClient.get('/launches');
   }
 
+  @override
   Future<List<dynamic>> fetchRockets() async {
-    try {
-      var response = await _dio.get('$baseUrl/rockets');
-      if(response.statusCode == 200) {
-        return response.data;
-      } else {
-        throw Exception('Status code: ${response.statusCode}');
-      }
-    } catch (e) {
-      throw Exception(e.toString());
-    }
+    return await _apiClient.get('/rockets');
   }
 }
 
