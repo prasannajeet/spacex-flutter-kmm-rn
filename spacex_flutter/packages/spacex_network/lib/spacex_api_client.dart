@@ -1,15 +1,15 @@
 import 'spacex_service.dart';
 
-abstract class IRemoteService {
+abstract class IRepository {
   final IApiClient apiClient;
-  IRemoteService(this.apiClient);
+  IRepository(this.apiClient);
   Future<Map<String, dynamic>> fetchCompanyInfo();
   Future<List<dynamic>> fetchLaunches();
   Future<List<dynamic>> fetchRockets();
 }
 
-class SpaceXRemoteService extends IRemoteService {
-  SpaceXRemoteService(super.apiClient);
+class SpaceXRepository extends IRepository {
+  SpaceXRepository(super.apiClient);
 
   @override
   Future<Map<String, dynamic>> fetchCompanyInfo() async {

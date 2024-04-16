@@ -7,5 +7,5 @@ import 'spacex_service.dart';
 final dioProvider = Provider<Dio>((ref) => Dio());
 final networkConfigProvider = Provider<SpaceXNetworkServiceConfig>((ref) => SpaceXNetworkServiceConfig());
 final spaceXApiClientProvider = Provider<IApiClient>((ref) => SpaceXApiClient(ref.watch(dioProvider)));
-final remoteServiceProvider = Provider<IRemoteService>((ref) => SpaceXRemoteService(ref.watch(spaceXApiClientProvider)));
+final remoteServiceProvider = Provider<IRepository>((ref) => SpaceXRepository(ref.watch(spaceXApiClientProvider)));
 
