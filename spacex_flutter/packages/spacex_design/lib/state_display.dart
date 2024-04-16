@@ -11,7 +11,10 @@ class StateDisplayWidget<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return state.when(
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (e, st) => Text('Error: ${e.toString()}'),
+      error: (e, st) => AlertDialog(
+        title: const Text('Error'),
+        content: Text(e.toString()),
+      ),
       data: (data) => Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
