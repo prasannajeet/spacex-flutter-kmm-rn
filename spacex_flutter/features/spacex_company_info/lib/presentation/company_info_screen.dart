@@ -13,8 +13,7 @@ class CompanyInfoScreen extends ConsumerWidget {
       backgroundColor: Colors.grey,
       body: RefreshIndicator(
         onRefresh: () {
-          ref.read(companyInfoProvider.notifier).fetchCompanyInfo();
-          return Future.value();
+          return ref.read(companyInfoProvider.notifier).fetchCompanyInfo();
         },
         child: StateDisplayWidget(state: state, onSuccess: (data) => Text(data.toString())
       ),

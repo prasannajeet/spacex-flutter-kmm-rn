@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+SpacexCompanyInfo _$SpacexCompanyInfoFromJson(Map<String, dynamic> json) {
+  return _SpacexCompanyInfo.fromJson(json);
+}
+
 /// @nodoc
 mixin _$SpacexCompanyInfo {
   Headquarters? get headquarters => throw _privateConstructorUsedError;
@@ -33,6 +37,7 @@ mixin _$SpacexCompanyInfo {
   String? get summary => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SpacexCompanyInfoCopyWith<SpacexCompanyInfo> get copyWith =>
       throw _privateConstructorUsedError;
@@ -319,7 +324,7 @@ class __$$SpacexCompanyInfoImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$SpacexCompanyInfoImpl implements _SpacexCompanyInfo {
   const _$SpacexCompanyInfoImpl(
       {this.headquarters,
@@ -338,6 +343,9 @@ class _$SpacexCompanyInfoImpl implements _SpacexCompanyInfo {
       this.valuation,
       this.summary,
       this.id});
+
+  factory _$SpacexCompanyInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SpacexCompanyInfoImplFromJson(json);
 
   @override
   final Headquarters? headquarters;
@@ -407,6 +415,7 @@ class _$SpacexCompanyInfoImpl implements _SpacexCompanyInfo {
             (identical(other.id, id) || other.id == id));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -433,6 +442,13 @@ class _$SpacexCompanyInfoImpl implements _SpacexCompanyInfo {
   _$$SpacexCompanyInfoImplCopyWith<_$SpacexCompanyInfoImpl> get copyWith =>
       __$$SpacexCompanyInfoImplCopyWithImpl<_$SpacexCompanyInfoImpl>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SpacexCompanyInfoImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SpacexCompanyInfo implements SpacexCompanyInfo {
@@ -453,6 +469,9 @@ abstract class _SpacexCompanyInfo implements SpacexCompanyInfo {
       final int? valuation,
       final String? summary,
       final String? id}) = _$SpacexCompanyInfoImpl;
+
+  factory _SpacexCompanyInfo.fromJson(Map<String, dynamic> json) =
+      _$SpacexCompanyInfoImpl.fromJson;
 
   @override
   Headquarters? get headquarters;
@@ -492,6 +511,10 @@ abstract class _SpacexCompanyInfo implements SpacexCompanyInfo {
       throw _privateConstructorUsedError;
 }
 
+Links _$LinksFromJson(Map<String, dynamic> json) {
+  return _Links.fromJson(json);
+}
+
 /// @nodoc
 mixin _$Links {
   String? get website => throw _privateConstructorUsedError;
@@ -499,6 +522,7 @@ mixin _$Links {
   String? get twitter => throw _privateConstructorUsedError;
   String? get elonTwitter => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $LinksCopyWith<Links> get copyWith => throw _privateConstructorUsedError;
 }
@@ -600,10 +624,13 @@ class __$$LinksImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$LinksImpl implements _Links {
   const _$LinksImpl(
       {this.website, this.flickr, this.twitter, this.elonTwitter});
+
+  factory _$LinksImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LinksImplFromJson(json);
 
   @override
   final String? website;
@@ -631,6 +658,7 @@ class _$LinksImpl implements _Links {
                 other.elonTwitter == elonTwitter));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, website, flickr, twitter, elonTwitter);
@@ -640,6 +668,13 @@ class _$LinksImpl implements _Links {
   @pragma('vm:prefer-inline')
   _$$LinksImplCopyWith<_$LinksImpl> get copyWith =>
       __$$LinksImplCopyWithImpl<_$LinksImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LinksImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Links implements Links {
@@ -648,6 +683,8 @@ abstract class _Links implements Links {
       final String? flickr,
       final String? twitter,
       final String? elonTwitter}) = _$LinksImpl;
+
+  factory _Links.fromJson(Map<String, dynamic> json) = _$LinksImpl.fromJson;
 
   @override
   String? get website;
@@ -663,12 +700,17 @@ abstract class _Links implements Links {
       throw _privateConstructorUsedError;
 }
 
+Headquarters _$HeadquartersFromJson(Map<String, dynamic> json) {
+  return _Headquarters.fromJson(json);
+}
+
 /// @nodoc
 mixin _$Headquarters {
   String? get address => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get state => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $HeadquartersCopyWith<Headquarters> get copyWith =>
       throw _privateConstructorUsedError;
@@ -761,9 +803,12 @@ class __$$HeadquartersImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$HeadquartersImpl implements _Headquarters {
   const _$HeadquartersImpl({this.address, this.city, this.state});
+
+  factory _$HeadquartersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HeadquartersImplFromJson(json);
 
   @override
   final String? address;
@@ -787,6 +832,7 @@ class _$HeadquartersImpl implements _Headquarters {
             (identical(other.state, state) || other.state == state));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, address, city, state);
 
@@ -795,6 +841,13 @@ class _$HeadquartersImpl implements _Headquarters {
   @pragma('vm:prefer-inline')
   _$$HeadquartersImplCopyWith<_$HeadquartersImpl> get copyWith =>
       __$$HeadquartersImplCopyWithImpl<_$HeadquartersImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$HeadquartersImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Headquarters implements Headquarters {
@@ -802,6 +855,9 @@ abstract class _Headquarters implements Headquarters {
       {final String? address,
       final String? city,
       final String? state}) = _$HeadquartersImpl;
+
+  factory _Headquarters.fromJson(Map<String, dynamic> json) =
+      _$HeadquartersImpl.fromJson;
 
   @override
   String? get address;

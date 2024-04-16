@@ -1,11 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:spacex_company_info/data/spacex_company_info.dart';
 import 'package:spacex_network/spacex_api_di.dart';
 import '../domain/company_info_usecase.dart';
+part 'company_info_di.g.dart';
 
-final companyInfoUseCaseProvider = Provider<CompanyInfoUseCase>((ref) {
+@riverpod
+CompanyInfoUseCase companyInfoUseCase(CompanyInfoUseCaseRef ref) {
   return CompanyInfoUseCase(ref.watch(spaceXApiClientProvider));
-});
+}
 
 final companyInfoProvider = StateNotifierProvider<CompanyInfoNotifier, AsyncValue<SpacexCompanyInfo>>((ref) {
   final useCase = ref.read(companyInfoUseCaseProvider);

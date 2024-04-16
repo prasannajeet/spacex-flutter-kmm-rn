@@ -76,7 +76,6 @@ class EnginesBean with _$EnginesBean {
 }
 
 @freezed
-@JsonSerializable()
 class ThrustVacuumBean with _$ThrustVacuumBean {
   const factory ThrustVacuumBean({
     @JsonKey(name: 'kN') int? kN,
@@ -87,7 +86,6 @@ class ThrustVacuumBean with _$ThrustVacuumBean {
 }
 
 @freezed
-@JsonSerializable()
 class ThrustSeaLevelBean with _$ThrustSeaLevelBean {
   const factory ThrustSeaLevelBean({
     @JsonKey(name: 'kN') int? kN,
@@ -142,7 +140,6 @@ class CompositeFairingBean with _$CompositeFairingBean {
 }
 
 @freezed
-@JsonSerializable()
 class DiameterBean with _$DiameterBean {
   const factory DiameterBean({
     @JsonKey(name: 'meters') double? meters,
@@ -153,7 +150,6 @@ class DiameterBean with _$DiameterBean {
 }
 
 @freezed
-@JsonSerializable()
 class HeightBean with _$HeightBean {
   const factory HeightBean({
     @JsonKey(name: 'meters') double? meters,
@@ -164,7 +160,6 @@ class HeightBean with _$HeightBean {
 }
 
 @freezed
-@JsonSerializable()
 class ThrustBean with _$ThrustBean {
   const factory ThrustBean({
     @JsonKey(name: 'kN') int? kN,
@@ -175,7 +170,6 @@ class ThrustBean with _$ThrustBean {
 }
 
 @freezed
-@JsonSerializable()
 class FirstStageBean with _$FirstStageBean {
   const factory FirstStageBean({
     @JsonKey(name: 'thrust_sea_level') ThrustSeaLevelBean? thrustSeaLevel,
@@ -190,7 +184,6 @@ class FirstStageBean with _$FirstStageBean {
 }
 
 @freezed
-@JsonSerializable()
 class MassBean with _$MassBean {
   const factory MassBean({
     @JsonKey(name: 'kg') int? kg,

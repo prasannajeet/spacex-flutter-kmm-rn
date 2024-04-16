@@ -4,7 +4,6 @@ part 'spacex_company_info.freezed.dart';
 part 'spacex_company_info.g.dart';
 
 @freezed
-@JsonSerializable()
 class SpacexCompanyInfo with _$SpacexCompanyInfo {
   const factory SpacexCompanyInfo({
     Headquarters? headquarters,
@@ -29,7 +28,6 @@ class SpacexCompanyInfo with _$SpacexCompanyInfo {
 }
 
 @freezed
-@JsonSerializable()
 class Links with _$Links {
   const factory Links({
     String? website,
@@ -41,7 +39,6 @@ class Links with _$Links {
 }
 
 @freezed
-@JsonSerializable()
 class Headquarters with _$Headquarters {
   const factory Headquarters({
     String? address,

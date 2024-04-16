@@ -6,3 +6,8 @@ packages:
   - packages/*/*
   - packages/*/*/*
   - tests
+
+scripts:
+  build_runner:
+    description: Run dart run build_runner watch -d on all packages
+    run: melos exec -- dart run build_runner watch --delete-conflicting-outputs -d

@@ -11,9 +11,10 @@ dependencies:
     sdk: flutter
   spacex_network: ^0.0.1
   spacex_design: ^0.0.1
-  flutter_riverpod: ^2.5.1
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +23,7 @@ dev_dependencies:
   build_runner: ^2.4.9
   freezed: ^2.5.2
   json_serializable: ^6.7.1
+  riverpod_generator: ^2.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

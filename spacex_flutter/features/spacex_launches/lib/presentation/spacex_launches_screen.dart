@@ -13,8 +13,7 @@ class SpaceXLaunchesScreen extends ConsumerWidget {
       backgroundColor: Colors.grey,
       body: RefreshIndicator(
         onRefresh: () {
-          ref.read(spacexLaunchesProvider.notifier).fetchLaunches();
-          return Future.value();
+          return ref.read(spacexLaunchesProvider.notifier).fetchLaunches();
         },
         child: StateDisplayWidget(state: state, onSuccess: (data) => Text(data.toString())
         ),

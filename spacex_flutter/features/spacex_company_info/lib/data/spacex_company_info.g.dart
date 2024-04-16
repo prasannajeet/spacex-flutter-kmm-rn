@@ -6,8 +6,9 @@ part of 'spacex_company_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-SpacexCompanyInfo _$SpacexCompanyInfoFromJson(Map<String, dynamic> json) =>
-    SpacexCompanyInfo(
+_$SpacexCompanyInfoImpl _$$SpacexCompanyInfoImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SpacexCompanyInfoImpl(
       headquarters: json['headquarters'] == null
           ? null
           : Headquarters.fromJson(json['headquarters'] as Map<String, dynamic>),
@@ -30,7 +31,8 @@ SpacexCompanyInfo _$SpacexCompanyInfoFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String?,
     );
 
-Map<String, dynamic> _$SpacexCompanyInfoToJson(SpacexCompanyInfo instance) =>
+Map<String, dynamic> _$$SpacexCompanyInfoImplToJson(
+        _$SpacexCompanyInfoImpl instance) =>
     <String, dynamic>{
       'headquarters': instance.headquarters,
       'links': instance.links,
@@ -50,27 +52,29 @@ Map<String, dynamic> _$SpacexCompanyInfoToJson(SpacexCompanyInfo instance) =>
       'id': instance.id,
     };
 
-Links _$LinksFromJson(Map<String, dynamic> json) => Links(
+_$LinksImpl _$$LinksImplFromJson(Map<String, dynamic> json) => _$LinksImpl(
       website: json['website'] as String?,
       flickr: json['flickr'] as String?,
       twitter: json['twitter'] as String?,
       elonTwitter: json['elonTwitter'] as String?,
     );
 
-Map<String, dynamic> _$LinksToJson(Links instance) => <String, dynamic>{
+Map<String, dynamic> _$$LinksImplToJson(_$LinksImpl instance) =>
+    <String, dynamic>{
       'website': instance.website,
       'flickr': instance.flickr,
       'twitter': instance.twitter,
       'elonTwitter': instance.elonTwitter,
     };
 
-Headquarters _$HeadquartersFromJson(Map<String, dynamic> json) => Headquarters(
+_$HeadquartersImpl _$$HeadquartersImplFromJson(Map<String, dynamic> json) =>
+    _$HeadquartersImpl(
       address: json['address'] as String?,
       city: json['city'] as String?,
       state: json['state'] as String?,
     );
 
-Map<String, dynamic> _$HeadquartersToJson(Headquarters instance) =>
+Map<String, dynamic> _$$HeadquartersImplToJson(_$HeadquartersImpl instance) =>
     <String, dynamic>{
       'address': instance.address,
       'city': instance.city,
